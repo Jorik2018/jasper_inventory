@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="b3f49bf0-be6d-49fe-b210-2a7a265712fe">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="mesEje" class="java.lang.String">
+		<fieldDescription><![CDATA[mes.mesEje]]></fieldDescription>
+	</field>
+	<field name="mes" class="java.lang.String">
+		<fieldDescription><![CDATA[mes.nombre]]></fieldDescription>
+	</field>
+	<field name="id" class="java.lang.String">
+		<fieldDescription><![CDATA[modalidadLaboral.id]]></fieldDescription>
+	</field>
+	<field name="modalidadLaboral" class="java.lang.String">
+		<fieldDescription><![CDATA[modalidadLaboral.nombre]]></fieldDescription>
+	</field>
+	<field name="totalGasto" class="java.math.BigDecimal">
+		<fieldDescription><![CDATA[totalGasto]]></fieldDescription>
+	</field>
+	<field name="totalPersonal" class="java.lang.Integer">
+		<fieldDescription><![CDATA[totalPersonal]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="57" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="14" width="802" height="29" uuid="395f5897-22ca-46ed-99ba-3b6df1fface8"/>
+				<textElement textAlignment="Center">
+					<font size="13" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ESTADÍSTICA MENSUAL POR MODALIDAD LABORAL]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band splitType="Stretch"/>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="496" splitType="Stretch">
+			<barChart>
+				<chart>
+					<reportElement stretchType="RelativeToBandHeight" x="0" y="0" width="802" height="496" uuid="a29c5ebc-5f3f-40f9-bfdc-9e7ec8dcde50"/>
+					<chartTitle/>
+					<chartSubtitle/>
+					<chartLegend/>
+				</chart>
+				<categoryDataset>
+					<categorySeries>
+						<seriesExpression><![CDATA[$F{modalidadLaboral}]]></seriesExpression>
+						<categoryExpression><![CDATA[$F{mesEje}]]></categoryExpression>
+						<valueExpression><![CDATA[$F{totalGasto}]]></valueExpression>
+					</categorySeries>
+				</categoryDataset>
+				<barPlot isShowLabels="true" isShowTickLabels="true" isShowTickMarks="false">
+					<plot/>
+					<itemLabel/>
+					<categoryAxisFormat>
+						<axisFormat verticalTickLabels="false"/>
+					</categoryAxisFormat>
+					<valueAxisLabelExpression><![CDATA[$F{totalGasto}+": "+$F{totalPersonal} ]]></valueAxisLabelExpression>
+					<valueAxisFormat>
+						<axisFormat tickLabelMask="" verticalTickLabels="false"/>
+					</valueAxisFormat>
+				</barPlot>
+			</barChart>
+		</band>
+	</summary>
+</jasperReport>

@@ -1,0 +1,367 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="ae9b1489-69e4-4750-92d4-af3ab8128265">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="Crosstab Data Text" hAlign="Center"/>
+	<style name="style1">
+		<box topPadding="1" leftPadding="1" bottomPadding="1" rightPadding="1">
+			<topPen lineWidth="0.25"/>
+			<leftPen lineWidth="0.25"/>
+			<bottomPen lineWidth="0.25"/>
+			<rightPen lineWidth="0.25"/>
+		</box>
+	</style>
+	<parameter name="COMPANY_LOGO" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="desde" class="java.util.Date" isForPrompting="false"/>
+	<parameter name="hasta" class="java.util.Date" isForPrompting="false"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="extension" class="java.lang.Number">
+		<fieldDescription><![CDATA[extension]]></fieldDescription>
+	</field>
+	<field name="fechaHora" class="java.util.Date">
+		<fieldDescription><![CDATA[marcacionPK.fechaHora]]></fieldDescription>
+	</field>
+	<field name="dni" class="java.lang.String">
+		<fieldDescription><![CDATA[marcacionPK.dni]]></fieldDescription>
+	</field>
+	<field name="nombComp" class="java.lang.String">
+		<fieldDescription><![CDATA[personal.nombComp]]></fieldDescription>
+	</field>
+	<field name="tipoTrabajador" class="org.pegasus.personal.jpa.TipoTrabajador">
+		<fieldDescription><![CDATA[personal.tipoTrabajador]]></fieldDescription>
+	</field>
+	<field name="modLaboral" class="org.pegasus.personal.jpa.ModLaboral">
+		<fieldDescription><![CDATA[personal.modLaboral]]></fieldDescription>
+	</field>
+	<variable name="mes" class="java.lang.Integer">
+		<variableExpression><![CDATA[org.jsuns.util.XDate.getMonth($F{fechaHora})]]></variableExpression>
+	</variable>
+	<variable name="anio" class="java.lang.Integer">
+		<variableExpression><![CDATA[org.jsuns.util.XDate.getYear($F{fechaHora})]]></variableExpression>
+	</variable>
+	<variable name="dia" class="java.lang.Integer">
+		<variableExpression><![CDATA[org.jsuns.util.XDate.getDay($F{fechaHora})]]></variableExpression>
+	</variable>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="75" splitType="Stretch">
+			<image hAlign="Center" vAlign="Middle" onErrorType="Blank">
+				<reportElement x="12" y="0" width="60" height="58" uuid="d726cbf3-5d50-429a-a458-e1bccf66c526"/>
+				<imageExpression><![CDATA[$P{COMPANY_LOGO}]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="0" y="58" width="100" height="17" uuid="843ec4f2-4697-453e-a25a-7668bdd74c11"/>
+				<textElement>
+					<font fontName="Arial" size="8"/>
+				</textElement>
+				<text><![CDATA[SUB REGION PACIFICO]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="317" y="32" width="340" height="20" uuid="694c8a25-b3bc-45eb-938a-75fa403a2b24"/>
+				<textElement>
+					<font fontName="Arial" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[""+$F{modLaboral}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="182" y="0" width="517" height="20" uuid="3542802b-09f7-435e-8cf3-c7dda6e11ecf"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="13" isBold="true"/>
+				</textElement>
+				<text><![CDATA[RESUMEN DE TARDANZAS POR MINUTO DEL PERSONAL]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="217" y="32" width="100" height="20" uuid="f3125ab3-5829-4a27-bbd8-de27c45b75a1"/>
+				<textElement>
+					<font fontName="Arial" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[TIPO TRABAJADOR:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="217" y="52" width="100" height="20" uuid="aa1859fe-5feb-43fc-9faf-29cd426ddd6f"/>
+				<textElement>
+					<font fontName="Arial" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[DESDE:]]></text>
+			</staticText>
+			<textField pattern="dd/MM/yyyy">
+				<reportElement x="317" y="52" width="120" height="20" uuid="5167bfd1-c784-4429-8908-e1a333c2a81f"/>
+				<textElement>
+					<font fontName="Arial" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{desde}]]></textFieldExpression>
+			</textField>
+			<textField pattern="dd/MM/yyyy">
+				<reportElement x="537" y="52" width="120" height="20" uuid="665c1df5-d522-4317-a89a-3246386757a2"/>
+				<textElement>
+					<font fontName="Arial" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{hasta}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="437" y="52" width="100" height="20" uuid="4919b8d3-4aa4-4d7c-a285-9eb3d78d902f"/>
+				<textElement>
+					<font fontName="Arial" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[HASTA:]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band splitType="Stretch"/>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="16" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="140" splitType="Stretch">
+			<crosstab>
+				<reportElement x="0" y="0" width="802" height="140" uuid="c2c3f5cc-a9ed-4d6e-a933-8d671e06860f"/>
+				<crosstabHeaderCell>
+					<cellContents backcolor="#EAE4E4" mode="Opaque">
+						<staticText>
+							<reportElement style="style1" x="0" y="14" width="52" height="14" uuid="0ec9b74e-c600-4d10-a8d6-b7deb31079c8"/>
+							<textElement textAlignment="Center">
+								<font fontName="Arial" size="8" isBold="true"/>
+							</textElement>
+							<text><![CDATA[DNI]]></text>
+						</staticText>
+						<staticText>
+							<reportElement style="style1" x="52" y="14" width="213" height="14" uuid="bbd1d703-3b8b-420b-9754-12c3c41173af"/>
+							<textElement textAlignment="Center">
+								<font fontName="Arial" size="8" isBold="true"/>
+							</textElement>
+							<text><![CDATA[APELLIDOS Y NOMBRES]]></text>
+						</staticText>
+					</cellContents>
+				</crosstabHeaderCell>
+				<rowGroup name="nombComp" width="0" totalPosition="End">
+					<bucket class="java.lang.String">
+						<bucketExpression><![CDATA[$F{nombComp}]]></bucketExpression>
+					</bucket>
+					<crosstabRowHeader>
+						<cellContents backcolor="#FFFABF" mode="Opaque">
+							<box>
+								<pen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+							</box>
+						</cellContents>
+					</crosstabRowHeader>
+					<crosstabTotalRowHeader>
+						<cellContents backcolor="#EAE4E4" mode="Opaque">
+							<box>
+								<pen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+							</box>
+							<staticText>
+								<reportElement style="style1" mode="Transparent" x="0" y="0" width="265" height="14" uuid="594f6801-4b46-4760-8297-8daab23bd725"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="Arial" size="8" isBold="true"/>
+								</textElement>
+								<text><![CDATA[Total]]></text>
+							</staticText>
+						</cellContents>
+					</crosstabTotalRowHeader>
+				</rowGroup>
+				<rowGroup name="dni" width="265" totalPosition="End">
+					<bucket class="java.lang.String">
+						<bucketExpression><![CDATA[$F{dni}]]></bucketExpression>
+					</bucket>
+					<crosstabRowHeader>
+						<cellContents backcolor="#FFFABF" mode="Transparent">
+							<box>
+								<pen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+							</box>
+							<textField>
+								<reportElement style="style1" x="0" y="0" width="52" height="14" uuid="50a27abb-207d-4500-b70f-60b66a6b782c"/>
+								<textElement textAlignment="Center">
+									<font fontName="Arial" size="8"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$V{dni}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement style="style1" x="52" y="0" width="213" height="14" uuid="0cd3633e-2a28-4823-843d-c53c3e28fb95"/>
+								<textElement>
+									<font fontName="Arial" size="8"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$V{nombComp}]]></textFieldExpression>
+							</textField>
+						</cellContents>
+					</crosstabRowHeader>
+					<crosstabTotalRowHeader>
+						<cellContents backcolor="#FFFDE6" mode="Opaque">
+							<box>
+								<pen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+							</box>
+						</cellContents>
+					</crosstabTotalRowHeader>
+				</rowGroup>
+				<columnGroup name="mes" height="14" totalPosition="End">
+					<bucket class="java.lang.Integer">
+						<bucketExpression><![CDATA[$V{mes}]]></bucketExpression>
+					</bucket>
+					<crosstabColumnHeader>
+						<cellContents backcolor="#EAE4E4" mode="Opaque">
+							<box>
+								<pen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+							</box>
+							<textField>
+								<reportElement style="style1" mode="Transparent" x="0" y="0" width="20" height="14" backcolor="#CCFFCC" uuid="6086d736-689b-492b-abc2-d1f486f4f51f"/>
+								<textElement textAlignment="Center">
+									<font fontName="Arial" size="8" isBold="true"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$V{mes}]]></textFieldExpression>
+							</textField>
+						</cellContents>
+					</crosstabColumnHeader>
+					<crosstabTotalColumnHeader>
+						<cellContents backcolor="#EAE4E4" mode="Opaque">
+							<box>
+								<pen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+							</box>
+							<staticText>
+								<reportElement style="style1" x="0" y="0" width="30" height="28" uuid="5a40eca9-4639-4939-86cb-f3c8fc208bbf"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="Arial" size="8" isBold="true"/>
+								</textElement>
+								<text><![CDATA[Total tard. (Min)]]></text>
+							</staticText>
+						</cellContents>
+					</crosstabTotalColumnHeader>
+				</columnGroup>
+				<columnGroup name="dia" height="14" totalPosition="End">
+					<bucket class="java.lang.Integer">
+						<bucketExpression><![CDATA[$V{dia}]]></bucketExpression>
+					</bucket>
+					<crosstabColumnHeader>
+						<cellContents backcolor="#EAE4E4" mode="Opaque">
+							<box>
+								<pen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+							</box>
+							<textField>
+								<reportElement style="style1" x="0" y="0" width="20" height="14" uuid="562b6dad-309e-4dde-a4f0-3d9ec022f580"/>
+								<textElement textAlignment="Center">
+									<font fontName="Arial" size="8" isBold="true"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$V{dia}]]></textFieldExpression>
+							</textField>
+						</cellContents>
+					</crosstabColumnHeader>
+					<crosstabTotalColumnHeader>
+						<cellContents backcolor="#FFFDE6" mode="Opaque">
+							<box>
+								<pen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+							</box>
+						</cellContents>
+					</crosstabTotalColumnHeader>
+				</columnGroup>
+				<measure name="extensionMeasure" class="java.lang.Integer" calculation="Sum">
+					<measureExpression><![CDATA[$F{extension}]]></measureExpression>
+				</measure>
+				<crosstabCell width="20" height="14">
+					<cellContents>
+						<box>
+							<pen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+						</box>
+						<textField isBlankWhenNull="true">
+							<reportElement style="style1" x="0" y="0" width="20" height="14" uuid="4908596b-b2a9-45c2-9948-02ed823ae754"/>
+							<textElement textAlignment="Center">
+								<font fontName="Arial" size="8"/>
+							</textElement>
+							<textFieldExpression><![CDATA[$V{extensionMeasure}]]></textFieldExpression>
+						</textField>
+					</cellContents>
+				</crosstabCell>
+				<crosstabCell width="0" height="14" columnTotalGroup="dia">
+					<cellContents backcolor="#FFFDE6" mode="Opaque">
+						<box>
+							<pen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+						</box>
+					</cellContents>
+				</crosstabCell>
+				<crosstabCell width="30" height="14" columnTotalGroup="mes">
+					<cellContents backcolor="#EAE4E4" mode="Opaque">
+						<box>
+							<pen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+						</box>
+						<textField>
+							<reportElement style="style1" x="0" y="0" width="30" height="14" uuid="dff3b73f-4841-4703-bab7-5b1078322707"/>
+							<textElement textAlignment="Right">
+								<font fontName="Arial" size="8" isBold="true"/>
+							</textElement>
+							<textFieldExpression><![CDATA[$V{extensionMeasure}]]></textFieldExpression>
+						</textField>
+					</cellContents>
+				</crosstabCell>
+				<crosstabCell width="20" height="0" rowTotalGroup="dni">
+					<cellContents backcolor="#FFFDE6" mode="Opaque">
+						<box>
+							<pen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+						</box>
+					</cellContents>
+				</crosstabCell>
+				<crosstabCell width="0" height="0" rowTotalGroup="dni" columnTotalGroup="dia">
+					<cellContents backcolor="#FFFDE6" mode="Opaque">
+						<box>
+							<pen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+						</box>
+					</cellContents>
+				</crosstabCell>
+				<crosstabCell width="30" height="0" rowTotalGroup="dni" columnTotalGroup="mes">
+					<cellContents backcolor="#BFB860" mode="Opaque">
+						<box>
+							<pen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+						</box>
+					</cellContents>
+				</crosstabCell>
+				<crosstabCell width="20" height="14" rowTotalGroup="nombComp">
+					<cellContents backcolor="#EAE4E4" mode="Opaque">
+						<box>
+							<pen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+						</box>
+						<textField>
+							<reportElement style="style1" mode="Transparent" x="0" y="0" width="20" height="14" uuid="deaa1951-84b7-480e-a470-91d232f9d9b1"/>
+							<textElement textAlignment="Center">
+								<font fontName="Arial" size="8" isBold="true"/>
+							</textElement>
+							<textFieldExpression><![CDATA[$V{extensionMeasure}]]></textFieldExpression>
+						</textField>
+					</cellContents>
+				</crosstabCell>
+				<crosstabCell width="0" height="14" rowTotalGroup="nombComp" columnTotalGroup="dia">
+					<cellContents backcolor="#BFB860" mode="Opaque">
+						<box>
+							<pen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+						</box>
+					</cellContents>
+				</crosstabCell>
+				<crosstabCell width="30" height="14" rowTotalGroup="nombComp" columnTotalGroup="mes">
+					<cellContents backcolor="#EAE4E4" mode="Opaque">
+						<box>
+							<pen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+						</box>
+						<textField>
+							<reportElement style="style1" mode="Transparent" x="0" y="0" width="30" height="14" uuid="2bbf55d3-5b32-4239-93a5-845adb71897f"/>
+							<textElement textAlignment="Right">
+								<font fontName="Arial" size="8" isBold="true"/>
+							</textElement>
+							<textFieldExpression><![CDATA[$V{extensionMeasure}]]></textFieldExpression>
+						</textField>
+					</cellContents>
+				</crosstabCell>
+			</crosstab>
+		</band>
+	</summary>
+</jasperReport>

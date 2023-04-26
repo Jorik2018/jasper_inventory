@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<jdbcDataAdapter class="net.sf.jasperreports.data.jdbc.JdbcDataAdapterImpl">
+  <name>SISGEDO Data Adapter</name>
+  <driver>org.postgresql.Driver</driver>
+  <username>postgres</username>
+  <password>GRAncash2020</password>
+  <url>jdbc:postgresql://172.16.0.9:5432/sisgedonew</url>
+  <database></database>
+  <savePassword>true</savePassword>
+  <serverAddress></serverAddress>
+</jdbcDataAdapter>

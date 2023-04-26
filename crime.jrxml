@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="842" pageHeight="595" orientation="Landscape" whenNoDataType="AllSectionsNoDetail" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="b88dc33b-9d27-49bc-9cfe-44bed450228d">
+	<property name="ireport.zoom" value="2.0"/>
+	<property name="ireport.x" value="665"/>
+	<property name="ireport.y" value="0"/>
+	<style name="style1">
+		<box topPadding="1" leftPadding="1" bottomPadding="1" rightPadding="1">
+			<topPen lineWidth="0.25"/>
+			<leftPen lineWidth="0.25"/>
+			<bottomPen lineWidth="0.25"/>
+			<rightPen lineWidth="0.25"/>
+		</box>
+	</style>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="typeName" class="java.lang.String">
+		<fieldDescription><![CDATA[crimeType.name]]></fieldDescription>
+	</field>
+	<field name="description" class="java.lang.String">
+		<fieldDescription><![CDATA[description]]></fieldDescription>
+	</field>
+	<field name="ext" class="java.lang.Object">
+		<fieldDescription><![CDATA[ext]]></fieldDescription>
+	</field>
+	<field name="fecha" class="java.util.Date">
+		<fieldDescription><![CDATA[fecha]]></fieldDescription>
+	</field>
+	<field name="sex" class="java.lang.Object">
+		<fieldDescription><![CDATA[sex]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="14" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="802" height="14" uuid="40154c52-661e-4fed-ab20-3a201d72238c"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["INCIDENTES REPORTADOS EN REGION"]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="14" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="19" splitType="Stretch">
+			<staticText>
+				<reportElement style="style1" x="0" y="0" width="60" height="19" uuid="38359771-f8f4-4991-8224-b3569df63ece"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[FECHA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="style1" x="60" y="0" width="172" height="19" uuid="b5564f8f-3e5e-4cac-a5d1-34fb85bb1938"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[TIPO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="style1" x="232" y="0" width="286" height="19" uuid="ddeeed76-f539-41e1-8870-b4feb9c7ddc3"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[DESCRIPCIÓN]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="style1" x="682" y="0" width="120" height="19" uuid="1327a11b-f7da-4f1a-ab0c-6f5b89a75c2c"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[DISTRITO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="style1" x="562" y="0" width="120" height="19" uuid="1f1f9d7b-b649-4482-88d4-3eedbee486a0"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[PROVINCIA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="style1" x="518" y="0" width="44" height="19" uuid="2d805275-adba-4612-b96d-02d913b86ce3"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Sexo Agraviado]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="14" splitType="Stretch">
+			<textField isStretchWithOverflow="true" pattern="dd/MM/yyyy" isBlankWhenNull="true">
+				<reportElement style="style1" stretchType="RelativeToTallestObject" x="0" y="0" width="60" height="14" uuid="1db8f8d6-edef-470f-b1ca-2f3dea2d4ae1"/>
+				<textElement textAlignment="Center">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{fecha}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement style="style1" stretchType="RelativeToTallestObject" x="60" y="0" width="172" height="14" uuid="62fa61f5-5765-4d18-afbc-64a6d69af8f5"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{typeName}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement style="style1" stretchType="RelativeToTallestObject" x="232" y="0" width="286" height="14" uuid="ab3c5a91-00d9-4e7b-af1f-7efd6775b620"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{description}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement style="style1" stretchType="RelativeToTallestObject" x="682" y="0" width="120" height="14" uuid="6e1751e5-a474-4fd3-8480-6f4a53c74b74"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{ext}!=null?((Object[])$F{ext})[1]:""]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement style="style1" stretchType="RelativeToTallestObject" x="562" y="0" width="120" height="14" uuid="b0a6b66c-257e-41e9-a1ee-3f2d556cad87"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{ext}!=null?((Object[])$F{ext})[3]:""]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement style="style1" stretchType="RelativeToTallestObject" x="518" y="0" width="44" height="14" uuid="a400a2ba-c09f-44e3-bddc-ecb36c20f0d7"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{sex}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="14" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="14" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

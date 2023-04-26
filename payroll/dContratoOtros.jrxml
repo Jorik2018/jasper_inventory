@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="style1">
+		<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+			<topPen lineWidth="0.5"/>
+			<leftPen lineWidth="0.5"/>
+			<bottomPen lineWidth="0.5"/>
+			<rightPen lineWidth="0.5"/>
+		</box>
+	</style>
+	<parameter name="logo" class="java.awt.Image"/>
+	<queryString>
+		<![CDATA[select esc_contratos_otros.id_cno,esc_contratos_otros.id_esc,drt_personanatural.nombre_completo,esc_contratos_otros.id_dep,trim(concat(org_dep_tipo.nombre_dep_tipo,' ',org_dependencia.nombre_dep)) dependencia,esc_contratos_otros.id_cap,esc_contratos_otros.id_tipo,esc_tipo_personal.tipo,esc_contratos_otros.id_servicio,esc_servicios.servicio,esc_contratos_otros.fec_inicio,esc_contratos_otros.fec_fin,0 anio,0 mes, 0 dia,esc_contratos_otros.monto,esc_contratos_otros.id_dtra,esc_contratos_otros.mencion,esc_contratos_otros.periodo,esc_contratos_otros.adhonoren,esc_contratos_otros.estado
+from esc_contratos_otros
+inner join esc_personal on esc_contratos_otros.id_esc=esc_personal.id_esc
+inner join drt_personanatural on drt_personanatural.id_dir=esc_personal.id_dir
+LEFT OUTER JOIN org_dependencia on org_dependencia.id_dep=esc_contratos_otros.id_dep LEFT OUTER JOIN org_dep_tipo on org_dep_tipo.id_dep_tipo=org_dependencia.id_dep_tipo LEFT OUTER JOIN esc_servicios on esc_servicios.id_servicio=esc_contratos_otros.id_servicio LEFT OUTER JOIN esc_tipo_personal on esc_tipo_personal.id_tipo=esc_contratos_otros.id_tipo where esc_contratos_otros.id_esc=11449]]>
+	</queryString>
+	<field name="id_cno" class="java.lang.Integer"/>
+	<field name="id_esc" class="java.lang.Integer"/>
+	<field name="nombre_completo" class="java.lang.String"/>
+	<field name="id_dep" class="java.lang.Integer"/>
+	<field name="dependencia" class="java.lang.String"/>
+	<field name="id_cap" class="java.lang.Integer"/>
+	<field name="id_tipo" class="java.lang.Integer"/>
+	<field name="tipo" class="java.lang.String"/>
+	<field name="id_servicio" class="java.lang.Integer"/>
+	<field name="servicio" class="java.lang.String"/>
+	<field name="fec_inicio" class="java.sql.Timestamp"/>
+	<field name="fec_fin" class="java.sql.Timestamp"/>
+	<field name="anio" class="java.lang.Long"/>
+	<field name="mes" class="java.lang.Long"/>
+	<field name="dia" class="java.lang.Long"/>
+	<field name="monto" class="java.math.BigDecimal"/>
+	<field name="id_dtra" class="java.lang.String"/>
+	<field name="mencion" class="java.lang.String"/>
+	<field name="periodo" class="java.lang.String"/>
+	<field name="adhonoren" class="java.lang.Integer"/>
+	<field name="estado" class="java.lang.Boolean"/>
+	<group name="g_id_esc">
+		<groupExpression><![CDATA[$F{id_esc}]]></groupExpression>
+		<groupHeader>
+			<band height="39">
+				<staticText>
+					<reportElement style="style1" mode="Opaque" x="19" y="19" width="241" height="20" backcolor="#CCCCCC"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Servicio]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="style1" mode="Opaque" x="260" y="19" width="100" height="20" backcolor="#CCCCCC"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Documento]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="style1" mode="Opaque" x="360" y="19" width="56" height="20" backcolor="#CCCCCC"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Fecha Ini]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="style1" mode="Opaque" x="472" y="19" width="27" height="20" backcolor="#CCCCCC"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Año]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="style1" mode="Opaque" x="499" y="19" width="27" height="20" backcolor="#CCCCCC"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Mes]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="style1" mode="Opaque" x="526" y="19" width="27" height="20" backcolor="#CCCCCC"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Dia]]></text>
+				</staticText>
+				<textField>
+					<reportElement style="style1" mode="Opaque" x="78" y="0" width="709" height="20" backcolor="#CCCCCC"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{nombre_completo}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement style="style1" mode="Opaque" x="416" y="20" width="56" height="19" backcolor="#CCCCCC"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Fecha Fin]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="style1" mode="Opaque" x="553" y="20" width="234" height="19" backcolor="#CCCCCC"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Dependencia]]></text>
+				</staticText>
+				<textField>
+					<reportElement style="style1" mode="Opaque" x="19" y="0" width="59" height="20" backcolor="#CCCCCC"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{id_esc}]]></textFieldExpression>
+				</textField>
+			</band>
+		</groupHeader>
+		<groupFooter>
+			<band height="16">
+				<textField>
+					<reportElement style="style1" x="526" y="0" width="27" height="15"/>
+					<textElement textAlignment="Center">
+						<font size="7"/>
+					</textElement>
+					<textFieldExpression><![CDATA["0"]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="style1" x="499" y="0" width="27" height="15"/>
+					<textElement textAlignment="Center">
+						<font size="7"/>
+					</textElement>
+					<textFieldExpression><![CDATA["0"]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="style1" x="472" y="0" width="27" height="15"/>
+					<textElement textAlignment="Center">
+						<font size="7"/>
+					</textElement>
+					<textFieldExpression><![CDATA["0"]]></textFieldExpression>
+				</textField>
+			</band>
+		</groupFooter>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="67" splitType="Stretch">
+			<image>
+				<reportElement x="19" y="0" width="71" height="67"/>
+				<imageExpression><![CDATA[$P{logo}]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="40" splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="15" splitType="Stretch">
+			<textField isStretchWithOverflow="true">
+				<reportElement style="style1" stretchType="RelativeToTallestObject" x="19" y="0" width="241" height="15" isRemoveLineWhenBlank="true" isPrintInFirstWholeBand="true" isPrintWhenDetailOverflows="true"/>
+				<textElement>
+					<font size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{servicio}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement style="style1" stretchType="RelativeToTallestObject" x="260" y="0" width="100" height="15" isPrintWhenDetailOverflows="true"/>
+				<textElement textAlignment="Center">
+					<font size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{id_dtra}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="dd/MM/yyyy">
+				<reportElement style="style1" stretchType="RelativeToTallestObject" x="360" y="0" width="56" height="15" isPrintWhenDetailOverflows="true"/>
+				<textElement textAlignment="Center">
+					<font size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{fec_inicio}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement style="style1" stretchType="RelativeToTallestObject" x="472" y="0" width="27" height="15" isPrintWhenDetailOverflows="true"/>
+				<textElement textAlignment="Center">
+					<font size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{anio}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement style="style1" stretchType="RelativeToTallestObject" x="499" y="0" width="27" height="15" isPrintWhenDetailOverflows="true"/>
+				<textElement textAlignment="Center">
+					<font size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{mes}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement style="style1" stretchType="RelativeToTallestObject" x="526" y="0" width="27" height="15" isPrintWhenDetailOverflows="true"/>
+				<textElement textAlignment="Center">
+					<font size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{dia}]]></textFieldExpression>
+			</textField>
+			<textField pattern="dd/MM/yyyy">
+				<reportElement style="style1" stretchType="RelativeToTallestObject" x="416" y="0" width="56" height="15"/>
+				<textElement textAlignment="Center">
+					<font size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{fec_fin}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="style1" stretchType="RelativeToTallestObject" x="553" y="0" width="234" height="15"/>
+				<textElement>
+					<font size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{dependencia}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="20" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

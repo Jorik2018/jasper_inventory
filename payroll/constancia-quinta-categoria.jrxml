@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="c8103030-507b-496b-8361-4d9cce2cc307">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="204"/>
+	<property name="ireport.y" value="0"/>
+	<style name="bordered">
+		<box topPadding="1" leftPadding="2" bottomPadding="1" rightPadding="2">
+			<pen lineWidth="0.25"/>
+			<topPen lineWidth="0.25"/>
+			<leftPen lineWidth="0.25"/>
+			<bottomPen lineWidth="0.25"/>
+			<rightPen lineWidth="0.25"/>
+		</box>
+	</style>
+	<style name="header" style="bordered" mode="Opaque" forecolor="#000000" backcolor="#CCCCCC" fill="Solid" isBold="true">
+		<box topPadding="1" leftPadding="1" bottomPadding="1" rightPadding="1"/>
+	</style>
+	<parameter name="COMPANY_NAME" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["UNIVERSIDAD NACIONAL DEL SANTA"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="COMPANY_LOGO" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["G:\\proyecto\\oceca\\web\\images\\uns.jpg"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="COUNTRY_LOGO" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["G:\\proyecto\\oceca\\web\\images\\uns.jpg"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="FIRMA_1" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="FIRMA_2" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="MES_MAP" class="java.util.Map" isForPrompting="false">
+		<defaultValueExpression><![CDATA[new java.util.HashMap()]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="numeroPndid" class="java.lang.String">
+		<fieldDescription><![CDATA[personal.drtPersonaNatural.numeroPndid]]></fieldDescription>
+	</field>
+	<field name="nombreCompleto" class="java.lang.String">
+		<fieldDescription><![CDATA[personal.drtPersonaNatural.nombreCompleto]]></fieldDescription>
+	</field>
+	<field name="tipo" class="java.lang.String">
+		<fieldDescription><![CDATA[personal.escTipoPersonal.tipo]]></fieldDescription>
+	</field>
+	<field name="ruc" class="java.lang.String">
+		<fieldDescription><![CDATA[personal.ruc]]></fieldDescription>
+	</field>
+	<field name="ingresoBruto" class="java.math.BigDecimal">
+		<fieldDescription><![CDATA[pdtQuinta.bruto]]></fieldDescription>
+	</field>
+	<field name="rentaQuinta" class="java.math.BigDecimal">
+		<fieldDescription><![CDATA[pdtQuinta.quinta]]></fieldDescription>
+	</field>
+	<field name="dedicacion" class="java.lang.String">
+		<fieldDescription><![CDATA[dedicacion]]></fieldDescription>
+	</field>
+	<field name="categoria" class="java.lang.String">
+		<fieldDescription><![CDATA[categoria]]></fieldDescription>
+	</field>
+	<field name="mes" class="java.lang.Integer">
+		<fieldDescription><![CDATA[pdtQuinta.pdtQuintaPK.mes]]></fieldDescription>
+	</field>
+	<field name="anio" class="java.lang.Integer">
+		<fieldDescription><![CDATA[pdtQuinta.pdtQuintaPK.anio]]></fieldDescription>
+	</field>
+	<field name="idEsc" class="java.lang.Integer">
+		<fieldDescription><![CDATA[personal.idEsc]]></fieldDescription>
+	</field>
+	<variable name="ingresoBruto_1" class="java.math.BigDecimal" resetType="Group" resetGroup="dni" calculation="Sum">
+		<variableExpression><![CDATA[$F{ingresoBruto}]]></variableExpression>
+	</variable>
+	<variable name="rentaQuinta_1" class="java.math.BigDecimal" resetType="Group" resetGroup="dni" calculation="Sum">
+		<variableExpression><![CDATA[$F{rentaQuinta}]]></variableExpression>
+	</variable>
+	<group name="dni" isResetPageNumber="true" keepTogether="true">
+		<groupExpression><![CDATA[$F{idEsc}]]></groupExpression>
+		<groupHeader>
+			<band height="248">
+				<staticText>
+					<reportElement key="staticText-2" style="header" positionType="Float" mode="Opaque" x="0" y="218" width="111" height="30" isPrintInFirstWholeBand="true" backcolor="#CCCCCC" uuid="2d663dd8-4ca8-4040-9067-a6d03c318831"/>
+					<box topPadding="1" leftPadding="1" bottomPadding="1" rightPadding="1">
+						<pen lineWidth="0.25"/>
+						<topPen lineWidth="0.25"/>
+						<leftPen lineWidth="0.25"/>
+						<bottomPen lineWidth="0.25"/>
+						<rightPen lineWidth="0.25"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font isBold="true" pdfFontName="Helvetica-Bold"/>
+					</textElement>
+					<text><![CDATA[MES]]></text>
+				</staticText>
+				<staticText>
+					<reportElement key="staticText-4" style="header" positionType="Float" mode="Opaque" x="111" y="218" width="111" height="30" isPrintInFirstWholeBand="true" backcolor="#CCCCCC" uuid="eab413cd-c250-4275-81d3-b9134e635ef7"/>
+					<box topPadding="1" leftPadding="1" bottomPadding="1" rightPadding="1">
+						<pen lineWidth="0.25"/>
+						<topPen lineWidth="0.25"/>
+						<leftPen lineWidth="0.25"/>
+						<bottomPen lineWidth="0.25"/>
+						<rightPen lineWidth="0.25"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font isBold="true" pdfFontName="Helvetica-Bold"/>
+					</textElement>
+					<text><![CDATA[CATEGORIA]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="false">
+					<reportElement key="textField-1" x="1" y="174" width="554" height="13" uuid="e66c30f1-9c35-481a-bb3c-b92bdd10db0e"/>
+					<textElement textAlignment="Justified" markup="html">
+						<font fontName="Arial"/>
+					</textElement>
+					<textFieldExpression><![CDATA["Que, en conformidad a la normativa establecida, se han efectuado retenciones por Concepto de <b>Impuesto a la Renta de Quinta Categoria</b> a los ingresos percibidos mensualmente al "+$F{tipo}+" <b>"+$F{nombreCompleto}+"</b>, en ejercicio de sus funciones en la Universidad Nacional del Santa"]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement key="staticText-3" mode="Transparent" x="0" y="90" width="555" height="17" backcolor="#FFFFFF" uuid="96b6cb23-8c71-4a7f-961a-85d435269cd7"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Arial" size="12" isBold="true" pdfFontName="Helvetica-Bold"/>
+					</textElement>
+					<text><![CDATA[CERTIFICADO DE RENTA DE QUINTA CATEGORIA]]></text>
+				</staticText>
+				<staticText>
+					<reportElement key="staticText-6" mode="Transparent" x="0" y="145" width="555" height="29" backcolor="#FFFFFF" uuid="21b32c05-5096-4cc6-8b7f-5885884db229"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Arial" size="12" isBold="true" pdfFontName="Helvetica-Bold"/>
+					</textElement>
+					<text><![CDATA[HACE CONSTAR]]></text>
+				</staticText>
+				<staticText>
+					<reportElement key="staticText-7" mode="Transparent" x="65" y="50" width="425" height="20" backcolor="#FFFFFF" uuid="d4e88ce2-455a-48d0-b275-9f6895693e89"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Arial" size="11" isBold="true" pdfFontName="Helvetica-Bold"/>
+					</textElement>
+					<text><![CDATA[OFICINA DE REMUNERACIONES]]></text>
+				</staticText>
+				<image scaleImage="RetainShape" vAlign="Middle" isUsingCache="false" onErrorType="Blank">
+					<reportElement key="image-2" mode="Transparent" x="490" y="0" width="65" height="70" forecolor="#FFFFFF" uuid="e5eecc07-969f-47cd-aa54-b3e4994661f2"/>
+					<graphicElement fill="Solid"/>
+					<imageExpression><![CDATA[$P{COUNTRY_LOGO}]]></imageExpression>
+				</image>
+				<staticText>
+					<reportElement key="staticText-1" mode="Transparent" x="65" y="0" width="425" height="30" backcolor="#FFFFFF" uuid="8e65484f-f9a9-4dda-92b3-54d29a4974e0"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Arial" size="17" isBold="true" pdfFontName="Helvetica-Bold"/>
+					</textElement>
+					<text><![CDATA[UNIVERSIDAD NACIONAL DEL SANTA]]></text>
+				</staticText>
+				<image scaleImage="RetainShape" vAlign="Middle" onErrorType="Blank">
+					<reportElement key="image-1" mode="Transparent" x="0" y="0" width="65" height="70" uuid="b557af96-bd36-4160-af17-2fa5c10d29ae"/>
+					<imageExpression><![CDATA[$P{COMPANY_LOGO}]]></imageExpression>
+				</image>
+				<staticText>
+					<reportElement key="staticText-2" mode="Transparent" x="65" y="30" width="425" height="20" backcolor="#FFFFFF" uuid="ce6f4d3f-8d79-4a81-bb2b-d8a8c6ca4e24"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Arial" size="13" isBold="true" pdfFontName="Helvetica-Bold"/>
+					</textElement>
+					<text><![CDATA[DIRECCIÓN DE RECURSOS HUMANOS]]></text>
+				</staticText>
+				<staticText>
+					<reportElement key="staticText-5" mode="Transparent" x="0" y="117" width="555" height="28" backcolor="#FFFFFF" uuid="d8033f06-4b2c-4ea6-af8a-557c83273d6f"/>
+					<textElement textAlignment="Justified" verticalAlignment="Middle">
+						<font fontName="Arial" size="10" isBold="true" pdfFontName="Helvetica-Bold"/>
+					</textElement>
+					<text><![CDATA[QUIEN SUSCRIBE, DIRECTOR DE LA DIRECCIÓN DE RECURSOS HUMANOS DE LA UNIVERSIDAD NACIONAL DEL SANTA]]></text>
+				</staticText>
+				<staticText>
+					<reportElement key="staticText-6" style="header" positionType="Float" mode="Opaque" x="333" y="218" width="111" height="30" isPrintInFirstWholeBand="true" backcolor="#CCCCCC" uuid="cb84c723-5750-483f-b87b-b4aed8f754fe"/>
+					<box topPadding="1" leftPadding="1" bottomPadding="1" rightPadding="1">
+						<pen lineWidth="0.25"/>
+						<topPen lineWidth="0.25"/>
+						<leftPen lineWidth="0.25"/>
+						<bottomPen lineWidth="0.25"/>
+						<rightPen lineWidth="0.25"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font isBold="true" pdfFontName="Helvetica-Bold"/>
+					</textElement>
+					<text><![CDATA[Ingreso
+Bruto]]></text>
+				</staticText>
+				<staticText>
+					<reportElement key="staticText-7" positionType="Float" mode="Opaque" x="444" y="218" width="111" height="30" isPrintInFirstWholeBand="true" backcolor="#CCCCCC" uuid="4056ae00-6d09-4cb7-9019-e2bbc9dd9163"/>
+					<box topPadding="1" leftPadding="1" bottomPadding="1" rightPadding="1">
+						<pen lineWidth="0.25"/>
+						<topPen lineWidth="0.25"/>
+						<leftPen lineWidth="0.25"/>
+						<bottomPen lineWidth="0.25"/>
+						<rightPen lineWidth="0.25"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font isBold="true" pdfFontName="Helvetica-Bold"/>
+					</textElement>
+					<text><![CDATA[Renta 5ta
+Categoria]]></text>
+				</staticText>
+				<textField pattern="####" isBlankWhenNull="false">
+					<reportElement key="textField-2" style="bordered" positionType="Float" isPrintRepeatedValues="false" x="0" y="200" width="555" height="18" isRemoveLineWhenBlank="true" isPrintInFirstWholeBand="true" isPrintWhenDetailOverflows="true" uuid="fe8d9bd0-e43d-4fe9-9dce-55898048aa7f"/>
+					<box topPadding="1" leftPadding="2" bottomPadding="1" rightPadding="2">
+						<pen lineWidth="0.25"/>
+						<topPen lineWidth="0.25"/>
+						<leftPen lineWidth="0.25"/>
+						<bottomPen lineWidth="0.25"/>
+						<rightPen lineWidth="0.25"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font isBold="true" pdfFontName="Helvetica-Bold"/>
+					</textElement>
+					<textFieldExpression><![CDATA["Ejercicio "+$F{anio}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement key="staticText-5" style="header" positionType="Float" mode="Opaque" x="222" y="218" width="111" height="30" isPrintInFirstWholeBand="true" backcolor="#CCCCCC" uuid="b7664e5f-00ec-48a4-a670-f21aaee3fd21"/>
+					<box topPadding="1" leftPadding="1" bottomPadding="1" rightPadding="1">
+						<pen lineWidth="0.25"/>
+						<topPen lineWidth="0.25"/>
+						<leftPen lineWidth="0.25"/>
+						<bottomPen lineWidth="0.25"/>
+						<rightPen lineWidth="0.25"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font isBold="true" pdfFontName="Helvetica-Bold"/>
+					</textElement>
+					<text><![CDATA[DEDICACION]]></text>
+				</staticText>
+			</band>
+		</groupHeader>
+		<groupFooter>
+			<band height="59">
+				<textField isStretchWithOverflow="true">
+					<reportElement key="staticText-8" x="0" y="32" width="555" height="14" uuid="6717965a-591d-4253-8bcf-60fb70e288b2"/>
+					<textElement markup="none"/>
+					<textFieldExpression><![CDATA["Se expide la presente constancia a solicitud del interesado para los fines que estime conveniente."]]></textFieldExpression>
+				</textField>
+				<textField pattern="###0.00;###0.00-" isBlankWhenNull="true">
+					<reportElement style="bordered" mode="Transparent" x="333" y="0" width="111" height="20" forecolor="#000000" backcolor="#FFFFFF" uuid="bf8c2b29-0751-40b9-b895-6f9ba1bb169d"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle" rotation="None" markup="none">
+						<font fontName="SansSerif" size="10" isBold="true" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+						<paragraph lineSpacing="Single"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$V{ingresoBruto_1}]]></textFieldExpression>
+				</textField>
+				<textField pattern="###0.00;###0.00-" isBlankWhenNull="true">
+					<reportElement style="bordered" mode="Transparent" x="444" y="0" width="111" height="20" forecolor="#000000" backcolor="#FFFFFF" uuid="156c4cf6-9e34-4316-968f-0128cd5f52fb"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle" rotation="None" markup="none">
+						<font fontName="SansSerif" size="10" isBold="true" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+						<paragraph lineSpacing="Single"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$V{rentaQuinta_1}]]></textFieldExpression>
+				</textField>
+			</band>
+		</groupFooter>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement style="bordered" x="0" y="0" width="111" height="20" uuid="4aba5018-ff2b-419e-93fc-01fc6cf72448"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{MES_MAP}.get($F{mes})]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement style="bordered" x="111" y="0" width="111" height="20" uuid="3f589455-e4af-4977-abb2-a6555b2b7eba"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{categoria}]]></textFieldExpression>
+			</textField>
+			<textField pattern="###0.00;###0.00-" isBlankWhenNull="true">
+				<reportElement style="bordered" x="444" y="0" width="111" height="20" uuid="0b36ecb7-0ddc-4685-8b87-bee049f7b9af"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{rentaQuinta}]]></textFieldExpression>
+			</textField>
+			<textField pattern="###0.00;###0.00-" isBlankWhenNull="true">
+				<reportElement style="bordered" x="333" y="0" width="111" height="20" uuid="525872e5-133e-4387-aa49-01eec05bedf1"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{ingresoBruto}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement style="bordered" x="222" y="0" width="111" height="20" uuid="029a8a3a-f875-4ccd-b80f-4bf11a1c05bb"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{dedicacion}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="160" splitType="Stretch">
+			<rectangle radius="5">
+				<reportElement mode="Transparent" x="0" y="147" width="555" height="13" uuid="a9674a08-3fec-4008-87ba-e85bc38c2100"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement x="126" y="147" width="302" height="13" uuid="5a7dc68e-876f-4030-983d-0c625a48916f"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="8"/>
+				</textElement>
+				<text><![CDATA[Sistema de Información Integral de Gestión Academica y Administrativa]]></text>
+			</staticText>
+			<textField evaluationTime="Report">
+				<reportElement x="528" y="147" width="23" height="13" uuid="b3944b88-6241-4d9f-8153-a1b302698040"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Arial" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="452" y="147" width="93" height="13" uuid="d451a1da-696f-4cef-b686-b485041ccd2c"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Arial" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Página "+$V{PAGE_NUMBER}+" de"]]></textFieldExpression>
+			</textField>
+			<textField pattern="dd/MM/yyyy HH:mm:ss">
+				<reportElement x="4" y="147" width="100" height="13" uuid="f5e261fc-411f-4903-9396-e40e3a0a503a"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Arial" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement key="staticText-9" positionType="FixRelativeToBottom" x="0" y="0" width="278" height="59" uuid="19e30e42-8619-4bc2-9f9c-7a47d076ea6a"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="html">
+					<font isItalic="false" pdfFontName="Helvetica"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{FIRMA_1}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement key="staticText-10" positionType="FixRelativeToBottom" x="278" y="0" width="277" height="60" uuid="da6d141f-8869-4fcb-937a-dd483d2c1537"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="html">
+					<font isItalic="false" pdfFontName="Helvetica"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{FIRMA_2}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

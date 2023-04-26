@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="842" pageHeight="595" orientation="Landscape" whenNoDataType="AllSectionsNoDetail" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="80eaadaa-9b35-4bf4-946c-2d5405f8c8b5">
+	<property name="ireport.zoom" value="1.5"/>
+	<property name="ireport.x" value="351"/>
+	<property name="ireport.y" value="0"/>
+	<style name="style1">
+		<box topPadding="1" leftPadding="1" bottomPadding="1" rightPadding="1">
+			<topPen lineWidth="0.25"/>
+			<leftPen lineWidth="0.25"/>
+			<bottomPen lineWidth="0.25"/>
+			<rightPen lineWidth="0.25"/>
+		</box>
+	</style>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="typeName" class="java.lang.String">
+		<fieldDescription><![CDATA[riskType.name]]></fieldDescription>
+	</field>
+	<field name="fechaFin" class="java.util.Date">
+		<fieldDescription><![CDATA[fechaFin]]></fieldDescription>
+	</field>
+	<field name="fechaIni" class="java.util.Date">
+		<fieldDescription><![CDATA[fechaIni]]></fieldDescription>
+	</field>
+	<field name="status" class="java.lang.Boolean">
+		<fieldDescription><![CDATA[status]]></fieldDescription>
+	</field>
+	<field name="description" class="java.lang.String">
+		<fieldDescription><![CDATA[description]]></fieldDescription>
+	</field>
+	<field name="ext" class="java.lang.Object">
+		<fieldDescription><![CDATA[ext]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="14" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="802" height="14" uuid="4ca34b0e-ff10-44a3-afc0-61922a4bad27"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["RIESGOS REPORTADOS EN REGION"]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="14" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="14" splitType="Stretch">
+			<staticText>
+				<reportElement style="style1" x="331" y="0" width="187" height="14" uuid="5b109c7d-3220-4e6b-af02-590b608923d0"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[DESCRIPCIÓN]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="style1" x="159" y="0" width="172" height="14" uuid="67aab91b-18d9-4984-baa7-1236c55733f7"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[TIPO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="style1" x="0" y="0" width="39" height="14" uuid="542c7325-c921-4ef9-929e-d6e608324031"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nº]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="style1" x="39" y="0" width="60" height="14" uuid="5e21a1a6-a8b9-49b0-9b80-34dcfbf91431"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[DESDE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="style1" x="99" y="0" width="60" height="14" uuid="b5beb43e-265a-49e6-9bc2-9df6b0556bfc"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[HASTA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="style1" x="518" y="0" width="133" height="14" uuid="6e5f2629-57ef-4236-8fb2-141ebebadfdd"/>
+				<textElement textAlignment="Center">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[PROVINCIA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="style1" x="651" y="0" width="151" height="14" uuid="f5b47eec-09e5-4ae4-a623-3f87534b5f16"/>
+				<textElement textAlignment="Center">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[DISTRITO]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="14" splitType="Stretch">
+			<textField isBlankWhenNull="true">
+				<reportElement style="style1" x="331" y="0" width="187" height="14" uuid="35556d4e-31dc-4a42-9f45-ecfaea183aab"/>
+				<textElement>
+					<font fontName="Arial" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{description}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement style="style1" x="159" y="0" width="172" height="14" uuid="0a671830-29fc-4a29-b047-86bd7f0e5ac5"/>
+				<textElement>
+					<font fontName="Arial" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{typeName}]]></textFieldExpression>
+			</textField>
+			<textField pattern="0000" isBlankWhenNull="true">
+				<reportElement style="style1" x="0" y="0" width="39" height="14" uuid="5b3843b5-6f27-419a-baf5-a108f3103d0a"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{REPORT_COUNT}]]></textFieldExpression>
+			</textField>
+			<textField pattern="dd/MM/yyyy" isBlankWhenNull="true">
+				<reportElement style="style1" x="39" y="0" width="60" height="14" uuid="e5f572cd-b409-4f07-8234-51ac45aed86f"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{fechaIni}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement style="style1" stretchType="RelativeToTallestObject" x="518" y="0" width="133" height="14" uuid="b112c73d-5d68-446a-866a-1c14f53b7dae"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{ext}!=null?((Object[])$F{ext})[3]:""]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement style="style1" stretchType="RelativeToTallestObject" x="651" y="0" width="151" height="14" uuid="b5cfdd6a-251a-4884-8204-d047bc234a83"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{ext}!=null?((Object[])$F{ext})[1]:""]]></textFieldExpression>
+			</textField>
+			<textField pattern="dd/MM/yyyy" isBlankWhenNull="true">
+				<reportElement style="style1" x="99" y="0" width="60" height="14" uuid="c4801c74-8030-4501-af9b-b841f959f8eb"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{fechaFin}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="14" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="14" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="14" splitType="Stretch"/>
+	</summary>
+</jasperReport>

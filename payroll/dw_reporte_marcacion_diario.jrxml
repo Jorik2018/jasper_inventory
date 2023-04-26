@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="44bcf51d-1e6b-4476-b83c-c72497efccd2">
+	<property name="ireport.zoom" value="1.5"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="style1">
+		<box topPadding="1" leftPadding="1" bottomPadding="1" rightPadding="1">
+			<pen lineWidth="0.5"/>
+			<topPen lineWidth="0.25"/>
+			<leftPen lineWidth="0.25"/>
+			<bottomPen lineWidth="0.25"/>
+			<rightPen lineWidth="0.25"/>
+		</box>
+	</style>
+	<style name="style1_1">
+		<box topPadding="1" leftPadding="1" bottomPadding="1" rightPadding="1">
+			<pen lineWidth="0.5"/>
+			<topPen lineWidth="0.0"/>
+			<leftPen lineWidth="0.0"/>
+			<bottomPen lineWidth="0.0"/>
+			<rightPen lineWidth="0.0"/>
+		</box>
+	</style>
+	<parameter name="COMPANY_LOGO" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="modLaboral" class="java.lang.Object" isForPrompting="false"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="estado" class="java.lang.Character">
+		<fieldDescription><![CDATA[estado]]></fieldDescription>
+	</field>
+	<field name="marcacionPK" class="org.pegasus.personal.jpa.MarcacionPK">
+		<fieldDescription><![CDATA[marcacionPK]]></fieldDescription>
+	</field>
+	<field name="fechaHora" class="java.util.Date">
+		<fieldDescription><![CDATA[marcacionPK.fechaHora]]></fieldDescription>
+	</field>
+	<field name="dni" class="java.lang.String">
+		<fieldDescription><![CDATA[marcacionPK.dni]]></fieldDescription>
+	</field>
+	<field name="observ" class="java.lang.String">
+		<fieldDescription><![CDATA[observ]]></fieldDescription>
+	</field>
+	<field name="personal" class="org.pegasus.personal.jpa.Personal">
+		<fieldDescription><![CDATA[personal]]></fieldDescription>
+	</field>
+	<field name="nombComp" class="java.lang.String">
+		<fieldDescription><![CDATA[personal.nombComp]]></fieldDescription>
+	</field>
+	<field name="registro" class="java.lang.Character">
+		<fieldDescription><![CDATA[registro]]></fieldDescription>
+	</field>
+	<field name="tipo" class="java.lang.Character">
+		<fieldDescription><![CDATA[tipo]]></fieldDescription>
+	</field>
+	<field name="tipoHor" class="java.lang.Character">
+		<fieldDescription><![CDATA[tipoHor]]></fieldDescription>
+	</field>
+	<field name="turno" class="java.lang.Character">
+		<fieldDescription><![CDATA[turno]]></fieldDescription>
+	</field>
+	<field name="descCargo" class="java.lang.String">
+		<fieldDescription><![CDATA[personal.descCargo]]></fieldDescription>
+	</field>
+	<field name="TURNO_MAP" class="java.util.Map">
+		<fieldDescription><![CDATA[TURNO_MAP]]></fieldDescription>
+	</field>
+	<field name="TIPO_MAP" class="java.util.Map">
+		<fieldDescription><![CDATA[TIPO_MAP]]></fieldDescription>
+	</field>
+	<field name="MOVIMIENTO_MAP" class="java.util.Map">
+		<fieldDescription><![CDATA[MOVIMIENTO_MAP]]></fieldDescription>
+	</field>
+	<field name="TIPO_HORARIO_MAP" class="java.util.Map">
+		<fieldDescription><![CDATA[TIPO_HORARIO_MAP]]></fieldDescription>
+	</field>
+	<field name="modLaboral" class="org.pegasus.personal.jpa.ModLaboral">
+		<fieldDescription><![CDATA[personal.modLaboral]]></fieldDescription>
+	</field>
+	<variable name="fechaHora_1" class="java.lang.Integer" resetType="Page" calculation="Count">
+		<variableExpression><![CDATA[$F{fechaHora}]]></variableExpression>
+	</variable>
+	<variable name="fechaHora_2" class="java.util.Date" calculation="Lowest">
+		<variableExpression><![CDATA[$F{fechaHora}]]></variableExpression>
+	</variable>
+	<variable name="fechaHora_3" class="java.util.Date" calculation="Highest">
+		<variableExpression><![CDATA[$F{fechaHora}]]></variableExpression>
+	</variable>
+	<group name="dni">
+		<groupExpression><![CDATA[$F{dni}]]></groupExpression>
+		<groupHeader>
+			<band height="14">
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="style1" stretchType="RelativeToTallestObject" x="41" y="0" width="256" height="14" uuid="2d59f0f9-71b6-4484-8054-6cc3a1fe1708"/>
+					<textElement>
+						<font fontName="Arial" size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{nombComp}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="style1" stretchType="RelativeToTallestObject" x="297" y="0" width="258" height="14" uuid="90b90eb3-26b0-45d7-ba22-e9caa7405dd7"/>
+					<textElement>
+						<font fontName="Arial" size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{descCargo}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="style1" stretchType="RelativeToTallestObject" x="0" y="0" width="41" height="14" uuid="9068d185-3510-4d36-880b-ddad393d098f"/>
+					<textElement textAlignment="Center">
+						<font fontName="Arial" size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{dni}]]></textFieldExpression>
+				</textField>
+			</band>
+		</groupHeader>
+		<groupFooter>
+			<band/>
+		</groupFooter>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="45" splitType="Stretch">
+			<staticText>
+				<reportElement x="95" y="0" width="365" height="20" uuid="27e410e7-cf84-4db9-9a09-b3d7285fe244"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" isBold="true"/>
+				</textElement>
+				<text><![CDATA[REPORTE DIARIO DE ASISTENCIA DE PERSONAL]]></text>
+			</staticText>
+			<textField evaluationTime="Report" pattern="dd/MM/yyyy HH.mm.ss">
+				<reportElement x="111" y="33" width="100" height="12" uuid="d1830894-9048-459e-951a-b49730b610cf"/>
+				<textElement>
+					<font fontName="Arial" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{fechaHora_3}]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report" pattern="dd/MM/yyyy HH.mm.ss">
+				<reportElement x="308" y="33" width="127" height="12" uuid="2b1dda52-558a-491b-9af5-70601aa61857">
+					<printWhenExpression><![CDATA[$P{modLaboral}!=null]]></printWhenExpression>
+				</reportElement>
+				<textElement>
+					<font fontName="Arial" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[""+$F{modLaboral}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="45" y="33" width="66" height="12" uuid="539d3cfc-6cab-4f6c-9610-d20dfb94b8fd"/>
+				<textElement textAlignment="Right">
+					<font fontName="Arial" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[FECHA : ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="211" y="33" width="97" height="12" uuid="f815cf01-133a-4590-bc44-4208e3726b5e">
+					<printWhenExpression><![CDATA[$P{modLaboral}!=null]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Right">
+					<font fontName="Arial" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[MODALIDAD LABORAL : ]]></text>
+			</staticText>
+			<image onErrorType="Icon">
+				<reportElement x="0" y="0" width="45" height="45" uuid="375b7f9e-7643-4d43-aeae-3e89d3d00c63"/>
+				<imageExpression><![CDATA[$P{COMPANY_LOGO}]]></imageExpression>
+			</image>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="28" splitType="Stretch">
+			<staticText>
+				<reportElement style="style1" x="0" y="0" width="41" height="14" uuid="03b13598-dbb9-4d88-bc81-1763fd84a3ef"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[DNI]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="style1" x="136" y="14" width="64" height="14" uuid="078b9c50-416b-4532-9a7d-798b803ee11f"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[MOVIMIENTO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="style1" x="200" y="14" width="68" height="14" uuid="b28b7ac7-ed4e-4627-868f-12fb26d68eab"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[TIPO MARCA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="style1" x="87" y="14" width="49" height="14" uuid="dc97e12b-8e1f-4ec2-9b0a-6eda6a8a593f"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[TURNO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="style1" x="268" y="14" width="287" height="14" uuid="0703c807-45b3-4b10-a24d-b1f9cc7cdf61"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[OBSERVACIONES]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="style1" x="41" y="0" width="256" height="14" uuid="bfc2071f-695d-4ef5-9b2b-9833f22f0d95"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[APELLIDOS Y NOMBRES]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="style1" x="297" y="0" width="258" height="14" uuid="a982668e-e73d-443f-aec4-5b899067ae52"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[CARGO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="style1" x="41" y="14" width="46" height="14" uuid="9eb60afe-5e6e-4751-8109-4ee4e7ba3c67"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[HORA]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="14" splitType="Stretch">
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement style="style1_1" stretchType="RelativeToTallestObject" x="136" y="0" width="64" height="14" uuid="7cd48294-3993-4a30-af96-e3e827fc6b59"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{MOVIMIENTO_MAP}.get($F{registro})]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement style="style1_1" stretchType="RelativeToTallestObject" x="200" y="0" width="68" height="14" uuid="96025264-7fba-4809-a499-e18286b13c16"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{TIPO_MAP}.get($F{tipo})]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement style="style1_1" stretchType="RelativeToTallestObject" x="87" y="0" width="49" height="14" uuid="5cdbb80d-8e83-48f9-9d62-ace0e2303bfa"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{TURNO_MAP}.get($F{turno})]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement style="style1_1" stretchType="RelativeToTallestObject" x="268" y="0" width="287" height="14" uuid="e2381313-b660-41ee-8392-7265145cb90b"/>
+				<textElement>
+					<font fontName="Arial" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{observ}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="HH.mm.ss" isBlankWhenNull="true">
+				<reportElement style="style1_1" stretchType="RelativeToTallestObject" x="41" y="0" width="46" height="14" uuid="89ccbb5f-6e80-4d50-baf3-b3b53fdc099e"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{fechaHora}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="26" splitType="Stretch">
+			<rectangle radius="5">
+				<reportElement x="0" y="13" width="555" height="13" uuid="f8e9537f-80af-44de-8e58-95fc644e827a"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</rectangle>
+			<textField evaluationTime="Report">
+				<reportElement x="527" y="13" width="23" height="13" uuid="4b06bb83-98f4-415f-a194-a2f18c9a26fc"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Arial" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="dd/MM/yyyy HH:mm:ss">
+				<reportElement x="3" y="13" width="100" height="13" uuid="dc35da2f-e090-4967-b4cc-cbee5b9328f7"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Arial" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="160" y="13" width="262" height="13" uuid="f2d120ff-3b85-49c0-9d2a-656c1a937da9"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="8"/>
+				</textElement>
+				<text><![CDATA[Sistema Integral de Gestión Administrativa - PEGASUS V2.0]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="450" y="13" width="93" height="13" uuid="a26f44a1-60a2-4a89-aa8a-020c5a4a60ab"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Arial" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Página "+$V{PAGE_NUMBER}+" de"]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

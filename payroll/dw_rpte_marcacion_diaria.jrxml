@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="c034c4c8-c07c-4239-90e9-a82c5676aa61">
+	<property name="ireport.zoom" value="1.5"/>
+	<property name="ireport.x" value="161"/>
+	<property name="ireport.y" value="0"/>
+	<style name="style1">
+		<box>
+			<topPen lineWidth="0.25"/>
+			<leftPen lineWidth="0.25"/>
+			<bottomPen lineWidth="0.25"/>
+			<rightPen lineWidth="0.25"/>
+		</box>
+	</style>
+	<parameter name="LOGO_COMPANY" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="LOGO_COUNTRY" class="java.lang.String" isForPrompting="false"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="fecha" class="java.util.Date">
+		<fieldDescription><![CDATA[fecha]]></fieldDescription>
+	</field>
+	<field name="modalidad" class="java.lang.String">
+		<fieldDescription><![CDATA[modalidad]]></fieldDescription>
+	</field>
+	<field name="dni" class="java.lang.String">
+		<fieldDescription><![CDATA[personal.dni]]></fieldDescription>
+	</field>
+	<field name="nombComp" class="java.lang.String">
+		<fieldDescription><![CDATA[personal.nombComp]]></fieldDescription>
+	</field>
+	<field name="hIngreso" class="java.lang.String">
+		<fieldDescription><![CDATA[hIngreso]]></fieldDescription>
+	</field>
+	<field name="hRefrigerio" class="java.lang.String">
+		<fieldDescription><![CDATA[hRefrigerio]]></fieldDescription>
+	</field>
+	<field name="hReingreso" class="java.lang.String">
+		<fieldDescription><![CDATA[hReingreso]]></fieldDescription>
+	</field>
+	<field name="hSalida" class="java.lang.String">
+		<fieldDescription><![CDATA[hSalida]]></fieldDescription>
+	</field>
+	<field name="dIngreso" class="java.util.Date">
+		<fieldDescription><![CDATA[ingreso.marcacionPK.fechaHora]]></fieldDescription>
+	</field>
+	<field name="dRefrigerio" class="java.util.Date">
+		<fieldDescription><![CDATA[refrigerio.marcacionPK.fechaHora]]></fieldDescription>
+	</field>
+	<field name="dReingreso" class="java.util.Date">
+		<fieldDescription><![CDATA[reingreso.marcacionPK.fechaHora]]></fieldDescription>
+	</field>
+	<field name="dSalida" class="java.util.Date">
+		<fieldDescription><![CDATA[salida.marcacionPK.fechaHora]]></fieldDescription>
+	</field>
+	<field name="numMarca" class="java.lang.Integer">
+		<fieldDescription><![CDATA[numMarca]]></fieldDescription>
+	</field>
+	<field name="minTardanza" class="java.lang.Integer">
+		<fieldDescription><![CDATA[minTardanza]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="86" splitType="Stretch">
+			<staticText>
+				<reportElement x="159" y="0" width="237" height="31" uuid="501560cb-8cc1-4bc2-a23f-616f5453f738"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="13" isBold="true"/>
+				</textElement>
+				<text><![CDATA[REPORTE DIARIO DE MARCACIONES
+POR TIPO DE TRABAJADOR]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="103" y="43" width="54" height="16" uuid="d59761f4-7ffa-4b1f-a610-7464eec594ce"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Arial" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[FECHA:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="103" y="59" width="54" height="16" uuid="1387d310-a0cb-4fc5-b04a-f57cf54704a0"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Arial" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[TIPO TRAB.:]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="159" y="43" width="173" height="16" uuid="231dc2f7-e2f6-4727-844e-63d6e5ec0c35"/>
+				<textElement verticalAlignment="Middle" markup="none">
+					<font fontName="Arial" size="8" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{fecha}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="159" y="59" width="173" height="16" uuid="dfde0b75-805e-4ace-b724-326db8396477"/>
+				<textElement verticalAlignment="Middle" markup="none">
+					<font fontName="Arial" size="8" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{modalidad}]]></textFieldExpression>
+			</textField>
+			<image hAlign="Center" vAlign="Middle" onErrorType="Icon">
+				<reportElement x="6" y="0" width="68" height="68" uuid="70cefead-5748-420a-b657-8f6447e21e49"/>
+				<imageExpression><![CDATA[$P{LOGO_COMPANY}]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="0" y="68" width="80" height="16" uuid="a8a8153d-808b-4946-a427-61d3e1a98ee5"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="7" isBold="false"/>
+				</textElement>
+				<text><![CDATA[SUB REGION PACIFICO]]></text>
+			</staticText>
+			<image hAlign="Center" vAlign="Middle" onErrorType="Icon">
+				<reportElement x="481" y="0" width="68" height="68" uuid="6b3961d5-c0ac-4c36-9c59-8f31bc41cbd7"/>
+				<imageExpression><![CDATA[$P{LOGO_COUNTRY}]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="475" y="68" width="80" height="16" uuid="38fb504e-542b-4d55-83cb-6d833645f6c3"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="7" isBold="false"/>
+				</textElement>
+				<text><![CDATA[COMPUTO]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="20" splitType="Stretch">
+			<staticText>
+				<reportElement style="style1" x="0" y="0" width="47" height="20" uuid="4a9fde93-d4ae-4133-955e-719252ca5e18"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[DNI]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="style1" x="47" y="0" width="257" height="20" uuid="c78d4d8f-7714-4a4e-a93a-dced6a0d752c"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nombre Completo]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="style1" x="304" y="0" width="44" height="20" uuid="869d5400-ba10-4dbd-9fd1-020dbf1f907e"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Hora de
+Ingreso]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="style1" x="348" y="0" width="44" height="20" uuid="b96d2af7-89af-4bbe-a38a-fab153063edb"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Hora de 
+Refrigerio]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="style1" x="392" y="0" width="44" height="20" uuid="9cb32376-a1be-46fe-845e-db42740b5575"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Hora de
+Reingreso]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="style1" x="436" y="0" width="41" height="20" uuid="4b817126-bae3-4197-a6e1-15587868b62d"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Hora de
+Salida]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="style1" x="477" y="0" width="48" height="20" uuid="8eb61855-8665-4cbc-b5bf-1cf5afb539ad"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Minutos de
+Tardanza]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="style1" x="525" y="0" width="30" height="20" uuid="98cae8c0-d098-49bf-8676-8c248a3fa1c5"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Num.
+Marcas]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="18" splitType="Stretch">
+			<textField isBlankWhenNull="true">
+				<reportElement style="style1" x="0" y="0" width="47" height="18" uuid="2ff4fae7-d20c-49be-a7af-332fd8122515"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{dni}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement style="style1" x="47" y="0" width="257" height="18" uuid="d4a65ac5-5582-4622-ab50-0d8762dd7bc9"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Arial" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nombComp}]]></textFieldExpression>
+			</textField>
+			<textField pattern="HH:mm:ss" isBlankWhenNull="true">
+				<reportElement style="style1" x="304" y="0" width="44" height="18" uuid="ce8c5d57-096c-4e02-bbd9-c5d52602a453"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{hIngreso}]]></textFieldExpression>
+			</textField>
+			<textField pattern="HH:mm:ss" isBlankWhenNull="true">
+				<reportElement style="style1" x="348" y="0" width="44" height="18" uuid="19db98c7-ce5b-4695-928a-7fa014a42e4e"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{hRefrigerio}]]></textFieldExpression>
+			</textField>
+			<textField pattern="HH:mm:ss" isBlankWhenNull="true">
+				<reportElement style="style1" x="392" y="0" width="44" height="18" uuid="58104f3e-8785-4db0-b9f5-b037ffefab81"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{hReingreso}]]></textFieldExpression>
+			</textField>
+			<textField pattern="HH:mm:ss" isBlankWhenNull="true">
+				<reportElement style="style1" x="436" y="0" width="41" height="18" uuid="e13d7561-bd67-410d-88cf-f06b4733cff3"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{hSalida}]]></textFieldExpression>
+			</textField>
+			<textField pattern="HH:mm:ss" isBlankWhenNull="true">
+				<reportElement style="style1" x="304" y="0" width="44" height="18" uuid="83922dba-28ae-445b-857b-d6a4892ff6c4"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{dIngreso}]]></textFieldExpression>
+			</textField>
+			<textField pattern="HH:mm:ss" isBlankWhenNull="true">
+				<reportElement style="style1" x="348" y="0" width="44" height="18" uuid="92625889-11a6-45ee-a57b-11b007535445"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{dRefrigerio}]]></textFieldExpression>
+			</textField>
+			<textField pattern="HH:mm:ss" isBlankWhenNull="true">
+				<reportElement style="style1" x="392" y="0" width="44" height="18" uuid="de1f68be-fcab-4ef3-9f31-2fd0af171d72"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{dReingreso}]]></textFieldExpression>
+			</textField>
+			<textField pattern="HH:mm:ss" isBlankWhenNull="true">
+				<reportElement style="style1" x="436" y="0" width="41" height="18" uuid="13d50662-5adf-48d3-9d93-3a46ef7ac96a"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{dSalida}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement style="style1" x="477" y="0" width="48" height="18" uuid="44304bc7-b3d6-4399-b48e-128c736a25b8"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{minTardanza}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement style="style1" x="525" y="0" width="30" height="18" uuid="39337ee6-872d-4cb7-96f5-044ffae71d83"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{numMarca}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

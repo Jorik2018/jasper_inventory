@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" columnCount="4" pageWidth="556" pageHeight="842" columnWidth="138" columnSpacing="1" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" isFloatColumnFooter="true" isIgnorePagination="true" uuid="6b679344-ad88-4aad-8233-9ec99cd949d6">
+	<property name="ireport.zoom" value="2.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="style1">
+		<box topPadding="1" leftPadding="2" bottomPadding="1" rightPadding="2">
+			<pen lineWidth="0.5"/>
+			<topPen lineWidth="0.0"/>
+			<leftPen lineWidth="0.5"/>
+			<bottomPen lineWidth="0.0"/>
+			<rightPen lineWidth="0.0"/>
+		</box>
+	</style>
+	<style name="style1_1">
+		<box topPadding="1" leftPadding="2" bottomPadding="1" rightPadding="2">
+			<pen lineWidth="0.5"/>
+			<topPen lineWidth="0.0"/>
+			<leftPen lineWidth="0.0"/>
+			<bottomPen lineWidth="0.0"/>
+			<rightPen lineWidth="0.0"/>
+		</box>
+	</style>
+	<style name="style1_2">
+		<box topPadding="1" leftPadding="0" bottomPadding="1" rightPadding="2">
+			<pen lineWidth="0.5"/>
+			<topPen lineWidth="0.0"/>
+			<leftPen lineWidth="0.0"/>
+			<bottomPen lineWidth="0.0"/>
+			<rightPen lineWidth="0.5"/>
+		</box>
+	</style>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="codigo" class="java.lang.String">
+		<fieldDescription><![CDATA[planillaDetPK.codigo]]></fieldDescription>
+	</field>
+	<field name="concepto" class="java.lang.String">
+		<fieldDescription><![CDATA[concepto.concepto]]></fieldDescription>
+	</field>
+	<field name="ind" class="java.lang.Character">
+		<fieldDescription><![CDATA[ind]]></fieldDescription>
+	</field>
+	<field name="monto" class="java.math.BigDecimal">
+		<fieldDescription><![CDATA[monto]]></fieldDescription>
+	</field>
+	<field name="col" class="java.lang.Short">
+		<fieldDescription><![CDATA[col]]></fieldDescription>
+	</field>
+	<group name="col" isStartNewColumn="true" keepTogether="true">
+		<groupExpression><![CDATA[$F{col}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="11" splitType="Stretch">
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement style="style1_1" stretchType="RelativeToTallestObject" x="0" y="0" width="12" height="10" forecolor="#FFFFFF" uuid="09804769-3d75-4cb8-9257-ed5b9a2cb7f9"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA["X"]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement style="style1_2" stretchType="RelativeToTallestObject" x="12" y="0" width="89" height="10" uuid="4201f892-f465-4f22-83fa-692345b92be3"/>
+				<textElement>
+					<font fontName="Arial" size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{concepto}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement style="style1" stretchType="RelativeToTallestObject" mode="Transparent" x="101" y="0" width="38" height="10" isRemoveLineWhenBlank="true" backcolor="#66FF66" uuid="51f5b36f-fb88-410b-b0a1-241553e54eb1"/>
+				<textElement textAlignment="Right">
+					<font fontName="Arial" size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{monto}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement style="style1_1" stretchType="RelativeToTallestObject" x="0" y="0" width="12" height="10" uuid="d974d901-ebe8-4245-a2de-b0c6a88e22c5"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{monto}!=null?($F{ind}=='1'?"+":"-"):" "]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

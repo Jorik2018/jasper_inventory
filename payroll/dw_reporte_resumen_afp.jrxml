@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="b84053f8-3414-4137-b4c2-6398ca6710db">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="style1">
+		<box topPadding="1" leftPadding="1" bottomPadding="1" rightPadding="1">
+			<topPen lineWidth="0.25"/>
+			<leftPen lineWidth="0.25"/>
+			<bottomPen lineWidth="0.25"/>
+			<rightPen lineWidth="0.25"/>
+		</box>
+	</style>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="componenteNombre" class="java.lang.String">
+		<fieldDescription><![CDATA[planillaTrab.planilla.meta.componente.componenteNombre.nombre]]></fieldDescription>
+	</field>
+	<field name="componenteCode" class="java.lang.String">
+		<fieldDescription><![CDATA[planillaTrab.planilla.meta.codComponente]]></fieldDescription>
+	</field>
+	<field name="meta" class="java.lang.String">
+		<fieldDescription><![CDATA[planillaTrab.planilla.meta.meta]]></fieldDescription>
+	</field>
+	<field name="metaNombre" class="java.lang.String">
+		<fieldDescription><![CDATA[planillaTrab.planilla.meta.nombre]]></fieldDescription>
+	</field>
+	<field name="NPlanilla" class="java.lang.String">
+		<fieldDescription><![CDATA[planillaTrab.planilla.NPlanilla]]></fieldDescription>
+	</field>
+	<field name="tipoTrab" class="java.lang.String">
+		<fieldDescription><![CDATA[planillaTrab.planilla.tipoTrab]]></fieldDescription>
+	</field>
+	<field name="fuenteFinancNombre" class="java.lang.String">
+		<fieldDescription><![CDATA[planillaTrab.planilla.fuenteF.nombre]]></fieldDescription>
+	</field>
+	<field name="fuenteFinanc" class="java.lang.String">
+		<fieldDescription><![CDATA[planillaTrab.planilla.fuenteFinanc]]></fieldDescription>
+	</field>
+	<field name="regPensionCode" class="java.lang.String">
+		<fieldDescription><![CDATA[planillaTrab.regPension.regPensionCode]]></fieldDescription>
+	</field>
+	<field name="regPensionNombre" class="java.lang.String">
+		<fieldDescription><![CDATA[planillaTrab.regPension.nombre]]></fieldDescription>
+	</field>
+	<field name="mesEje" class="java.lang.String">
+		<fieldDescription><![CDATA[planillaTrab.planilla.mes.mesEje]]></fieldDescription>
+	</field>
+	<field name="mesNombre" class="java.lang.String">
+		<fieldDescription><![CDATA[planillaTrab.planilla.mes.nombre]]></fieldDescription>
+	</field>
+	<field name="codigo" class="java.lang.String">
+		<fieldDescription><![CDATA[planillaDetPK.codigo]]></fieldDescription>
+	</field>
+	<field name="ind" class="java.lang.Character">
+		<fieldDescription><![CDATA[ind]]></fieldDescription>
+	</field>
+	<field name="monto" class="java.math.BigDecimal">
+		<fieldDescription><![CDATA[monto]]></fieldDescription>
+	</field>
+	<field name="anoEje" class="java.lang.String">
+		<fieldDescription><![CDATA[planillaDetPK.anoEje]]></fieldDescription>
+	</field>
+	<field name="tipoTrabCode" class="java.lang.String">
+		<fieldDescription><![CDATA[planillaTrab.planilla.tipoTrab.id]]></fieldDescription>
+	</field>
+	<field name="tipoTrabName" class="java.lang.String">
+		<fieldDescription><![CDATA[planillaTrab.planilla.tipoTrab.nombre]]></fieldDescription>
+	</field>
+	<variable name="monto_1" class="java.math.BigDecimal" resetType="Group" resetGroup="nPlanilla" calculation="Sum">
+		<variableExpression><![CDATA["22".equals($F{regPensionCode})&&("2040".equals($F{codigo})||"2041".equals($F{codigo})||"2042".equals($F{codigo})||"3030".equals($F{codigo}))?$F{monto}:java.math.BigDecimal.ZERO]]></variableExpression>
+	</variable>
+	<variable name="monto_2" class="java.math.BigDecimal" resetType="Group" resetGroup="nPlanilla" calculation="Sum">
+		<variableExpression><![CDATA["21".equals($F{regPensionCode})&&("2040".equals($F{codigo})||"2041".equals($F{codigo})||"2042".equals($F{codigo})||"3030".equals($F{codigo}))?$F{monto}:java.math.BigDecimal.ZERO]]></variableExpression>
+	</variable>
+	<variable name="monto_3" class="java.math.BigDecimal" resetType="Group" resetGroup="nPlanilla" calculation="Sum">
+		<variableExpression><![CDATA["23".equals($F{regPensionCode})&&("2040".equals($F{codigo})||"2041".equals($F{codigo})||"2042".equals($F{codigo})||"3030".equals($F{codigo}))?$F{monto}:java.math.BigDecimal.ZERO]]></variableExpression>
+	</variable>
+	<variable name="monto_4" class="java.math.BigDecimal" resetType="Group" resetGroup="nPlanilla" calculation="Sum">
+		<variableExpression><![CDATA["24".equals($F{regPensionCode})&&("2040".equals($F{codigo})||"2041".equals($F{codigo})||"2042".equals($F{codigo})||"3030".equals($F{codigo}))?$F{monto}:java.math.BigDecimal.ZERO]]></variableExpression>
+	</variable>
+	<variable name="monto_5" class="java.math.BigDecimal" resetType="Group" resetGroup="nPlanilla" calculation="Sum">
+		<variableExpression><![CDATA[$F{monto}]]></variableExpression>
+	</variable>
+	<variable name="monto_6" class="java.math.BigDecimal" resetType="Group" resetGroup="tipoTrab" calculation="Sum">
+		<variableExpression><![CDATA["22".equals($F{regPensionCode})&&("2040".equals($F{codigo})||"2041".equals($F{codigo})||"2042".equals($F{codigo})||"3030".equals($F{codigo}))?$F{monto}:java.math.BigDecimal.ZERO]]></variableExpression>
+	</variable>
+	<variable name="monto_7" class="java.math.BigDecimal" resetType="Group" resetGroup="tipoTrab" calculation="Sum">
+		<variableExpression><![CDATA["21".equals($F{regPensionCode})&&("2040".equals($F{codigo})||"2041".equals($F{codigo})||"2042".equals($F{codigo})||"3030".equals($F{codigo}))?$F{monto}:java.math.BigDecimal.ZERO]]></variableExpression>
+	</variable>
+	<variable name="monto_8" class="java.math.BigDecimal" resetType="Group" resetGroup="tipoTrab" calculation="Sum">
+		<variableExpression><![CDATA["23".equals($F{regPensionCode})&&("2040".equals($F{codigo})||"2041".equals($F{codigo})||"2042".equals($F{codigo})||"3030".equals($F{codigo}))?$F{monto}:java.math.BigDecimal.ZERO]]></variableExpression>
+	</variable>
+	<variable name="monto_9" class="java.math.BigDecimal" resetType="Group" resetGroup="tipoTrab" calculation="Sum">
+		<variableExpression><![CDATA["24".equals($F{regPensionCode})&&("2040".equals($F{codigo})||"2041".equals($F{codigo})||"2042".equals($F{codigo})||"3030".equals($F{codigo}))?$F{monto}:java.math.BigDecimal.ZERO]]></variableExpression>
+	</variable>
+	<group name="tipoTrab">
+		<groupExpression><![CDATA[$F{tipoTrabCode}]]></groupExpression>
+		<groupHeader>
+			<band height="65">
+				<textField>
+					<reportElement x="102" y="0" width="352" height="20" uuid="656fbd50-e8a9-4815-bbe1-695d98e54a1a"/>
+					<textElement textAlignment="Center" markup="none"/>
+					<textFieldExpression><![CDATA["RESUMEN DE PLANILLAS DE "+$F{tipoTrabName}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement style="style1" x="0" y="52" width="100" height="13" uuid="edacd40c-a681-41c8-8055-b38aeb28d538"/>
+					<textElement textAlignment="Center">
+						<font fontName="Arial" size="8"/>
+					</textElement>
+					<text><![CDATA[PLANILLAS]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="style1" x="130" y="52" width="78" height="13" uuid="f834a271-ac0e-4bde-be28-d4a5ccdc3c3c"/>
+					<textElement textAlignment="Center">
+						<font fontName="Arial" size="8"/>
+					</textElement>
+					<text><![CDATA[HORIZONTE]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="style1" x="208" y="52" width="78" height="13" uuid="3c8ade49-6269-4f03-ab5e-602e1c470039"/>
+					<textElement textAlignment="Center">
+						<font fontName="Arial" size="8"/>
+					</textElement>
+					<text><![CDATA[INTEGRA]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="style1" x="286" y="52" width="78" height="13" uuid="401c8950-6c68-4247-9101-a99c107d874d"/>
+					<textElement textAlignment="Center">
+						<font fontName="Arial" size="8"/>
+					</textElement>
+					<text><![CDATA[PROFUTURO]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="style1" x="364" y="52" width="78" height="13" uuid="d2a1cdb7-2a8f-4e07-9b8d-184da5ef7214"/>
+					<textElement textAlignment="Center">
+						<font fontName="Arial" size="8"/>
+					</textElement>
+					<text><![CDATA[PRIMA]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="style1" x="477" y="52" width="78" height="13" uuid="f3d761cc-5f51-4d39-b4c4-dfe677cbaecb"/>
+					<textElement textAlignment="Center">
+						<font fontName="Arial" size="8"/>
+					</textElement>
+					<text><![CDATA[TOTAL]]></text>
+				</staticText>
+				<textField>
+					<reportElement x="102" y="20" width="352" height="13" uuid="d1e90b9f-f5a6-4818-bcf3-1db41ed07600"/>
+					<textElement textAlignment="Center" markup="none">
+						<font fontName="Arial" size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA["MES DE "+  $F{mesNombre}+ " DEL " +  $F{anoEje}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="102" y="33" width="352" height="13" uuid="a5de4c1e-47a6-4d9b-bda2-a2d68f8de73e"/>
+					<textElement textAlignment="Center">
+						<font fontName="Arial" size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{fuenteFinancNombre}]]></textFieldExpression>
+				</textField>
+			</band>
+		</groupHeader>
+		<groupFooter>
+			<band height="26">
+				<textField pattern="###0.00;-###0.00">
+					<reportElement style="style1" x="130" y="0" width="78" height="13" uuid="4759c66e-e1d5-499f-af64-f4d2fe0b2b70"/>
+					<textElement textAlignment="Right">
+						<font fontName="Arial" size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$V{monto_6}]]></textFieldExpression>
+				</textField>
+				<textField pattern="###0.00;-###0.00">
+					<reportElement style="style1" x="208" y="0" width="78" height="13" uuid="235a9ba1-ea54-4f6b-ae69-91f39ab3a7b1"/>
+					<textElement textAlignment="Right">
+						<font fontName="Arial" size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$V{monto_7}]]></textFieldExpression>
+				</textField>
+				<textField pattern="###0.00;-###0.00">
+					<reportElement style="style1" x="286" y="0" width="78" height="13" uuid="16046750-14dc-45cb-831a-66e32c56d581"/>
+					<textElement textAlignment="Right">
+						<font fontName="Arial" size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$V{monto_8}]]></textFieldExpression>
+				</textField>
+				<textField pattern="###0.00;-###0.00">
+					<reportElement style="style1" x="364" y="0" width="78" height="13" uuid="745c88d7-1b79-4937-a7c1-83ca199cb874"/>
+					<textElement textAlignment="Right">
+						<font fontName="Arial" size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$V{monto_9}]]></textFieldExpression>
+				</textField>
+				<textField evaluationTime="Group" evaluationGroup="nPlanilla" pattern="###0.00;-###0.00">
+					<reportElement style="style1" x="477" y="0" width="78" height="13" uuid="9853bff5-6c9e-4ce0-b031-6f20eedaf1cf"/>
+					<textElement textAlignment="Right">
+						<font fontName="Arial" size="8" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$V{monto_6}.add($V{monto_7}).add($V{monto_8}).add($V{monto_9})]]></textFieldExpression>
+				</textField>
+			</band>
+		</groupFooter>
+	</group>
+	<group name="nPlanilla">
+		<groupExpression><![CDATA[$F{NPlanilla}]]></groupExpression>
+		<groupHeader>
+			<band height="13">
+				<textField>
+					<reportElement style="style1" x="0" y="0" width="100" height="13" uuid="91bef2f7-962c-4376-a597-3435a0dcc3e0"/>
+					<textElement>
+						<font fontName="Arial" size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{NPlanilla}]]></textFieldExpression>
+				</textField>
+				<textField evaluationTime="Group" evaluationGroup="nPlanilla" pattern="###0.00;-###0.00">
+					<reportElement style="style1" x="130" y="0" width="78" height="13" uuid="0bb1628e-662e-42db-b8e5-a13321d9f0eb"/>
+					<textElement textAlignment="Right">
+						<font fontName="Arial" size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$V{monto_1}]]></textFieldExpression>
+				</textField>
+				<textField evaluationTime="Group" evaluationGroup="nPlanilla" pattern="###0.00;-###0.00">
+					<reportElement style="style1" x="208" y="0" width="78" height="13" uuid="9c7d1eeb-2d5d-4b6c-b108-6a4abbab3427"/>
+					<textElement textAlignment="Right">
+						<font fontName="Arial" size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$V{monto_2}]]></textFieldExpression>
+				</textField>
+				<textField evaluationTime="Group" evaluationGroup="nPlanilla" pattern="###0.00;-###0.00">
+					<reportElement style="style1" x="286" y="0" width="78" height="13" uuid="c23761a5-b57a-459a-af80-4f866c46bd9d"/>
+					<textElement textAlignment="Right">
+						<font fontName="Arial" size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$V{monto_3}]]></textFieldExpression>
+				</textField>
+				<textField evaluationTime="Group" evaluationGroup="nPlanilla" pattern="###0.00;-###0.00">
+					<reportElement style="style1" x="364" y="0" width="78" height="13" uuid="522f062a-33bd-4b41-8f69-6f55a81534ef"/>
+					<textElement textAlignment="Right">
+						<font fontName="Arial" size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$V{monto_4}]]></textFieldExpression>
+				</textField>
+				<textField evaluationTime="Group" evaluationGroup="nPlanilla" pattern="###0.00;-###0.00">
+					<reportElement style="style1" x="477" y="0" width="78" height="13" uuid="20ba0089-6384-4ded-9939-4961b34f2dbb"/>
+					<textElement textAlignment="Right">
+						<font fontName="Arial" size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$V{monto_1}.add($V{monto_2}).add($V{monto_3}).add($V{monto_4})]]></textFieldExpression>
+				</textField>
+			</band>
+		</groupHeader>
+		<groupFooter>
+			<band/>
+		</groupFooter>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band splitType="Stretch"/>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="13" splitType="Stretch">
+			<textField evaluationTime="Report">
+				<reportElement x="527" y="0" width="23" height="13" uuid="9a6422b6-0c1f-47bc-861c-83e7a4fb82c9"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Arial" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="450" y="0" width="93" height="13" uuid="e88d1b7d-5d5b-47dc-993d-89cb2a847d09"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Arial" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Página "+$V{PAGE_NUMBER}+" de"]]></textFieldExpression>
+			</textField>
+			<rectangle radius="5">
+				<reportElement mode="Transparent" x="0" y="0" width="555" height="13" uuid="7c18bf9e-706d-49df-b051-97b06796255a"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</rectangle>
+			<textField pattern="dd/MM/yyyy HH:mm:ss">
+				<reportElement x="3" y="0" width="100" height="13" uuid="bd5ece42-6b97-4cc7-9d9e-be08623b19e3"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Arial" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="160" y="0" width="262" height="13" uuid="5d9331c5-fa77-4e63-a947-a5cf17787890"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="8"/>
+				</textElement>
+				<text><![CDATA[Sistema Integral de Gestión Administrativa - PEGASUS V2.0]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

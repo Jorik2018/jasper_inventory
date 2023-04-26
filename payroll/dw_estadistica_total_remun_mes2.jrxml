@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="53f3767d-e1a2-4fc9-9542-b7ef923de3e5">
+	<property name="ireport.zoom" value="2.0"/>
+	<property name="ireport.x" value="810"/>
+	<property name="ireport.y" value="0"/>
+	<style name="style1">
+		<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+			<topPen lineWidth="0.25"/>
+			<leftPen lineWidth="0.25"/>
+			<bottomPen lineWidth="0.25"/>
+			<rightPen lineWidth="0.25"/>
+		</box>
+	</style>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="mes" class="java.lang.String">
+		<fieldDescription><![CDATA[mes]]></fieldDescription>
+	</field>
+	<field name="mesName" class="java.lang.String">
+		<fieldDescription><![CDATA[mesName]]></fieldDescription>
+	</field>
+	<field name="totalGasto" class="java.math.BigDecimal">
+		<fieldDescription><![CDATA[totalGasto]]></fieldDescription>
+	</field>
+	<field name="totalPersonal" class="java.lang.Number">
+		<fieldDescription><![CDATA[totalPersonal]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band splitType="Stretch"/>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="13" splitType="Stretch">
+			<rectangle radius="5">
+				<reportElement mode="Transparent" x="0" y="0" width="555" height="13" uuid="353e3d27-e8af-41b9-937a-9adb8a4f5cac"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</rectangle>
+			<textField evaluationTime="Report">
+				<reportElement x="527" y="0" width="23" height="13" uuid="06dc3ddf-290d-4a3e-a536-6b251b1cef49"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Arial" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="dd/MM/yyyy HH:mm:ss">
+				<reportElement x="3" y="0" width="100" height="13" uuid="6f1a33da-4af1-4cee-8215-73f08a738e60"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Arial" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="160" y="0" width="262" height="13" uuid="7fb541c3-379a-4804-b7bb-24de355abc86"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="8"/>
+				</textElement>
+				<text><![CDATA[Sistema Integral de Gestión Administrativa - PEGASUS V2.0]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="450" y="0" width="93" height="13" uuid="59e42af5-60fe-4686-95b1-8f15292d0f70"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Arial" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Página "+$V{PAGE_NUMBER}+" de"]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="789" splitType="Stretch">
+			<bar3DChart>
+				<chart>
+					<reportElement style="style1" x="0" y="59" width="555" height="320" uuid="b5ee1f35-6fd0-47f5-b60d-b49e7d3a102b"/>
+					<chartTitle/>
+					<chartSubtitle/>
+					<chartLegend/>
+				</chart>
+				<categoryDataset>
+					<categorySeries>
+						<seriesExpression><![CDATA["Dummy Series"]]></seriesExpression>
+						<categoryExpression><![CDATA[$F{mesName}]]></categoryExpression>
+						<valueExpression><![CDATA[$F{totalGasto}]]></valueExpression>
+					</categorySeries>
+				</categoryDataset>
+				<bar3DPlot>
+					<plot/>
+					<itemLabel/>
+					<categoryAxisFormat>
+						<axisFormat/>
+					</categoryAxisFormat>
+					<valueAxisFormat>
+						<axisFormat/>
+					</valueAxisFormat>
+				</bar3DPlot>
+			</bar3DChart>
+			<staticText>
+				<reportElement x="113" y="0" width="329" height="20" uuid="9027c26b-ba5a-4ade-bc96-d97abbc7d48b"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial"/>
+				</textElement>
+				<text><![CDATA[Estadística Mensual de Total de Remuneraciones]]></text>
+			</staticText>
+			<bar3DChart>
+				<chart>
+					<reportElement style="style1" x="0" y="428" width="555" height="320" uuid="6c6ff462-df8a-48ff-b2b8-bc659846e3da"/>
+					<chartTitle/>
+					<chartSubtitle/>
+					<chartLegend/>
+				</chart>
+				<categoryDataset>
+					<categorySeries>
+						<seriesExpression><![CDATA["Dummy Series"]]></seriesExpression>
+						<categoryExpression><![CDATA[$F{mesName}]]></categoryExpression>
+						<valueExpression><![CDATA[$F{totalPersonal}]]></valueExpression>
+					</categorySeries>
+				</categoryDataset>
+				<bar3DPlot>
+					<plot/>
+					<itemLabel/>
+					<categoryAxisFormat>
+						<axisFormat/>
+					</categoryAxisFormat>
+					<valueAxisFormat>
+						<axisFormat/>
+					</valueAxisFormat>
+				</bar3DPlot>
+			</bar3DChart>
+		</band>
+	</summary>
+</jasperReport>

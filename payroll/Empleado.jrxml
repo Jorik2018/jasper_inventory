@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Empleado" pageWidth="595" pageHeight="842" whenNoDataType="AllSectionsNoDetail" columnWidth="503" leftMargin="55" rightMargin="37" topMargin="50" bottomMargin="42">
+	<property name="ireport.scriptlethandling" value="0"/>
+	<property name="ireport.encoding" value="UTF-8"/>
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="168"/>
+	<import value="net.sf.jasperreports.engine.*"/>
+	<import value="java.util.*"/>
+	<import value="net.sf.jasperreports.engine.data.*"/>
+	<parameter name="logo" class="java.io.File" isForPrompting="false"/>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["D:\\proyecto\\planilla\\src\\"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="detalle" class="net.sf.jasperreports.engine.JRDataSource" isForPrompting="false"/>
+	<parameter name="NOMBRE_COMPLETO_1" class="java.lang.String">
+		<defaultValueExpression><![CDATA["LIC WILBER IBARRA MARQUEZ"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="NOMBRE_COMPLETO_2" class="java.lang.String">
+		<defaultValueExpression><![CDATA["MG. LIZANDRO BALDOMERO REYNA ZEGARRA"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="escudo" class="java.io.File" isForPrompting="false"/>
+	<queryString>
+		<![CDATA[SELECT id_esc, esc_personal.id_dir, esc_tipo_personal.tipo, id_estado, condicion, drt_personanatural.nombre_completo, ruc
+FROM esc_personal
+INNER JOIN drt_personanatural ON drt_personanatural.id_dir = esc_personal.id_dir
+LEFT OUTER JOIN esc_tipo_personal ON esc_tipo_personal.id_tipo = esc_personal.id_tipo
+ WHERE id_esc=142]]>
+	</queryString>
+	<field name="id_esc" class="java.lang.Integer"/>
+	<field name="id_dir" class="java.lang.Integer"/>
+	<field name="tipo" class="java.lang.String"/>
+	<field name="id_estado" class="java.lang.Integer"/>
+	<field name="condicion" class="java.lang.String"/>
+	<field name="nombre_completo" class="java.lang.String"/>
+	<field name="ruc" class="java.lang.String"/>
+	<group name="id_esc" isStartNewPage="true">
+		<groupExpression><![CDATA[$F{id_esc}]]></groupExpression>
+		<groupHeader>
+			<band height="150">
+				<staticText>
+					<reportElement key="staticText-1" mode="Transparent" x="63" y="0" width="375" height="23" backcolor="#FFFFFF"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="16" isBold="true" pdfFontName="Helvetica-Bold"/>
+					</textElement>
+					<text><![CDATA[UNIVERSIDAD NACIONAL DEL SANTA]]></text>
+				</staticText>
+				<image scaleImage="RetainShape" vAlign="Middle" isUsingCache="false" onErrorType="Blank">
+					<reportElement x="438" y="0" width="64" height="80"/>
+					<imageExpression><![CDATA[$P{escudo}]]></imageExpression>
+				</image>
+				<staticText>
+					<reportElement key="staticText-2" mode="Transparent" x="63" y="22" width="375" height="17" backcolor="#FFFFFF"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="12" isBold="true" pdfFontName="Helvetica-Bold"/>
+					</textElement>
+					<text><![CDATA[OFICINA CENTRAL DE PERSONAL]]></text>
+				</staticText>
+				<staticText>
+					<reportElement key="staticText-3" mode="Transparent" x="63" y="56" width="375" height="17" backcolor="#FFFFFF"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="12" isBold="true" pdfFontName="Helvetica-Bold"/>
+					</textElement>
+					<text><![CDATA[CERTIFICADO DE RENTA DE QUINTA CATEGORIA]]></text>
+				</staticText>
+				<staticText>
+					<reportElement key="staticText-7" mode="Transparent" x="63" y="39" width="375" height="17" backcolor="#FFFFFF"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="12" isBold="true" pdfFontName="Helvetica-Bold"/>
+					</textElement>
+					<text><![CDATA[OFICINA DE REMUNERACIONES]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="false">
+					<reportElement key="textField-1" x="0" y="137" width="503" height="13"/>
+					<textElement textAlignment="Justified" markup="html"/>
+					<textFieldExpression><![CDATA["Que, en conformidad a la normativa establecida, se han efectuado retenciones por Concepto de <b>Impuesto a la Renta de Quinta Categoria</b> a los ingresos percibidos mensualmente al "+$F{tipo}+" <b>"+$F{nombre_completo}+"</b>, en ejercicio de sus funciones en la Universidad Nacional del Santa"]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement key="staticText-6" mode="Transparent" x="0" y="108" width="503" height="29" backcolor="#FFFFFF"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="12" isBold="true" pdfFontName="Helvetica-Bold"/>
+					</textElement>
+					<text><![CDATA[HACE CONSTAR]]></text>
+				</staticText>
+				<staticText>
+					<reportElement key="staticText-5" mode="Transparent" x="0" y="80" width="503" height="28" backcolor="#FFFFFF"/>
+					<textElement textAlignment="Justified" verticalAlignment="Middle">
+						<font size="10" isBold="true" pdfFontName="Helvetica-Bold"/>
+					</textElement>
+					<text><![CDATA[QUIEN SUSCRIBE , JEFE DE LA OFICINA CENTRAL DE PERSONAL DE LA UNIVERSIDAD NACIONAL DEL SANTA]]></text>
+				</staticText>
+				<image scaleImage="RetainShape" vAlign="Middle" onErrorType="Blank">
+					<reportElement x="0" y="0" width="64" height="80"/>
+					<imageExpression><![CDATA[$P{logo}]]></imageExpression>
+				</image>
+			</band>
+		</groupHeader>
+		<groupFooter>
+			<band height="194">
+				<textField>
+					<reportElement key="staticText-10" positionType="FixRelativeToBottom" x="251" y="134" width="252" height="59"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle" markup="html">
+						<font isItalic="false" pdfFontName="Helvetica"/>
+					</textElement>
+					<textFieldExpression><![CDATA["<I>"+$P{NOMBRE_COMPLETO_2}+"</I><BR><b>Jefe de Oficina Central de Personal</b>"]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement key="staticText-8" positionType="Float" x="0" y="0" width="504" height="43"/>
+					<textElement/>
+					<text><![CDATA[Se expide la presente constancia a solicitud del interesado para los fines que estime conveniente.]]></text>
+				</staticText>
+				<textField>
+					<reportElement key="staticText-9" positionType="FixRelativeToBottom" x="0" y="134" width="251" height="59"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle" markup="html">
+						<font isItalic="false" pdfFontName="Helvetica"/>
+					</textElement>
+					<textFieldExpression><![CDATA["<I>"+$P{NOMBRE_COMPLETO_1}+"</I><BR><b>Jefe de Oficina de Remuneraciones</b>"]]></textFieldExpression>
+				</textField>
+			</band>
+		</groupFooter>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="21" splitType="Stretch">
+			<subreport>
+				<reportElement positionType="Float" x="0" y="0" width="503" height="21"/>
+				<subreportParameter name="SUBREPORT"/>
+				<subreportParameter name="logo"/>
+				<dataSourceExpression><![CDATA[$P{detalle}]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "org/jsuns/ocper/renta5ta/Report5taCategoria.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="18" splitType="Stretch">
+			<textField evaluationTime="Report" pattern="&apos;Nuevo Chimbote, &apos;MMMMM dd &apos;de&apos; yyyy." isBlankWhenNull="false">
+				<reportElement key="textField" positionType="FixRelativeToBottom" x="0" y="0" width="218" height="18"/>
+				<textElement textAlignment="Left" verticalAlignment="Top"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="383" y="0" width="80" height="18"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Pagina "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement x="463" y="0" width="40" height="18"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

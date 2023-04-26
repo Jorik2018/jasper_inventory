@@ -1,0 +1,432 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="621efd2a-e76a-4d7e-b80e-c9a2c98e2ba3">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="348"/>
+	<property name="ireport.y" value="0"/>
+	<style name="style1" fontSize="8">
+		<box topPadding="1" leftPadding="1" bottomPadding="1" rightPadding="1">
+			<topPen lineWidth="0.25"/>
+			<leftPen lineWidth="0.25"/>
+			<bottomPen lineWidth="0.25"/>
+			<rightPen lineWidth="0.25"/>
+		</box>
+	</style>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="NExpediente" class="java.lang.String">
+		<fieldDescription><![CDATA[planillaDetPK.NExpediente]]></fieldDescription>
+	</field>
+	<field name="anoEje" class="java.lang.String">
+		<fieldDescription><![CDATA[planillaDetPK.anoEje]]></fieldDescription>
+	</field>
+	<field name="mesEje" class="java.lang.String">
+		<fieldDescription><![CDATA[planillaTrab.planilla.mes.mesEje]]></fieldDescription>
+	</field>
+	<field name="nombre" class="java.lang.String">
+		<fieldDescription><![CDATA[planillaTrab.planilla.mes.nombre]]></fieldDescription>
+	</field>
+	<field name="secFunc" class="java.lang.String">
+		<fieldDescription><![CDATA[planillaTrab.planilla.secFunc]]></fieldDescription>
+	</field>
+	<field name="meta" class="java.lang.String">
+		<fieldDescription><![CDATA[planillaTrab.planilla.meta.meta]]></fieldDescription>
+	</field>
+	<field name="dni" class="java.lang.String">
+		<fieldDescription><![CDATA[planillaDetPK.dni]]></fieldDescription>
+	</field>
+	<field name="nombComp" class="java.lang.String">
+		<fieldDescription><![CDATA[planillaTrab.personal.nombComp]]></fieldDescription>
+	</field>
+	<field name="regPensionCode" class="java.lang.String">
+		<fieldDescription><![CDATA[planillaTrab.regPension.regPensionCode]]></fieldDescription>
+	</field>
+	<field name="regPensionNombre" class="java.lang.String">
+		<fieldDescription><![CDATA[planillaTrab.regPension.nombre]]></fieldDescription>
+	</field>
+	<field name="tipoTrabajadorNombre" class="java.lang.String">
+		<fieldDescription><![CDATA[planillaTrab.tipoTrabajador.nombre]]></fieldDescription>
+	</field>
+	<field name="tipoTrabajadorCode" class="java.lang.String">
+		<fieldDescription><![CDATA[planillaTrab.tipoTrabajador.id]]></fieldDescription>
+	</field>
+	<field name="cuspp" class="java.lang.String">
+		<fieldDescription><![CDATA[planillaTrab.personal.cuspp]]></fieldDescription>
+	</field>
+	<field name="remAseg" class="java.math.BigDecimal">
+		<fieldDescription><![CDATA[planillaTrab.remAseg]]></fieldDescription>
+	</field>
+	<field name="monto" class="java.math.BigDecimal">
+		<fieldDescription><![CDATA[monto]]></fieldDescription>
+	</field>
+	<field name="codigo" class="java.lang.String">
+		<fieldDescription><![CDATA[planillaDetPK.codigo]]></fieldDescription>
+	</field>
+	<variable name="monto_1" class="java.math.BigDecimal" resetType="Group" resetGroup="regPensionCode" calculation="Sum">
+		<variableExpression><![CDATA["2041".equals($F{codigo})?$F{monto}:null]]></variableExpression>
+	</variable>
+	<variable name="monto_2" class="java.math.BigDecimal" resetType="Group" resetGroup="regPensionCode" calculation="Sum">
+		<variableExpression><![CDATA["2042".equals($F{codigo})?$F{monto}:null]]></variableExpression>
+	</variable>
+	<variable name="monto_3" class="java.math.BigDecimal" resetType="Group" resetGroup="regPensionCode" calculation="Sum">
+		<variableExpression><![CDATA[$F{monto}]]></variableExpression>
+	</variable>
+	<variable name="monto_4" class="java.math.BigDecimal" resetType="Group" resetGroup="regPensionCode" calculation="Sum">
+		<variableExpression><![CDATA["2040".equals($F{codigo})?$F{monto}:java.math.BigDecimal.ZERO]]></variableExpression>
+	</variable>
+	<variable name="monto_5" class="java.math.BigDecimal" resetType="Group" resetGroup="regPensionCode" calculation="Sum">
+		<variableExpression><![CDATA["3030".equals($F{codigo})?$F{monto}:null]]></variableExpression>
+	</variable>
+	<group name="tipoTrabajadorCode">
+		<groupExpression><![CDATA[$F{tipoTrabajadorCode}]]></groupExpression>
+		<groupHeader>
+			<band/>
+		</groupHeader>
+		<groupFooter>
+			<band height="64"/>
+		</groupFooter>
+	</group>
+	<group name="regPensionCode">
+		<groupExpression><![CDATA[$F{regPensionCode}]]></groupExpression>
+		<groupHeader>
+			<band height="155">
+				<staticText>
+					<reportElement style="style1" x="0" y="131" width="45" height="24" uuid="41ca5221-d10d-4fcc-8ef7-ad45bcc7c202"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Arial" size="7" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Nº DE PLANILLA]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="style1" x="355" y="131" width="52" height="24" uuid="b74e8b98-229b-4744-a67e-10f3cdff33c2"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Arial" size="7" isBold="true"/>
+					</textElement>
+					<text><![CDATA[REMUNERAC.
+ASEGURABLE]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="style1" x="407" y="131" width="47" height="24" uuid="729f742c-cb31-4bf8-b20a-479966724cb0"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Arial" size="7" isBold="true"/>
+					</textElement>
+					<text><![CDATA[APORTE
+OBLIGAT.]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="style1" x="454" y="131" width="47" height="24" uuid="86b8913a-044f-4254-b57b-eb80754dcb13"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Arial" size="7" isBold="true"/>
+					</textElement>
+					<text><![CDATA[APORTE
+C/F PREV.]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="style1" x="501" y="131" width="47" height="24" uuid="adec4192-3cf2-4377-9c8f-2c7d19196c61"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Arial" size="7" isBold="true"/>
+					</textElement>
+					<text><![CDATA[VOLUNTAR.
+C/F PREV.]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="style1" x="548" y="131" width="47" height="24" uuid="0c1a2a8c-6970-43ab-b016-525d3028e055"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Arial" size="7" isBold="true"/>
+					</textElement>
+					<text><![CDATA[APORTE
+1%]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="style1" x="595" y="131" width="51" height="24" uuid="59aab879-7c8f-492a-a907-47c33289598a"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Arial" size="7" isBold="true"/>
+					</textElement>
+					<text><![CDATA[SUBTOTAL
+FONDO]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="style1" x="750" y="131" width="52" height="24" uuid="a3a6e617-e029-4f87-88c4-f012fbb0a496"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Arial" size="7" isBold="true"/>
+					</textElement>
+					<text><![CDATA[SUB-TOTAL
+A.F.P.]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="style1" x="646" y="131" width="52" height="24" uuid="80e86665-923f-4e95-b466-73ba96e78a1e"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Arial" size="7" isBold="true"/>
+					</textElement>
+					<text><![CDATA[PRIMA
+SEGURO]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="style1" x="698" y="131" width="52" height="24" uuid="60823418-874b-4473-becf-293521bab599"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Arial" size="7" isBold="true"/>
+					</textElement>
+					<text><![CDATA[COMISION
+PORCENTUAL]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="195" y="0" width="413" height="26" uuid="69b81956-4d0e-4625-981b-1e9fb675dd4f"/>
+					<textElement textAlignment="Center">
+						<font fontName="Arial" isBold="true"/>
+					</textElement>
+					<text><![CDATA[RESUMEN DE PLANILLAS DE PAGO POR MES DE APORTES PREVISIONALES
+(SOLO PARA TRABAJADORES ]]></text>
+				</staticText>
+				<textField>
+					<reportElement x="24" y="26" width="149" height="13" uuid="d5192462-afdd-4963-bbe4-248635f2b0c5"/>
+					<textElement>
+						<font fontName="Arial" size="8" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{regPensionNombre}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="195" y="26" width="413" height="13" uuid="4a64803d-3f41-4cb2-bf5b-5eddf663d6a4"/>
+					<textElement textAlignment="Center">
+						<font fontName="Arial" size="8"/>
+					</textElement>
+					<text><![CDATA[REVISION CON MEDIO MAGNETICO   :   SI (  )    NO (X)]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="24" y="39" width="102" height="13" uuid="77cd6a80-fffb-4270-96d8-5fb44fc1abb0"/>
+					<textElement>
+						<font fontName="Arial" size="8"/>
+					</textElement>
+					<text><![CDATA[PERIODO DE DEVENGUE:]]></text>
+				</staticText>
+				<textField>
+					<reportElement x="126" y="39" width="124" height="13" uuid="2c9f17e4-52dc-4846-8722-7f0861807846"/>
+					<textElement>
+						<font fontName="Arial" size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{anoEje}+" / "+$F{mesEje}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="591" y="39" width="211" height="13" uuid="a6ec7955-6840-4c6d-b2e4-d049d98e55fc"/>
+					<textElement>
+						<font fontName="Arial"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{tipoTrabajadorNombre}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="0" y="26" width="24" height="13" uuid="173a69a8-e522-486f-83b5-b4e2abc4ab8a"/>
+					<textElement>
+						<font size="8" isBold="true"/>
+					</textElement>
+					<text><![CDATA[AFP]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="0" y="52" width="182" height="13" uuid="601ae01c-2951-4845-9903-a82ea3bd16b7"/>
+					<textElement>
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[I. DATOS DEL EMPLEADOR]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="0" y="66" width="318" height="13" uuid="e0269327-9c04-4c7f-b285-1a9cc01e82cc"/>
+					<textElement>
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[NOMBRE O RAZON SOCIAL:  PROYECTO ESPECIAL CHINECAS]]></text>
+				</staticText>
+				<line>
+					<reportElement x="0" y="65" width="802" height="1" uuid="1233408c-7992-4707-bd77-7a33d5c4b391"/>
+				</line>
+				<staticText>
+					<reportElement x="327" y="66" width="96" height="13" uuid="707cd14a-d98b-40e0-b36a-2eb9ee69067e"/>
+					<textElement>
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[RUC: 20164359701]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="432" y="66" width="100" height="13" uuid="35b003bf-b7e7-42f5-b71a-9c6bbef0fd87"/>
+					<textElement>
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[CUENTA BANCARIA:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="540" y="66" width="155" height="13" uuid="fb4a8a08-0e6e-410d-a0b5-9aa142fa6b23"/>
+					<textElement>
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[TIPO CUENTA:  CTA.-AHORRO]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="702" y="65" width="100" height="13" uuid="d0a3d1f6-2305-43cb-a508-803093df228c"/>
+					<textElement>
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[INST. FINANCIERA]]></text>
+				</staticText>
+				<line>
+					<reportElement x="0" y="78" width="802" height="1" uuid="306bcc7a-e6ef-478d-8295-5dab6b8dcce8"/>
+				</line>
+				<line>
+					<reportElement x="0" y="91" width="802" height="1" uuid="93238f7a-499c-43a2-babb-f3c0b6a60e9f"/>
+				</line>
+				<staticText>
+					<reportElement x="0" y="79" width="318" height="13" uuid="2dab0449-c49d-4f8f-bead-6350c5fd2d1e"/>
+					<textElement>
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[DIRECCION:  Av. José Carlos Marietegui S/N]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="432" y="79" width="100" height="13" uuid="6788b1c7-495a-4653-b685-df9284bce1d5"/>
+					<textElement>
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[URBANIZACION: NUEVO CHIMBOTE]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="327" y="79" width="96" height="13" uuid="566f746a-9de4-47ad-b392-6fa5636ad039"/>
+					<textElement>
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[Nº Dpto Int. Mz.:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="144" y="91" width="122" height="13" uuid="27bdf012-df18-4a1a-bf2e-f568caff0548"/>
+					<textElement>
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[PROVINCIA:  DEL SANTA]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="0" y="92" width="144" height="13" uuid="8625947c-ec36-4acd-9678-9a63fdd6ca19"/>
+					<textElement>
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[DISTRITO:  NUEVO CHIMBOTE]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="266" y="91" width="119" height="13" uuid="b5abd9e9-671f-407f-a48a-58e0d9a5d1bd"/>
+					<textElement>
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[DEPARTAMENTO:  ANCASH]]></text>
+				</staticText>
+				<line>
+					<reportElement x="0" y="104" width="802" height="1" uuid="9c210a65-a0ba-4ee4-8ad6-307293b9d08b"/>
+				</line>
+				<staticText>
+					<reportElement x="702" y="91" width="100" height="13" uuid="1e01e2c9-98be-4f06-8448-76df244a390d"/>
+					<textElement>
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[TELEFONO : 312960]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="0" y="105" width="343" height="13" uuid="ed3aee6c-4aa0-4438-ac87-d129bc540ec3"/>
+					<textElement>
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[REPRESEN. LEGAL (Apellidos y Nombres)  :  ARNULFO EDUARDO MORENO CORALES]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="702" y="104" width="100" height="13" uuid="049acce5-f8ca-4076-82e1-1103b280bb36"/>
+					<textElement>
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[TELEFONO : 312960]]></text>
+				</staticText>
+				<line>
+					<reportElement x="0" y="117" width="802" height="1" uuid="a4d2f251-fd14-4258-9bff-58be4623ffa0"/>
+				</line>
+				<line>
+					<reportElement x="0" y="130" width="802" height="1" uuid="66512443-0bd1-4ed9-a118-22de36e9c71f"/>
+				</line>
+				<staticText>
+					<reportElement x="0" y="118" width="343" height="13" uuid="3ad325a6-1785-46b6-ba53-63462d051c16"/>
+					<textElement>
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[ELABORADO POR: (Apellidos y Nombres)  :  SANTOS MARTIN TRUJILLO LOPEZ]]></text>
+				</staticText>
+			</band>
+		</groupHeader>
+		<groupFooter>
+			<band height="13">
+				<textField isStretchWithOverflow="true">
+					<reportElement style="style1" stretchType="RelativeToTallestObject" x="0" y="0" width="45" height="13" uuid="b3c9d616-1264-41f2-a70f-044f87740de7"/>
+					<textElement textAlignment="Center">
+						<font fontName="Arial"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{NExpediente}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="style1" stretchType="RelativeToTallestObject" x="45" y="0" width="310" height="13" uuid="2ef59b03-2db7-4f7f-a40c-382af92de136"/>
+					<textElement>
+						<font fontName="Arial"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{meta}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" pattern="###0.00;-###0.00" isBlankWhenNull="true">
+					<reportElement style="style1" stretchType="RelativeToTallestObject" x="646" y="0" width="52" height="13" uuid="9c14ab86-b007-4e9b-b746-0ec56f2ce7d1"/>
+					<textElement textAlignment="Right">
+						<font fontName="Arial"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$V{monto_2}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" pattern="###0.00;-###0.00" isBlankWhenNull="true">
+					<reportElement style="style1" stretchType="RelativeToTallestObject" x="548" y="0" width="47" height="13" uuid="43967fa9-47e6-498c-ac51-9039546d8080"/>
+					<textElement textAlignment="Right">
+						<font fontName="Arial"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$V{monto_5}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="style1" stretchType="RelativeToTallestObject" x="407" y="0" width="47" height="13" uuid="0ccf69d2-04c6-4a8a-954a-d11c6c9950cc"/>
+					<textElement textAlignment="Right">
+						<font fontName="Arial"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$V{monto_4}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" pattern="###0.00;-###0.00" isBlankWhenNull="true">
+					<reportElement style="style1" stretchType="RelativeToTallestObject" x="698" y="0" width="52" height="13" uuid="4a09cf69-4738-4d5f-bd66-72e85295d445"/>
+					<textElement textAlignment="Right">
+						<font fontName="Arial"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$V{monto_1}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="style1" stretchType="RelativeToTallestObject" x="355" y="0" width="52" height="13" uuid="46671c08-91b5-4610-a882-ba56fce3a0cf"/>
+					<textElement textAlignment="Right">
+						<font fontName="Arial"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$V{monto_4}.multiply(new java.math.BigDecimal("10"))]]></textFieldExpression>
+				</textField>
+			</band>
+		</groupFooter>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band splitType="Stretch"/>
+	</detail>
+	<columnFooter>
+		<band height="13" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

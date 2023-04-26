@@ -1,0 +1,522 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="e8995e4a-58f5-48e4-a23a-4d5151e5f1c5">
+	<property name="ireport.zoom" value="1.5"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="77"/>
+	<parameter name="COUNTRY_LOGO" class="java.lang.String" isForPrompting="false"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="NExpediente" class="java.lang.String">
+		<fieldDescription><![CDATA[planillaDetPK.NExpediente]]></fieldDescription>
+	</field>
+	<field name="anoEje" class="java.lang.String">
+		<fieldDescription><![CDATA[planillaDetPK.anoEje]]></fieldDescription>
+	</field>
+	<field name="codigo" class="java.lang.String">
+		<fieldDescription><![CDATA[planillaDetPK.codigo]]></fieldDescription>
+	</field>
+	<field name="dni" class="java.lang.String">
+		<fieldDescription><![CDATA[planillaDetPK.dni]]></fieldDescription>
+	</field>
+	<field name="mesEje" class="java.lang.String">
+		<fieldDescription><![CDATA[planillaTrab.planilla.mes.mesEje]]></fieldDescription>
+	</field>
+	<field name="mesNombre" class="java.lang.String">
+		<fieldDescription><![CDATA[planillaTrab.planilla.mes.nombre]]></fieldDescription>
+	</field>
+	<field name="NPlanilla" class="java.lang.String">
+		<fieldDescription><![CDATA[planillaTrab.planilla.NPlanilla]]></fieldDescription>
+	</field>
+	<field name="secFunc" class="java.lang.String">
+		<fieldDescription><![CDATA[planillaTrab.planilla.secFunc]]></fieldDescription>
+	</field>
+	<field name="tipoPlanilla" class="java.lang.String">
+		<fieldDescription><![CDATA[planillaTrab.planilla.tipoPlanilla.tipoPlanilla]]></fieldDescription>
+	</field>
+	<field name="nombrePlanilla" class="java.lang.String">
+		<fieldDescription><![CDATA[planillaTrab.planilla.tipoPlanilla.nombrePlanilla]]></fieldDescription>
+	</field>
+	<field name="abrevPlanilla" class="java.lang.String">
+		<fieldDescription><![CDATA[planillaTrab.planilla.tipoPlanilla.abrevPlanilla]]></fieldDescription>
+	</field>
+	<field name="fuenteFinancNombre" class="java.lang.String">
+		<fieldDescription><![CDATA[planillaTrab.planilla.fuenteF.nombre]]></fieldDescription>
+	</field>
+	<field name="fuenteFinancAbrev" class="java.lang.String">
+		<fieldDescription><![CDATA[planillaTrab.planilla.fuenteF.abrev]]></fieldDescription>
+	</field>
+	<field name="fuenteFinancCode" class="java.lang.String">
+		<fieldDescription><![CDATA[planillaTrab.planilla.fuenteFinanc]]></fieldDescription>
+	</field>
+	<field name="modLaboralNombre" class="java.lang.String">
+		<fieldDescription><![CDATA[planillaTrab.planilla.modLaboral.nombre]]></fieldDescription>
+	</field>
+	<field name="modLaboralCode" class="java.lang.String">
+		<fieldDescription><![CDATA[planillaTrab.planilla.modLaboral.id]]></fieldDescription>
+	</field>
+	<field name="fechaPlan" class="java.util.Date">
+		<fieldDescription><![CDATA[planillaTrab.planilla.fechaPlan]]></fieldDescription>
+	</field>
+	<field name="periodoFin" class="java.util.Date">
+		<fieldDescription><![CDATA[planillaTrab.planilla.periodoFin]]></fieldDescription>
+	</field>
+	<field name="periodoIni" class="java.util.Date">
+		<fieldDescription><![CDATA[planillaTrab.planilla.periodoIni]]></fieldDescription>
+	</field>
+	<field name="estado" class="java.lang.Character">
+		<fieldDescription><![CDATA[planillaTrab.planilla.estado]]></fieldDescription>
+	</field>
+	<field name="tipoTrab" class="java.lang.String">
+		<fieldDescription><![CDATA[planillaTrab.planilla.tipoTrab]]></fieldDescription>
+	</field>
+	<field name="regPensionCode" class="java.lang.String">
+		<fieldDescription><![CDATA[planillaTrab.regPension.regPensionCode]]></fieldDescription>
+	</field>
+	<field name="regPensionNombre" class="java.lang.String">
+		<fieldDescription><![CDATA[planillaTrab.regPension.nombre]]></fieldDescription>
+	</field>
+	<field name="nivelRemNombre" class="java.lang.String">
+		<fieldDescription><![CDATA[planillaTrab.nivelRem.nombre]]></fieldDescription>
+	</field>
+	<field name="nivelRemAbrev" class="java.lang.String">
+		<fieldDescription><![CDATA[planillaTrab.nivelRem.abrev]]></fieldDescription>
+	</field>
+	<field name="descCargo" class="java.lang.String">
+		<fieldDescription><![CDATA[planillaTrab.descCargo]]></fieldDescription>
+	</field>
+	<field name="diasNor" class="java.lang.Integer">
+		<fieldDescription><![CDATA[planillaTrab.diasNor]]></fieldDescription>
+	</field>
+	<field name="NOrden" class="java.lang.Integer">
+		<fieldDescription><![CDATA[planillaTrab.NOrden]]></fieldDescription>
+	</field>
+	<field name="NSerie" class="java.lang.String">
+		<fieldDescription><![CDATA[planillaTrab.NSerie]]></fieldDescription>
+	</field>
+	<field name="remAseg" class="java.math.BigDecimal">
+		<fieldDescription><![CDATA[planillaTrab.remAseg]]></fieldDescription>
+	</field>
+	<field name="diasFer" class="java.lang.Integer">
+		<fieldDescription><![CDATA[planillaTrab.diasFer]]></fieldDescription>
+	</field>
+	<field name="diasDom" class="java.lang.Integer">
+		<fieldDescription><![CDATA[planillaTrab.diasDom]]></fieldDescription>
+	</field>
+	<field name="diasFtrab" class="java.lang.Integer">
+		<fieldDescription><![CDATA[planillaTrab.diasFtrab]]></fieldDescription>
+	</field>
+	<field name="montoRem" class="java.math.BigDecimal">
+		<fieldDescription><![CDATA[planillaTrab.montoRem]]></fieldDescription>
+	</field>
+	<field name="numHijos" class="java.lang.Integer">
+		<fieldDescription><![CDATA[planillaTrab.numHijos]]></fieldDescription>
+	</field>
+	<field name="ind" class="java.lang.Character">
+		<fieldDescription><![CDATA[ind]]></fieldDescription>
+	</field>
+	<field name="monto" class="java.math.BigDecimal">
+		<fieldDescription><![CDATA[monto]]></fieldDescription>
+	</field>
+	<field name="fechaIngreso" class="java.util.Date">
+		<fieldDescription><![CDATA[planillaTrab.personal.fechaIngreso]]></fieldDescription>
+	</field>
+	<field name="nombComp" class="java.lang.String">
+		<fieldDescription><![CDATA[planillaTrab.personal.nombComp]]></fieldDescription>
+	</field>
+	<field name="fechaInscrip" class="java.util.Date">
+		<fieldDescription><![CDATA[planillaTrab.personal.fechaInscrip]]></fieldDescription>
+	</field>
+	<field name="cuspp" class="java.lang.String">
+		<fieldDescription><![CDATA[planillaTrab.personal.cuspp]]></fieldDescription>
+	</field>
+	<field name="codPlza" class="java.lang.String">
+		<fieldDescription><![CDATA[planillaTrab.personal.codPlza]]></fieldDescription>
+	</field>
+	<field name="meta" class="java.lang.String">
+		<fieldDescription><![CDATA[planillaTrab.planilla.meta.meta]]></fieldDescription>
+	</field>
+	<field name="metaNombre" class="java.lang.String">
+		<fieldDescription><![CDATA[planillaTrab.planilla.meta.nombre]]></fieldDescription>
+	</field>
+	<field name="funcion" class="java.lang.String">
+		<fieldDescription><![CDATA[planillaTrab.planilla.meta.funcion.funcionPK.funcion]]></fieldDescription>
+	</field>
+	<field name="funcionNombre" class="java.lang.String">
+		<fieldDescription><![CDATA[planillaTrab.planilla.meta.funcion.nombre]]></fieldDescription>
+	</field>
+	<field name="nm" class="java.lang.String">
+		<fieldDescription><![CDATA[planillaTrab.planilla.meta.nm]]></fieldDescription>
+	</field>
+	<field name="nombreNm" class="java.lang.String">
+		<fieldDescription><![CDATA[planillaTrab.planilla.meta.nombreNm]]></fieldDescription>
+	</field>
+	<field name="componente" class="java.lang.String">
+		<fieldDescription><![CDATA[planillaTrab.planilla.meta.componente.componentePK.componente]]></fieldDescription>
+	</field>
+	<field name="componenteNombre" class="java.lang.String">
+		<fieldDescription><![CDATA[planillaTrab.planilla.meta.componente.componenteNombre.nombre]]></fieldDescription>
+	</field>
+	<field name="subPrograma" class="java.lang.String">
+		<fieldDescription><![CDATA[planillaTrab.planilla.meta.subPrograma]]></fieldDescription>
+	</field>
+	<field name="concepto" class="java.lang.String">
+		<fieldDescription><![CDATA[concepto.concepto]]></fieldDescription>
+	</field>
+	<field name="actProy" class="java.lang.String">
+		<fieldDescription><![CDATA[planillaTrab.planilla.meta.componente.componentePK.actProy]]></fieldDescription>
+	</field>
+	<field name="actProyNombreNombre" class="java.lang.String">
+		<fieldDescription><![CDATA[planillaTrab.planilla.meta.componente.actProy.actProyNombre.nombre]]></fieldDescription>
+	</field>
+	<field name="programaNombreNombre" class="java.lang.String">
+		<fieldDescription><![CDATA[planillaTrab.planilla.meta.componente.actProy.subPrograma.programa.programaNombre.nombre]]></fieldDescription>
+	</field>
+	<field name="subProgramaNombreNombre" class="java.lang.String">
+		<fieldDescription><![CDATA[planillaTrab.planilla.meta.componente.actProy.subPrograma.subProgramaNombre.nombre]]></fieldDescription>
+	</field>
+	<variable name="monto_1" class="java.math.BigDecimal" resetType="Group" resetGroup="codigo" calculation="Sum">
+		<variableExpression><![CDATA[$F{monto}]]></variableExpression>
+	</variable>
+	<variable name="monto_2" class="java.math.BigDecimal" resetType="Group" resetGroup="ind" calculation="Sum">
+		<variableExpression><![CDATA[$F{monto}]]></variableExpression>
+	</variable>
+	<variable name="monto_3" class="java.math.BigDecimal" calculation="Sum">
+		<variableExpression><![CDATA[$F{ind}=='1'?$F{monto}:
+($F{ind}=='2'?java.math.BigDecimal.ZERO.subtract($F{monto}):java.math.BigDecimal.ZERO)]]></variableExpression>
+	</variable>
+	<variable name="monto_4" class="java.math.BigDecimal" calculation="Sum">
+		<variableExpression><![CDATA[$F{ind}=='1'||$F{ind}=='3'?$F{monto}:java.math.BigDecimal.ZERO]]></variableExpression>
+	</variable>
+	<variable name="dni_1" class="java.lang.Integer" resetType="Page" calculation="DistinctCount">
+		<variableExpression><![CDATA[$F{dni}]]></variableExpression>
+	</variable>
+	<group name="ind">
+		<groupExpression><![CDATA[$F{ind}]]></groupExpression>
+		<groupHeader>
+			<band height="13">
+				<textField>
+					<reportElement x="133" y="0" width="259" height="13" uuid="86fcadf3-852a-4302-895a-98eadd66e10b"/>
+					<textElement>
+						<font fontName="Arial" size="7"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{REPORT_PARAMETERS_MAP}.get("I"+$F{ind})]]></textFieldExpression>
+				</textField>
+			</band>
+		</groupHeader>
+		<groupFooter>
+			<band height="13">
+				<textField>
+					<reportElement x="143" y="0" width="222" height="13" uuid="480c8c19-4580-4b0c-8653-ae8cd2f8024b"/>
+					<textElement>
+						<font fontName="Arial" size="7" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA["TOTAL "+$P{REPORT_PARAMETERS_MAP}.get("I"+$F{ind})]]></textFieldExpression>
+				</textField>
+				<textField pattern="###0.00;-###0.00">
+					<reportElement x="365" y="0" width="100" height="13" uuid="847ef279-d48f-4e5f-8827-a2eb835535de"/>
+					<textElement textAlignment="Right">
+						<font fontName="Arial" size="7" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$V{monto_2}]]></textFieldExpression>
+				</textField>
+			</band>
+		</groupFooter>
+	</group>
+	<group name="codigo">
+		<groupExpression><![CDATA[$F{codigo}]]></groupExpression>
+		<groupHeader>
+			<band height="13">
+				<textField>
+					<reportElement x="153" y="0" width="20" height="13" uuid="fd59776e-cc13-471f-8f5c-2e3dd93e2217"/>
+					<textElement>
+						<font fontName="Arial" size="7"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{codigo}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="173" y="0" width="192" height="13" uuid="bf72dd78-29e9-4773-83e5-f213ac40929b"/>
+					<textElement>
+						<font fontName="Arial" size="7"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{concepto}]]></textFieldExpression>
+				</textField>
+				<textField evaluationTime="Group" evaluationGroup="codigo" pattern="###0.00;-###0.00">
+					<reportElement x="365" y="0" width="100" height="13" uuid="a23758c8-c086-4a14-842b-4aac809764b1"/>
+					<textElement textAlignment="Right">
+						<font fontName="Arial" size="7"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$V{monto_1}]]></textFieldExpression>
+				</textField>
+			</band>
+		</groupHeader>
+		<groupFooter>
+			<band/>
+		</groupFooter>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="157" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="115" width="555" height="14" uuid="83b09951-5806-4e55-8fad-631f083747c3"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[REGION ANCASH]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="0" y="129" width="555" height="14" uuid="5e1010ac-d997-4d7b-9f84-5f0ec326dd7c"/>
+				<textElement textAlignment="Center" markup="none">
+					<font fontName="Arial" size="9" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["RESUMEN DE PLANILLA UNICA DE PAGOS - PENSIONISTAS  MES: " + $F{mesNombre}+ "  DEL: " + $F{anoEje}]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Page">
+				<reportElement x="0" y="143" width="555" height="14" uuid="c0820a66-e37c-4a7d-b81f-9a856bb73903"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA["NUMERO DE TRABAJADORES: "+$V{dni_1}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="73" y="0" width="205" height="11" uuid="782ffb57-e96f-4701-b983-79caa5c09a5b"/>
+				<textElement>
+					<font fontName="Arial" size="7"/>
+				</textElement>
+				<text><![CDATA[: 01 PRESIDENCIA DEL CONSEJO DE MINISTROS]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="11" width="73" height="11" uuid="5760d5fa-5325-49c3-9f28-0368b4c352a4"/>
+				<textElement>
+					<font fontName="Arial" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[PLIEGO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="44" width="73" height="11" uuid="61366373-713c-430e-96f4-c97d88520fa6"/>
+				<textElement>
+					<font fontName="Arial" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[FUENTE FINANC.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="278" y="44" width="73" height="11" uuid="ddb3ee38-88f6-4ccb-91c9-a8ec575cc69c"/>
+				<textElement>
+					<font fontName="Arial" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[META]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="351" y="33" width="204" height="11" uuid="4837a9fc-33d4-499a-9785-c05adafcda64"/>
+				<textElement>
+					<font fontName="Arial" size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[": "+$F{componente}+" "+$F{componenteNombre}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="278" y="11" width="73" height="11" uuid="3eff1055-5cec-4d1c-8a82-33a429723efc"/>
+				<textElement>
+					<font fontName="Arial" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[SUB PROGRAMA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="22" width="73" height="11" uuid="ae9ad1c8-f901-4e7e-80b7-214e5954d457"/>
+				<textElement>
+					<font fontName="Arial" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[UNIDAD EJECUTORA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="278" y="22" width="73" height="11" uuid="a178c483-9960-4366-b0f2-e211bac6ce6a"/>
+				<textElement>
+					<font fontName="Arial" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ACTIVIDAD/PROY]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="351" y="22" width="204" height="11" uuid="6bec62d2-8ebc-42ae-b768-d15e15286fa8"/>
+				<textElement>
+					<font fontName="Arial" size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[": "+$F{actProy}+" "+$F{actProyNombreNombre}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="73" y="11" width="205" height="11" uuid="91a4216d-bd1e-456a-92d7-2d1d02236d74"/>
+				<textElement>
+					<font fontName="Arial" size="7"/>
+				</textElement>
+				<text><![CDATA[: 441 GOBIERNO REGIONAL DE ANCASH]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="278" y="33" width="73" height="11" uuid="da81af21-4c97-43d4-932b-b26a84b5e30c"/>
+				<textElement>
+					<font fontName="Arial" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[COMPONENTE]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="73" y="44" width="205" height="11" uuid="69fb721a-945d-4451-8f9f-b21035eb5ba5"/>
+				<textElement>
+					<font fontName="Arial" size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[": "+$F{fuenteFinancCode}+" "+$F{fuenteFinancNombre}]]></textFieldExpression>
+			</textField>
+			<image hAlign="Center" vAlign="Middle" onErrorType="Blank">
+				<reportElement x="247" y="55" width="60" height="60" uuid="797a8cc5-1db7-45f8-afb5-2f32ab129401"/>
+				<imageExpression><![CDATA[$P{COUNTRY_LOGO}]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="73" y="22" width="205" height="11" uuid="4a79b291-d8fb-4738-a6c7-6e9be092e0a8"/>
+				<textElement>
+					<font fontName="Arial" size="7"/>
+				</textElement>
+				<text><![CDATA[: 003 SUB REGION PACIFICO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="0" width="73" height="11" uuid="b7f363ef-0c3c-4b80-8eeb-918a8fcbd2b3"/>
+				<textElement>
+					<font fontName="Arial" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[SECTOR]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="73" y="33" width="205" height="11" uuid="6a63fcd0-3045-4745-b92b-957c8889db71"/>
+				<textElement>
+					<font fontName="Arial" size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[": "+$F{funcion}+" "+$F{funcionNombre}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="278" y="0" width="73" height="11" uuid="bebbc745-07c0-4f97-8842-70261be0fe32"/>
+				<textElement>
+					<font fontName="Arial" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[PROGRAMA]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="351" y="44" width="204" height="21" uuid="68130b94-7f51-4785-9db1-1206c559c101"/>
+				<textElement>
+					<font fontName="Arial" size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[": "+$F{meta}+" "+$F{metaNombre}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="351" y="0" width="204" height="11" uuid="5bcf84c2-abb4-45da-a75e-cde853050e79"/>
+				<textElement>
+					<font fontName="Arial" size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[": XXXX "+$F{programaNombreNombre}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="33" width="73" height="11" uuid="0f6ae112-f7c3-488f-8fa6-297200e19581"/>
+				<textElement>
+					<font fontName="Arial" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[FUNCION]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="351" y="11" width="204" height="11" uuid="1cec2236-0f31-40c2-a830-440f7caf61fe"/>
+				<textElement>
+					<font fontName="Arial" size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[": "+$F{subPrograma}+" "+$F{subProgramaNombreNombre}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band splitType="Stretch"/>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="13" splitType="Stretch">
+			<rectangle radius="5">
+				<reportElement x="0" y="0" width="555" height="13" uuid="0ce90833-4467-4550-a0f6-18cd772ea56b"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</rectangle>
+			<textField evaluationTime="Report">
+				<reportElement x="527" y="0" width="23" height="13" uuid="93871543-f302-4e5f-a58a-519d23e4fe6c"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Arial" size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="484" y="0" width="59" height="13" uuid="20328635-3af3-494c-89d6-6c4f45ed4dac">
+					<printWhenExpression><![CDATA[$V{PAGE_NUMBER}<10]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Arial" size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Página "+$V{PAGE_NUMBER}+" de"]]></textFieldExpression>
+			</textField>
+			<textField pattern="dd/MM/yyyy HH:mm:ss">
+				<reportElement x="3" y="0" width="100" height="13" uuid="eb6fce8a-9f2f-494d-9013-e8deac2024eb"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Arial" size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="160" y="0" width="262" height="13" uuid="5380a6ae-144e-46e9-a32d-6aa3cb3a81cd"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="7"/>
+				</textElement>
+				<text><![CDATA[Sistema Integral de Gestión Administrativa - PEGASUS V2.0]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="477" y="0" width="59" height="13" uuid="fa999045-97dc-4998-b0b4-a99905b77eda">
+					<printWhenExpression><![CDATA[$V{PAGE_NUMBER}>9]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Arial" size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Página "+$V{PAGE_NUMBER}+" de"]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch">
+			<textField pattern="###0.00;-###0.00">
+				<reportElement x="365" y="0" width="100" height="13" uuid="fcbe74ad-506f-4d6c-8d08-2a185deff986"/>
+				<textElement textAlignment="Right">
+					<font fontName="Arial" size="7" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{monto_3}]]></textFieldExpression>
+			</textField>
+			<textField pattern="###0.00;-###0.00">
+				<reportElement x="365" y="13" width="100" height="13" uuid="6c17681f-d0e5-4c93-8c67-3ef2bf3b4af8"/>
+				<textElement textAlignment="Right">
+					<font fontName="Arial" size="7" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{monto_4}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="265" y="0" width="100" height="13" uuid="017a6baa-bdff-492a-bbfd-f41fabbe5723"/>
+				<textElement>
+					<font fontName="Arial" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[LIQUIDO A PAGAR]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="265" y="13" width="100" height="13" uuid="750e728d-879c-4b18-8b04-8ba0e5c0228d"/>
+				<textElement>
+					<font fontName="Arial" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[TOTAL GIRADO]]></text>
+			</staticText>
+		</band>
+	</summary>
+</jasperReport>

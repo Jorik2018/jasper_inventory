@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="d6da0ad5-b98b-4c05-8df5-4a3f683fc15b">
+	<property name="ireport.zoom" value="1.5"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="96"/>
+	<style name="style1">
+		<box topPadding="1" leftPadding="1" bottomPadding="1" rightPadding="1">
+			<topPen lineWidth="0.25"/>
+			<leftPen lineWidth="0.25"/>
+			<bottomPen lineWidth="0.25"/>
+			<rightPen lineWidth="0.25"/>
+		</box>
+	</style>
+	<parameter name="EDAD" class="java.util.Map" isForPrompting="false"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="id" class="java.lang.String">
+		<fieldDescription><![CDATA[modLaboral.id]]></fieldDescription>
+	</field>
+	<field name="abrev" class="java.lang.String">
+		<fieldDescription><![CDATA[modLaboral.abrev]]></fieldDescription>
+	</field>
+	<field name="dni" class="java.lang.String">
+		<fieldDescription><![CDATA[dni]]></fieldDescription>
+	</field>
+	<field name="nombComp" class="java.lang.String">
+		<fieldDescription><![CDATA[nombComp]]></fieldDescription>
+	</field>
+	<field name="descCargo" class="java.lang.String">
+		<fieldDescription><![CDATA[descCargo]]></fieldDescription>
+	</field>
+	<field name="fechaNac" class="java.util.Date">
+		<fieldDescription><![CDATA[fechaNac]]></fieldDescription>
+	</field>
+	<field name="ubicaFoto" class="java.lang.String">
+		<fieldDescription><![CDATA[ubicaFoto]]></fieldDescription>
+	</field>
+	<field name="modLaboralNombre" class="java.lang.String">
+		<fieldDescription><![CDATA[modLaboral.nombre]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="54" splitType="Stretch">
+			<staticText>
+				<reportElement x="118" y="0" width="319" height="30" uuid="4cdeb87c-f966-4892-b42f-a5c8cebeab53"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ONOMASTICOS DEL PERSONAL ACTIVO
+SUB REGION PACIFICO]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="13" splitType="Stretch">
+			<staticText>
+				<reportElement style="style1" x="138" y="0" width="279" height="13" uuid="40bd0b95-4c61-47f6-9623-c4290f2abd06"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[DATOS DEL TRABAJADOR]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="style1" x="69" y="0" width="69" height="13" uuid="98a457d8-4cae-4e08-8f9d-db822ae82e4f"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[FOTOGRAFIA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="style1" x="0" y="0" width="69" height="13" uuid="6d74ccf6-3606-4306-84f4-6794926c4120"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[DIA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="style1" x="417" y="0" width="69" height="13" uuid="54b77486-8564-4259-a7d9-214d9faf7eca"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Fecha Nac]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="style1" x="486" y="0" width="69" height="13" uuid="f1a9ff2b-531a-4ccd-b2ee-c759904720d5"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Edad]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="76" splitType="Stretch">
+			<rectangle>
+				<reportElement mode="Transparent" x="138" y="0" width="279" height="76" uuid="e10f612c-67ce-4239-929f-e86e4d2452d5"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</rectangle>
+			<textField>
+				<reportElement x="144" y="4" width="273" height="18" uuid="046f1630-c455-4ff1-869b-9f2a7f664824"/>
+				<textElement>
+					<font fontName="Arial"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{dni}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="144" y="58" width="273" height="18" uuid="e20bc16d-bd86-49ce-893b-9055032e2ab7"/>
+				<textElement>
+					<font fontName="Arial"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{modLaboralNombre}]]></textFieldExpression>
+			</textField>
+			<textField pattern="dd">
+				<reportElement style="style1" x="0" y="0" width="69" height="76" uuid="a03be9e3-d6c2-4fb0-9c9c-2a4f54e8e213"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{fechaNac}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="144" y="40" width="273" height="18" uuid="658eaa0c-0e1d-44ba-8816-e9a5bf2007e9"/>
+				<textElement>
+					<font fontName="Arial"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{descCargo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="144" y="22" width="273" height="18" uuid="fc92ecae-7895-4a0d-940f-436115c819e7"/>
+				<textElement>
+					<font fontName="Arial" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nombComp}]]></textFieldExpression>
+			</textField>
+			<textField pattern="dd/MM/yyyy">
+				<reportElement style="style1" x="417" y="0" width="69" height="76" uuid="bc2dc98e-8c2e-4421-88ac-fcc78ecc1234"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{fechaNac}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="style1" x="486" y="0" width="69" height="76" uuid="087250b5-3e10-43ef-8190-09d56352c4ad"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{EDAD}!=null?$P{EDAD}.get($F{fechaNac}):null]]></textFieldExpression>
+			</textField>
+			<image hAlign="Center" onErrorType="Blank">
+				<reportElement x="69" y="0" width="69" height="76" uuid="16b32bff-ed99-45d0-ac6e-0cf20b81f02b"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+				<imageExpression><![CDATA[$F{ubicaFoto}]]></imageExpression>
+			</image>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="13" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="13" splitType="Stretch">
+			<textField evaluationTime="Report">
+				<reportElement x="527" y="0" width="23" height="13" uuid="e964cacc-377a-4721-8aba-0dea8ddc4a08"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Arial"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="450" y="0" width="93" height="13" uuid="bba3081d-ae07-4055-9a96-8ab08bb0e05e"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Arial"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Página "+$V{PAGE_NUMBER}+" de"]]></textFieldExpression>
+			</textField>
+			<rectangle radius="5">
+				<reportElement mode="Transparent" x="0" y="0" width="555" height="13" uuid="9ed73ca2-efaa-46d3-ac31-6c339866a535"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</rectangle>
+			<textField pattern="dd/MM/yyyy HH:mm:ss">
+				<reportElement x="3" y="0" width="100" height="13" uuid="ba73a16e-af61-4cd1-9e2b-1643aa153e46"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Arial"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="160" y="0" width="262" height="13" uuid="8626d90c-e438-4e6c-8ff5-a42d09912a6a"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial"/>
+				</textElement>
+				<text><![CDATA[Sistema Integral de Gestión Administrativa - PEGASUS V2.0]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

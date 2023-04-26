@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="style1">
+		<box>
+			<bottomPen lineWidth="1.0"/>
+		</box>
+	</style>
+	<parameter name="escudo" class="java.awt.Image"/>
+	<parameter name="logo" class="java.awt.Image"/>
+	<parameter name="company" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[select v.id_esc,o.fec_inicio fecha_ini,n.nombre_completo,p.id_tipo,t.tipo,p.condicion,v.anio,v.total,pendientes from
+per_vacaciones v
+inner join esc_personal p on p.id_esc=v.id_esc
+inner join esc_contratos_otros o on o.id_esc=p.id_esc and fec_fin>='2013-3-26' and fec_inicio<='2013-3-26'
+inner join esc_tipo_personal t on t.id_tipo=o.id_tipo
+inner join drt_personanatural n on n.id_dir=p.id_dir
+right outer join (select now()) d on 1=1
+/*where v.id_esc=11449 and v.anio=2013 and v.mes=3*/]]>
+	</queryString>
+	<field name="id_esc" class="java.lang.Integer"/>
+	<field name="fecha_ini" class="java.sql.Timestamp"/>
+	<field name="nombre_completo" class="java.lang.String"/>
+	<field name="id_tipo" class="java.lang.Integer"/>
+	<field name="tipo" class="java.lang.String"/>
+	<field name="condicion" class="java.lang.Boolean"/>
+	<field name="anio" class="java.lang.Integer"/>
+	<field name="total" class="java.lang.Integer"/>
+	<field name="pendientes" class="java.lang.Integer"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="392" splitType="Stretch">
+			<textField>
+				<reportElement x="134" y="13" width="289" height="28"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{company}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="34" y="123" width="489" height="20"/>
+				<textElement textAlignment="Center">
+					<font size="13" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[DESCANSO FISICO POR AÑO DE SERVICIO CUMPLIDO]]></text>
+			</staticText>
+			<image>
+				<reportElement x="457" y="13" width="66" height="91"/>
+				<imageExpression><![CDATA[$P{escudo}]]></imageExpression>
+			</image>
+			<image onErrorType="Icon">
+				<reportElement x="34" y="13" width="66" height="91"/>
+				<imageExpression><![CDATA[$P{logo}]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="34" y="188" width="100" height="20"/>
+				<textElement textAlignment="Right">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Còdigo:]]></text>
+			</staticText>
+			<textField>
+				<reportElement style="style1" x="134" y="188" width="100" height="20"/>
+				<textElement textAlignment="Center">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{id_esc}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="34" y="225" width="100" height="20"/>
+				<textElement textAlignment="Right">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nombre completo:]]></text>
+			</staticText>
+			<textField>
+				<reportElement style="style1" x="134" y="225" width="389" height="20"/>
+				<textElement textAlignment="Center">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nombre_completo}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="34" y="265" width="100" height="20"/>
+				<textElement textAlignment="Right">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Tipo personal:]]></text>
+			</staticText>
+			<textField>
+				<reportElement style="style1" x="134" y="265" width="100" height="20"/>
+				<textElement textAlignment="Center">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tipo}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="323" y="265" width="100" height="20"/>
+				<textElement textAlignment="Right">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Condiciòn:]]></text>
+			</staticText>
+			<textField>
+				<reportElement style="style1" x="423" y="265" width="100" height="20"/>
+				<textElement textAlignment="Center">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[org.jsuns.util.JSUtil.intValue($F{condicion})==1?"NOMBRADO":"CONTRATADO"]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="34" y="298" width="100" height="31"/>
+				<textElement textAlignment="Right">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Fecha inicio del
+ contrato actual:]]></text>
+			</staticText>
+			<textField pattern="dd/MM/yyyy">
+				<reportElement style="style1" x="134" y="308" width="100" height="20"/>
+				<textElement textAlignment="Center">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{fecha_ini}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="323" y="308" width="100" height="20"/>
+				<textElement textAlignment="Right">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Año asignado:]]></text>
+			</staticText>
+			<textField>
+				<reportElement style="style1" x="423" y="309" width="100" height="20"/>
+				<textElement textAlignment="Center">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{anio}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="323" y="349" width="100" height="20"/>
+				<textElement textAlignment="Right">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Pendientes:]]></text>
+			</staticText>
+			<textField>
+				<reportElement style="style1" x="423" y="349" width="100" height="20"/>
+				<textElement textAlignment="Center">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{pendientes}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="34" y="349" width="100" height="20"/>
+				<textElement textAlignment="Right">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Total gozados:]]></text>
+			</staticText>
+			<textField>
+				<reportElement style="style1" x="134" y="349" width="100" height="20"/>
+				<textElement textAlignment="Center">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{total}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="134" y="41" width="289" height="28"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+					<font size="13" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["OFICINA CENTRAL DE PERSONAL"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="134" y="69" width="289" height="28"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["UNIDAD DE ESCALAFON"]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="100" y="104" width="357" height="1"/>
+			</line>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="34" splitType="Stretch">
+			<line>
+				<reportElement x="0" y="0" width="555" height="1"/>
+			</line>
+			<staticText>
+				<reportElement x="234" y="8" width="100" height="20"/>
+				<textElement textAlignment="Center">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[OCECA - UNS]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="433" y="8" width="80" height="20"/>
+				<textElement textAlignment="Right">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement x="513" y="8" width="29" height="20"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="dd/MM/yyyy">
+				<reportElement x="20" y="8" width="100" height="20"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

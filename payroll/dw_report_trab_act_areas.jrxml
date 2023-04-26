@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="c9ebba0a-509b-4784-90c5-cccdf4346cb4">
+	<property name="ireport.zoom" value="2.0"/>
+	<property name="ireport.x" value="503"/>
+	<property name="ireport.y" value="165"/>
+	<style name="style1">
+		<box topPadding="1" leftPadding="1" bottomPadding="1" rightPadding="1">
+			<topPen lineWidth="0.25"/>
+			<leftPen lineWidth="0.25"/>
+			<bottomPen lineWidth="0.25"/>
+			<rightPen lineWidth="0.25"/>
+		</box>
+	</style>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="dni" class="java.lang.String">
+		<fieldDescription><![CDATA[dni]]></fieldDescription>
+	</field>
+	<field name="nombComp" class="java.lang.String">
+		<fieldDescription><![CDATA[nombComp]]></fieldDescription>
+	</field>
+	<field name="modLaboralCode" class="java.lang.String">
+		<fieldDescription><![CDATA[modLaboral.id]]></fieldDescription>
+	</field>
+	<field name="modLaboralNombre" class="java.lang.String">
+		<fieldDescription><![CDATA[modLaboral.nombre]]></fieldDescription>
+	</field>
+	<field name="nivelRem" class="java.lang.String">
+		<fieldDescription><![CDATA[nivelRem]]></fieldDescription>
+	</field>
+	<field name="nivelRemNombre" class="java.lang.String">
+		<fieldDescription><![CDATA[nivelRemunerativo.nombre]]></fieldDescription>
+	</field>
+	<field name="cargoCode" class="java.lang.Integer">
+		<fieldDescription><![CDATA[cargo.idCargo]]></fieldDescription>
+	</field>
+	<field name="nomCargo" class="java.lang.String">
+		<fieldDescription><![CDATA[cargo.nomCargo]]></fieldDescription>
+	</field>
+	<field name="cargoDesc" class="java.lang.String">
+		<fieldDescription><![CDATA[descCargo]]></fieldDescription>
+	</field>
+	<field name="montoRem" class="java.math.BigDecimal">
+		<fieldDescription><![CDATA[montoRem]]></fieldDescription>
+	</field>
+	<field name="oficinaNombre" class="java.lang.String">
+		<fieldDescription><![CDATA[oficina.oficina]]></fieldDescription>
+	</field>
+	<field name="codoficina" class="java.lang.String">
+		<fieldDescription><![CDATA[oficina.oficinaPK.codoficina]]></fieldDescription>
+	</field>
+	<field name="codarea" class="java.lang.String">
+		<fieldDescription><![CDATA[oficina.oficinaPK.codarea]]></fieldDescription>
+	</field>
+	<field name="area" class="java.lang.String">
+		<fieldDescription><![CDATA[oficina.area.area]]></fieldDescription>
+	</field>
+	<variable name="dni_1" class="java.lang.Integer" resetType="Group" resetGroup="codoficina" calculation="Count">
+		<variableExpression><![CDATA[$F{dni}]]></variableExpression>
+	</variable>
+	<variable name="dni_2" class="java.lang.Integer" resetType="Group" resetGroup="codarea" calculation="Count">
+		<variableExpression><![CDATA[$F{dni}]]></variableExpression>
+	</variable>
+	<variable name="dni_3" class="java.lang.Integer" calculation="Count">
+		<variableExpression><![CDATA[$F{dni}]]></variableExpression>
+	</variable>
+	<group name="codarea" isReprintHeaderOnEachPage="true">
+		<groupExpression><![CDATA[$F{codarea}]]></groupExpression>
+		<groupHeader>
+			<band height="13">
+				<textField>
+					<reportElement style="style1" mode="Opaque" x="0" y="0" width="55" height="13" backcolor="#FFFF66" uuid="92bf1bea-dc42-4364-b34a-3680234af04c"/>
+					<textElement textAlignment="Center">
+						<font fontName="Arial" size="7" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{codarea}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="style1" mode="Opaque" x="55" y="0" width="500" height="13" backcolor="#FFFF66" uuid="581253a3-fc0a-460d-ab61-6e2af7092efb"/>
+					<textElement>
+						<font fontName="Arial" size="7" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{area}]]></textFieldExpression>
+				</textField>
+			</band>
+		</groupHeader>
+		<groupFooter>
+			<band height="13">
+				<textField>
+					<reportElement style="style1" mode="Opaque" x="491" y="0" width="64" height="13" backcolor="#FFFF66" uuid="17d2c11c-2b45-49b7-9d95-a363e4ece2dc"/>
+					<textElement textAlignment="Right">
+						<font fontName="Arial" size="7" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$V{dni_2}]]></textFieldExpression>
+				</textField>
+			</band>
+		</groupFooter>
+	</group>
+	<group name="codoficina" isReprintHeaderOnEachPage="true">
+		<groupExpression><![CDATA[$F{codoficina}]]></groupExpression>
+		<groupHeader>
+			<band height="13">
+				<textField>
+					<reportElement style="style1" mode="Opaque" x="55" y="0" width="500" height="13" backcolor="#CCFFCC" uuid="6b779297-b122-4c68-8f4d-c10cbed96391"/>
+					<textElement>
+						<font fontName="Arial" size="7" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{oficinaNombre}]]></textFieldExpression>
+				</textField>
+			</band>
+		</groupHeader>
+		<groupFooter>
+			<band height="13">
+				<textField>
+					<reportElement style="style1" mode="Opaque" x="491" y="0" width="64" height="13" backcolor="#CCFFCC" uuid="aca01ed9-badc-4312-8e93-5036ad82a124"/>
+					<textElement textAlignment="Right">
+						<font fontName="Arial" size="7" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$V{dni_1}]]></textFieldExpression>
+				</textField>
+			</band>
+		</groupFooter>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="50" splitType="Stretch">
+			<staticText>
+				<reportElement x="110" y="0" width="332" height="20" uuid="27018fbb-21df-443f-a680-52d2271c87a0"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[REPORTE DE PERSONAL ACTIVO POR MODALIDAD LABORAL]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="13" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="13" splitType="Stretch">
+			<staticText>
+				<reportElement style="style1" x="0" y="0" width="55" height="13" uuid="240a2277-befe-4848-8f40-860d90719ff9"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[DNI]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="style1" x="55" y="0" width="174" height="13" uuid="a3bec643-990d-4743-8a8f-3f69038ca871"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[APELLIDOS Y NOMBRES]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="style1" x="229" y="0" width="162" height="13" uuid="1f86fe79-1a60-467a-955c-73cf8a9e92ef"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[CARGO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="style1" x="391" y="0" width="100" height="13" uuid="c2eaa75c-3ebe-4eeb-9162-d5d47f63719e"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[TIPO DE TRABAJADOR]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="13" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="55" height="13" uuid="228b3833-4794-4ccd-b2ff-f39b19606a19"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font fontName="Arial" size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{dni}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="55" y="0" width="174" height="13" uuid="c3f64af6-9547-41f1-8d22-11a37eb045e5"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="Arial" size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nombComp}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="229" y="0" width="162" height="13" uuid="750964c0-b191-495e-bfee-bcc45a52b9c2"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="Arial" size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nomCargo}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="391" y="0" width="100" height="13" uuid="f6e1889a-87c0-4e53-b5b3-2ffee7db5ea8"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="Arial" size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{modLaboralNombre}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="13" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="13" splitType="Stretch">
+			<textField pattern="" isBlankWhenNull="false">
+				<reportElement style="style1" mode="Opaque" x="491" y="0" width="64" height="13" forecolor="#000000" backcolor="#FFFF66" uuid="19e17533-950e-4ed0-8c0d-57eebe8fd805"/>
+				<textElement textAlignment="Right" verticalAlignment="Top" rotation="None" markup="none">
+					<font fontName="Arial" size="7" isBold="true" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{dni_3}]]></textFieldExpression>
+			</textField>
+		</band>
+	</summary>
+</jasperReport>

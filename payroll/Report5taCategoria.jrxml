@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Report5taCategoria" pageWidth="503" pageHeight="842" columnWidth="503" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0">
+	<property name="ireport.scriptlethandling" value="0"/>
+	<property name="ireport.encoding" value="UTF-8"/>
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<import value="net.sf.jasperreports.engine.*"/>
+	<import value="java.util.*"/>
+	<import value="net.sf.jasperreports.engine.data.*"/>
+	<style name="bordered">
+		<box topPadding="1" leftPadding="2" bottomPadding="1" rightPadding="2">
+			<pen lineWidth="0.25"/>
+			<topPen lineWidth="0.25"/>
+			<leftPen lineWidth="0.25"/>
+			<bottomPen lineWidth="0.25"/>
+			<rightPen lineWidth="0.25"/>
+		</box>
+	</style>
+	<style name="header" style="bordered" mode="Opaque" forecolor="#000000" backcolor="#CCCCCC" fill="Solid" isBold="true">
+		<box topPadding="1" leftPadding="1" bottomPadding="1" rightPadding="1"/>
+	</style>
+	<parameter name="SUBREPORT" class="net.sf.jasperreports.engine.JRDataSource" isForPrompting="false"/>
+	<queryString>
+		<![CDATA[SELECT A.id_tipopla,A.anio,A.mes,A.nivel,A.dedicacion,B.bruto total,B.quinta renta FROM (select 1 id_tipopla,per_periodo_pla.anio,per_periodo_pla.mes,per_detallepla.nivel,per_detallepla.dedicacion,sum(monto) AS total FROM per_planilla INNER JOIN per_periodo_pla ON per_planilla.id_periodo = per_periodo_pla.id_periodo,per_planillaconcepto,per_detallepla WHERE per_periodo_pla.anio=2012 AND per_planilla.id_planilla = per_planillaconcepto.id_planilla AND per_planillaconcepto.id_esc = per_detallepla.id_esc AND per_planilla.id_planilla = per_detallepla.id_planilla AND per_detallepla.id_esc =93 AND id_tipomov=1 GROUP BY per_periodo_pla.anio,per_periodo_pla.mes,per_detallepla.nivel,per_detallepla.dedicacion) AS A  LEFT OUTER JOIN (SELECT per_quinta.*  FROM  esc_personal  inner join per_quinta ON esc_personal.id_dir=per_quinta.id_dir AND per_quinta.anio=2012 WHERE   esc_personal.id_esc=93 ) B  ON A.anio=B.anio AND A.mes=B.mes]]>
+	</queryString>
+	<field name="id_tipopla" class="java.lang.Integer"/>
+	<field name="anio" class="java.lang.Double"/>
+	<field name="mes" class="java.lang.String"/>
+	<field name="nivel" class="java.lang.String"/>
+	<field name="dedicacion" class="java.lang.String"/>
+	<field name="total" class="java.lang.Double"/>
+	<field name="renta" class="java.lang.Double"/>
+	<variable name="totalIngresoBruto" class="java.lang.Double" resetType="Group" resetGroup="total_anual" calculation="Sum">
+		<variableExpression><![CDATA[$F{total}]]></variableExpression>
+	</variable>
+	<variable name="totalRenta5taCategoria" class="java.lang.Double" resetType="Group" resetGroup="total_anual" calculation="Sum">
+		<variableExpression><![CDATA[$F{renta}]]></variableExpression>
+	</variable>
+	<variable name="meses" class="java.lang.Object">
+		<variableExpression><![CDATA[new String[]{"ENERO","FEBRERO","MARZO",
+"ABRIL","MAYO","JUNIO","JULIO","AGOSTO",
+"SETIEMBRE","OCTUBRE","NOVIEMBRE","DICIEMBRE"}]]></variableExpression>
+	</variable>
+	<group name="total_anual" isReprintHeaderOnEachPage="true">
+		<groupExpression><![CDATA[$F{anio}]]></groupExpression>
+		<groupHeader>
+			<band height="48" splitType="Prevent">
+				<rectangle radius="0">
+					<reportElement key="element-1" mode="Opaque" x="0" y="18" width="503" height="30" isPrintInFirstWholeBand="true" forecolor="#000000" backcolor="#CCCCCC"/>
+				</rectangle>
+				<staticText>
+					<reportElement key="staticText-2" style="header" mode="Opaque" x="0" y="18" width="92" height="30" isPrintInFirstWholeBand="true" backcolor="#CCCCCC"/>
+					<box topPadding="1" leftPadding="1" bottomPadding="1" rightPadding="1">
+						<pen lineWidth="0.25"/>
+						<topPen lineWidth="0.25"/>
+						<leftPen lineWidth="0.25"/>
+						<bottomPen lineWidth="0.25"/>
+						<rightPen lineWidth="0.25"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font isBold="true" pdfFontName="Helvetica-Bold"/>
+					</textElement>
+					<text><![CDATA[MES]]></text>
+				</staticText>
+				<staticText>
+					<reportElement key="staticText-4" style="header" mode="Opaque" x="92" y="18" width="126" height="30" isPrintInFirstWholeBand="true" backcolor="#CCCCCC"/>
+					<box topPadding="1" leftPadding="1" bottomPadding="1" rightPadding="1">
+						<pen lineWidth="0.25"/>
+						<topPen lineWidth="0.25"/>
+						<leftPen lineWidth="0.25"/>
+						<bottomPen lineWidth="0.25"/>
+						<rightPen lineWidth="0.25"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font isBold="true" pdfFontName="Helvetica-Bold"/>
+					</textElement>
+					<text><![CDATA[CATEGORIA]]></text>
+				</staticText>
+				<staticText>
+					<reportElement key="staticText-5" style="header" mode="Opaque" x="218" y="18" width="102" height="30" isPrintInFirstWholeBand="true" backcolor="#CCCCCC"/>
+					<box topPadding="1" leftPadding="1" bottomPadding="1" rightPadding="1">
+						<pen lineWidth="0.25"/>
+						<topPen lineWidth="0.25"/>
+						<leftPen lineWidth="0.25"/>
+						<bottomPen lineWidth="0.25"/>
+						<rightPen lineWidth="0.25"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font isBold="true" pdfFontName="Helvetica-Bold"/>
+					</textElement>
+					<text><![CDATA[DEDICACION]]></text>
+				</staticText>
+				<staticText>
+					<reportElement key="staticText-6" style="header" mode="Opaque" x="320" y="18" width="92" height="30" isPrintInFirstWholeBand="true" backcolor="#CCCCCC"/>
+					<box topPadding="1" leftPadding="1" bottomPadding="1" rightPadding="1">
+						<pen lineWidth="0.25"/>
+						<topPen lineWidth="0.25"/>
+						<leftPen lineWidth="0.25"/>
+						<bottomPen lineWidth="0.25"/>
+						<rightPen lineWidth="0.25"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font isBold="true" pdfFontName="Helvetica-Bold"/>
+					</textElement>
+					<text><![CDATA[Ingreso
+Bruto]]></text>
+				</staticText>
+				<staticText>
+					<reportElement key="staticText-7" mode="Opaque" x="412" y="18" width="91" height="30" isPrintInFirstWholeBand="true" backcolor="#CCCCCC"/>
+					<box topPadding="1" leftPadding="1" bottomPadding="1" rightPadding="1">
+						<pen lineWidth="0.25"/>
+						<topPen lineWidth="0.25"/>
+						<leftPen lineWidth="0.25"/>
+						<bottomPen lineWidth="0.25"/>
+						<rightPen lineWidth="0.25"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font isBold="true" pdfFontName="Helvetica-Bold"/>
+					</textElement>
+					<text><![CDATA[Renta 5ta
+Categoria]]></text>
+				</staticText>
+				<textField pattern="####" isBlankWhenNull="false">
+					<reportElement key="textField-2" style="bordered" isPrintRepeatedValues="false" x="0" y="0" width="503" height="18" isRemoveLineWhenBlank="true" isPrintInFirstWholeBand="true" isPrintWhenDetailOverflows="true"/>
+					<box topPadding="1" leftPadding="2" bottomPadding="1" rightPadding="2">
+						<pen lineWidth="0.25"/>
+						<topPen lineWidth="0.25"/>
+						<leftPen lineWidth="0.25"/>
+						<bottomPen lineWidth="0.25"/>
+						<rightPen lineWidth="0.25"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font isBold="true" pdfFontName="Helvetica-Bold"/>
+					</textElement>
+					<textFieldExpression><![CDATA["EJERCICIO "+$F{anio}.intValue()]]></textFieldExpression>
+				</textField>
+			</band>
+		</groupHeader>
+		<groupFooter>
+			<band height="33" splitType="Prevent">
+				<rectangle radius="0">
+					<reportElement key="element-2" style="header" mode="Opaque" x="352" y="0" width="151" height="16" forecolor="#000000" backcolor="#CCCCCC"/>
+				</rectangle>
+				<textField pattern="###0.00" isBlankWhenNull="false">
+					<reportElement key="textField" style="bordered" mode="Opaque" x="320" y="0" width="92" height="16" backcolor="#CCCCCC"/>
+					<box topPadding="1" leftPadding="2" bottomPadding="1" rightPadding="2">
+						<pen lineWidth="0.25"/>
+						<topPen lineWidth="0.25"/>
+						<leftPen lineWidth="0.25"/>
+						<bottomPen lineWidth="0.25"/>
+						<rightPen lineWidth="0.25"/>
+					</box>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font isBold="true" pdfFontName="Helvetica-Bold"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$V{totalIngresoBruto}]]></textFieldExpression>
+				</textField>
+				<textField pattern="##0.00" isBlankWhenNull="false">
+					<reportElement key="textField" style="bordered" mode="Opaque" x="412" y="0" width="91" height="16" backcolor="#CCCCCC"/>
+					<box topPadding="1" leftPadding="2" bottomPadding="1" rightPadding="2">
+						<pen lineWidth="0.25"/>
+						<topPen lineWidth="0.25"/>
+						<leftPen lineWidth="0.25"/>
+						<bottomPen lineWidth="0.25"/>
+						<rightPen lineWidth="0.25"/>
+					</box>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font isBold="true" pdfFontName="Helvetica-Bold"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$V{totalRenta5taCategoria}]]></textFieldExpression>
+				</textField>
+			</band>
+		</groupFooter>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band splitType="Prevent"/>
+	</columnHeader>
+	<detail>
+		<band height="16" splitType="Stretch">
+			<textField pattern="00" isBlankWhenNull="false">
+				<reportElement key="textField" style="bordered" x="0" y="0" width="92" height="16"/>
+				<box topPadding="1" leftPadding="2" bottomPadding="1" rightPadding="2">
+					<pen lineWidth="0.25"/>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{mes}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField" style="bordered" x="92" y="0" width="126" height="16"/>
+				<box topPadding="1" leftPadding="2" bottomPadding="1" rightPadding="2">
+					<pen lineWidth="0.25"/>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{nivel}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField" style="bordered" x="218" y="0" width="102" height="16"/>
+				<box topPadding="1" leftPadding="2" bottomPadding="1" rightPadding="2">
+					<pen lineWidth="0.25"/>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{dedicacion}]]></textFieldExpression>
+			</textField>
+			<textField pattern="##0.00" isBlankWhenNull="true">
+				<reportElement key="textField-1" style="bordered" x="320" y="0" width="92" height="16"/>
+				<box topPadding="1" leftPadding="2" bottomPadding="1" rightPadding="2">
+					<pen lineWidth="0.25"/>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{total}]]></textFieldExpression>
+			</textField>
+			<textField pattern="##0.00" isBlankWhenNull="true">
+				<reportElement key="textField" style="bordered" x="412" y="0" width="91" height="16"/>
+				<box topPadding="1" leftPadding="2" bottomPadding="1" rightPadding="2">
+					<pen lineWidth="0.25"/>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{renta}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band splitType="Prevent"/>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

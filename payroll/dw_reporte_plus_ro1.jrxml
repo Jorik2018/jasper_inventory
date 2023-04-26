@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="2e263aac-85db-47c4-9ed1-cac5ec1008ea">
+	<property name="ireport.zoom" value="1.5"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="style1">
+		<box topPadding="1" leftPadding="1" bottomPadding="1" rightPadding="1">
+			<topPen lineWidth="0.25"/>
+			<leftPen lineWidth="0.25"/>
+			<bottomPen lineWidth="0.25"/>
+			<rightPen lineWidth="0.25"/>
+		</box>
+	</style>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="codigo" class="java.lang.String">
+		<fieldDescription><![CDATA[codigo]]></fieldDescription>
+	</field>
+	<field name="entidad" class="java.lang.String">
+		<fieldDescription><![CDATA[entidad]]></fieldDescription>
+	</field>
+	<field name="glosa" class="java.lang.String">
+		<fieldDescription><![CDATA[glosa]]></fieldDescription>
+	</field>
+	<field name="monto" class="java.math.BigDecimal">
+		<fieldDescription><![CDATA[monto]]></fieldDescription>
+	</field>
+	<field name="secFunc" class="java.lang.String">
+		<fieldDescription><![CDATA[secFunc]]></fieldDescription>
+	</field>
+	<field name="tipo" class="java.lang.String">
+		<fieldDescription><![CDATA[tipo]]></fieldDescription>
+	</field>
+	<variable name="monto_1" class="java.math.BigDecimal" calculation="Sum">
+		<variableExpression><![CDATA[$F{monto}]]></variableExpression>
+	</variable>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="60" splitType="Stretch">
+			<staticText>
+				<reportElement x="63" y="0" width="429" height="20" uuid="77f673cb-472f-4c1c-a500-1604224572f5"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" isBold="true"/>
+				</textElement>
+				<text><![CDATA[GOBIERNO REGIONAL DE ANCASH - UNIDAD EJECUTORA : 003 SUB REGION PACIFICO]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="63" y="20" width="429" height="13" uuid="04485c09-6606-4bf6-90a5-e939d101d4b0"/>
+				<textElement textAlignment="Center" markup="none">
+					<font fontName="Arial" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{entidad}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="63" y="33" width="429" height="13" uuid="68a28e37-a286-4ebe-b093-023019cb3d7c"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" isBold="true"/>
+				</textElement>
+				<text><![CDATA[RELACION DE PAGOS SIN CUENTA CORRIENTE]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="13" splitType="Stretch">
+			<staticText>
+				<reportElement style="style1" x="31" y="0" width="57" height="13" uuid="fba814c5-689c-4fae-b603-665cfadd1906"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[DNI / CODIGO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="style1" x="88" y="0" width="239" height="13" uuid="3597a584-d929-403d-9bcd-a697de658f12"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[APELLIDOS Y NOMBRES / REPRESENTANTE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="style1" x="327" y="0" width="152" height="13" uuid="dc838979-87e4-4073-9505-52a917e48cf5"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[NUMERO DE CUENTA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="style1" x="479" y="0" width="76" height="13" uuid="0f82195a-750a-4633-b2ca-464737abca65"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[IMPORTE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="style1" x="0" y="0" width="31" height="13" uuid="49180247-cf86-458c-8bc4-87466bceb7a2"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[N°]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="13" splitType="Stretch">
+			<textField>
+				<reportElement style="style1" x="0" y="0" width="31" height="13" uuid="578c79d8-4e8f-499d-bc7d-d41aa49943d0"/>
+				<textElement>
+					<font fontName="Arial" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{REPORT_COUNT}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="style1" x="31" y="0" width="57" height="13" uuid="a708a90f-5550-4445-badf-ab4b0d4fba4f"/>
+				<textElement>
+					<font fontName="Arial" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{codigo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="style1" x="88" y="0" width="239" height="13" uuid="52dd68d5-079f-4db2-9451-ca8471f67afa"/>
+				<textElement>
+					<font fontName="Arial" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{glosa}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="style1" x="327" y="0" width="152" height="13" uuid="3ef9699b-76ba-4a38-9441-95d374fb294c"/>
+				<textElement>
+					<font fontName="Arial" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tipo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="style1" x="479" y="0" width="76" height="13" uuid="4ce3fa27-9bce-4ef2-9315-ae6a93157ad6"/>
+				<textElement>
+					<font fontName="Arial" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{monto}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="13" splitType="Stretch">
+			<rectangle radius="5">
+				<reportElement mode="Transparent" x="0" y="0" width="555" height="13" uuid="9d7bd2bc-cf13-4f73-9ad3-85ccb2451c8e"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement x="160" y="0" width="262" height="13" uuid="78901cd3-e060-4dd6-b4eb-a2a4dea973ae"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="8"/>
+				</textElement>
+				<text><![CDATA[Sistema Integral de Gestión Administrativa - PEGASUS V2.0]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="450" y="0" width="93" height="13" uuid="175d822d-a280-4ef4-8a1b-60e2a32ce5e0"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Arial" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Página "+$V{PAGE_NUMBER}+" de"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement x="527" y="0" width="23" height="13" uuid="5709aa5d-0648-4d33-b5ad-4eac9ca1b81d"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Arial" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="dd/MM/yyyy HH:mm:ss">
+				<reportElement x="3" y="0" width="100" height="13" uuid="11feda54-1474-4583-ba65-3f6e42170eef"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Arial" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="13" splitType="Stretch">
+			<textField>
+				<reportElement style="style1" x="479" y="0" width="76" height="13" uuid="f8632b50-8dee-4bc1-a194-831f6186d9b9"/>
+				<textElement>
+					<font fontName="Arial" size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{monto_1}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement style="style1" x="403" y="0" width="76" height="13" uuid="801af6ac-350c-4343-8d6c-3f380ed13fcf"/>
+				<textElement markup="none">
+					<font fontName="Arial" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[TOTALES :]]></text>
+			</staticText>
+		</band>
+	</summary>
+</jasperReport>

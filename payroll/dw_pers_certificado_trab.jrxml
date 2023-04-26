@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="068943b7-30a8-4288-855f-caba6ce6efb8">
+	<property name="ireport.zoom" value="1.5"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="69"/>
+	<parameter name="YEAR_NAME" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="COMPANY_LOGO" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="COUNTRY_LOGO" class="java.lang.String" isForPrompting="false"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="anoEje" class="java.lang.String">
+		<fieldDescription><![CDATA[planilla.planillaPK.anoEje]]></fieldDescription>
+	</field>
+	<field name="NMes" class="java.lang.Integer">
+		<fieldDescription><![CDATA[planilla.mes.NMes]]></fieldDescription>
+	</field>
+	<field name="id" class="java.lang.String">
+		<fieldDescription><![CDATA[planilla.modLaboral.id]]></fieldDescription>
+	</field>
+	<field name="abrev" class="java.lang.String">
+		<fieldDescription><![CDATA[planilla.modLaboral.abrev]]></fieldDescription>
+	</field>
+	<field name="nombre" class="java.lang.String">
+		<fieldDescription><![CDATA[planilla.modLaboral.nombre]]></fieldDescription>
+	</field>
+	<field name="tipoTrab" class="java.lang.String">
+		<fieldDescription><![CDATA[planilla.tipoTrab]]></fieldDescription>
+	</field>
+	<field name="periodoIni" class="java.util.Date">
+		<fieldDescription><![CDATA[planilla.periodoIni]]></fieldDescription>
+	</field>
+	<field name="periodoFin" class="java.util.Date">
+		<fieldDescription><![CDATA[planilla.periodoFin]]></fieldDescription>
+	</field>
+	<field name="nivelRem" class="java.lang.String">
+		<fieldDescription><![CDATA[nivelRem.nivelRemPK.nivelRem]]></fieldDescription>
+	</field>
+	<field name="nivelRemAbrev" class="java.lang.String">
+		<fieldDescription><![CDATA[nivelRem.abrev]]></fieldDescription>
+	</field>
+	<field name="diasDm" class="java.lang.Integer">
+		<fieldDescription><![CDATA[diasDm]]></fieldDescription>
+	</field>
+	<field name="diasAgua" class="java.lang.Integer">
+		<fieldDescription><![CDATA[diasAgua]]></fieldDescription>
+	</field>
+	<field name="diasDom" class="java.lang.Integer">
+		<fieldDescription><![CDATA[diasDom]]></fieldDescription>
+	</field>
+	<field name="diasFer" class="java.lang.Integer">
+		<fieldDescription><![CDATA[diasFer]]></fieldDescription>
+	</field>
+	<field name="diasNor" class="java.lang.Integer">
+		<fieldDescription><![CDATA[diasNor]]></fieldDescription>
+	</field>
+	<field name="diasFtrab" class="java.lang.Integer">
+		<fieldDescription><![CDATA[diasFtrab]]></fieldDescription>
+	</field>
+	<field name="nombreNm" class="java.lang.String">
+		<fieldDescription><![CDATA[planilla.meta.nombreNm]]></fieldDescription>
+	</field>
+	<field name="nombComp" class="java.lang.String">
+		<fieldDescription><![CDATA[personal.nombComp]]></fieldDescription>
+	</field>
+	<field name="nivelRemName" class="java.lang.String">
+		<fieldDescription><![CDATA[nivelRem.nombre]]></fieldDescription>
+	</field>
+	<field name="dni" class="java.lang.String">
+		<fieldDescription><![CDATA[planillaTrabPK.dni]]></fieldDescription>
+	</field>
+	<field name="mesName" class="java.lang.String">
+		<fieldDescription><![CDATA[planilla.mes.nombre]]></fieldDescription>
+	</field>
+	<variable name="diasFer_1" class="java.lang.Integer" calculation="Sum">
+		<variableExpression><![CDATA[($F{diasNor}!=null?$F{diasNor}:0)+
+($F{diasFtrab}!=null?$F{diasFtrab}:0)+
+($F{diasFer}!=null?$F{diasFer}:0)+
+($F{diasDom}!=null?$F{diasDom}:0)]]></variableExpression>
+	</variable>
+	<group name="anoEje" isReprintHeaderOnEachPage="true">
+		<groupExpression><![CDATA[$F{anoEje}]]></groupExpression>
+		<groupHeader>
+			<band height="18">
+				<textField>
+					<reportElement mode="Opaque" x="0" y="0" width="70" height="18" backcolor="#EAEAEA" uuid="61db6b89-aaf9-4215-b33b-02a7f3aed6c3"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Arial" size="8" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA["AÑO: "+$F{anoEje}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement mode="Opaque" x="70" y="0" width="485" height="18" backcolor="#EAEAEA" uuid="53f39b74-3a15-4cd4-91ba-39af6941e3e8"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Arial" size="8" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA["MODALIDAD: "+$F{nombre}]]></textFieldExpression>
+				</textField>
+			</band>
+		</groupHeader>
+		<groupFooter>
+			<band/>
+		</groupFooter>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="171" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="78" width="555" height="23" uuid="dc1aceef-4e64-42c1-90bd-c7f5a1255f8c"/>
+				<textElement>
+					<font fontName="Arial" size="8"/>
+				</textElement>
+				<text><![CDATA[QUIEN SUSCRIBE, JEFE DE LA OFICINA DE RECURSOS HUMANOS DE LA SUB REGION PACÍFICO - REGIÓN ANCASH]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="101" width="555" height="20" uuid="f808a069-8855-499d-b7c7-43c11c0b6f73"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[C E R T I F I C A]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="121" width="54" height="20" uuid="2dcbfff0-f5d5-484f-9374-c27eee1b383e"/>
+				<textElement markup="html">
+					<font fontName="Arial" size="8"/>
+				</textElement>
+				<text><![CDATA[Que el SR. ]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="0" y="141" width="555" height="30" uuid="2a1df400-ed04-4e81-90f2-a7a36dc32908"/>
+				<textElement>
+					<font fontName="Arial" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA["                  Identificado con D.N.I. Nº " + $F{dni} + ", ha trabajado bajo la Modalidad de Régimen " + 
+(  "4".equals($F{id})?"Construcción Civil": "Común") + " en las siguientes Obras:"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="54" y="121" width="501" height="20" uuid="f75d9f6f-0d57-4e1b-9d7a-246b345f7b05"/>
+				<textElement markup="html">
+					<font fontName="Arial" size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nombComp}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="92" y="36" width="371" height="20" uuid="4e6e0dbd-0411-479c-8977-271a00148dbc"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[RECORD LABORAL E HISTORICO]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="92" y="0" width="371" height="20" uuid="aa3afa4e-92cc-425e-a044-e0826c9f6891"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{YEAR_NAME}]]></textFieldExpression>
+			</textField>
+			<image onErrorType="Blank">
+				<reportElement x="0" y="0" width="59" height="68" uuid="525e0f5a-f9f0-4c37-959d-58586eda8643"/>
+				<imageExpression><![CDATA[$P{COMPANY_LOGO}]]></imageExpression>
+			</image>
+			<image onErrorType="Blank">
+				<reportElement x="492" y="0" width="59" height="57" uuid="db822eaa-d030-438a-8313-58829b3353c4"/>
+				<imageExpression><![CDATA[$P{COUNTRY_LOGO}]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="490" y="57" width="64" height="11" uuid="d9120e89-f9a4-4f69-9175-24a3be84da0f"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="5"/>
+				</textElement>
+				<text><![CDATA[SUBREGION PACIFICO]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="28" splitType="Stretch">
+			<staticText>
+				<reportElement x="70" y="0" width="139" height="28" uuid="6582427c-1f29-4068-84ed-6a76fff1aea3"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Arial" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[CARGO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="471" y="0" width="84" height="14" uuid="24c1576f-8285-43b2-94b2-b289c202d8ad"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[DIAS]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="471" y="14" width="28" height="14" uuid="65d363e3-eb8c-403a-96d7-003e27467d65"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[NOR]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="499" y="14" width="28" height="14" uuid="f2fae602-9bf6-4cfd-be7c-c7ce828894d5"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[DOM]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="527" y="14" width="28" height="14" uuid="7abfd82f-0a4f-4f48-828e-b5461309a33b"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[TOT]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="209" y="0" width="262" height="28" uuid="3a38ba16-6cb7-44d1-8b69-86ee0ebe4e95"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Arial" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ACTIVIDAD / PROYECTO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="0" width="70" height="28" uuid="f33152e3-d8e9-4ea9-8269-443f5b1e2bb1"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Arial" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[MES]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="4" width="70" height="16" uuid="da930c32-f057-4247-b33a-cbfaa1a145a0"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Arial" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{mesName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="70" y="4" width="139" height="16" uuid="1d75b7ef-1566-4da7-b115-2ec779cfa76d"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Arial" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nivelRemName}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="209" y="4" width="262" height="16" uuid="d1769cdc-959d-4faa-a683-12edcee5b57d"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="Arial" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nombreNm}]]></textFieldExpression>
+			</textField>
+			<textField pattern="00">
+				<reportElement x="499" y="4" width="28" height="16" uuid="9745274d-f2b7-4267-947b-66a55ed8c737"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{diasDom}!=null?$F{diasDom}:0]]></textFieldExpression>
+			</textField>
+			<textField pattern="00">
+				<reportElement x="471" y="4" width="28" height="16" uuid="87e42ac6-f45e-4c96-9f0e-55b492918529"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($F{diasNor}!=null?$F{diasNor}:0)+
+($F{diasFtrab}!=null?$F{diasFtrab}:0)+
+($F{diasFer}!=null?$F{diasFer}:0)]]></textFieldExpression>
+			</textField>
+			<textField pattern="00">
+				<reportElement x="527" y="4" width="28" height="16" uuid="dfcd0c7c-2ab2-4b7c-b395-3f8953f101a2"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($F{diasNor}!=null?$F{diasNor}:0)+
+($F{diasFtrab}!=null?$F{diasFtrab}:0)+
+($F{diasFer}!=null?$F{diasFer}:0)+
+($F{diasDom}!=null?$F{diasDom}:0)]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="16" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="211" splitType="Stretch">
+			<textField pattern="00">
+				<reportElement mode="Opaque" x="471" y="0" width="84" height="18" backcolor="#EAEAEA" uuid="08171068-4743-4ec6-beeb-4f82f32c5333"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{diasFer_1}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement mode="Opaque" x="209" y="0" width="262" height="18" backcolor="#EAEAEA" uuid="51d44f2a-b47f-4f55-a227-7507552dd86d"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Arial" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[TOTAL DE DIAS:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="35" width="555" height="54" uuid="2afbac2c-ad77-46b7-8a52-487fd4324c66"/>
+				<textElement>
+					<font fontName="Arial" size="8"/>
+				</textElement>
+				<text><![CDATA[                   Se expide el presente documento a solicitud del interesado para los fines que estime conveniente.]]></text>
+			</staticText>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement x="445" y="89" width="110" height="20" uuid="6d3eaa14-5b30-414c-8826-a88edfe1a6f4"/>
+				<textElement>
+					<font fontName="Arial" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="345" y="89" width="100" height="20" uuid="9fe6865a-b62b-4672-bb99-c640f9a5823e"/>
+				<textElement>
+					<font fontName="Arial" size="8"/>
+				</textElement>
+				<text><![CDATA[Nuevo Chimbote,]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="345" y="150" width="210" height="20" uuid="e0d722ba-e13f-48b7-afeb-f56d0ac619d1"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="8"/>
+				</textElement>
+				<text><![CDATA[JEFE DE RECURSOS HUMANOS]]></text>
+			</staticText>
+			<line>
+				<reportElement x="345" y="149" width="210" height="1" uuid="1992cfa5-9066-4e9f-93b8-b4decc75fdda"/>
+				<graphicElement>
+					<pen lineStyle="Dashed"/>
+				</graphicElement>
+			</line>
+		</band>
+	</summary>
+</jasperReport>

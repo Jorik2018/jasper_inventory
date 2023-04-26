@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="499" pageHeight="842" columnWidth="499" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="035f2a46-6df9-4be7-93f1-4ec2dd583a78">
+	<property name="ireport.zoom" value="2.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="style1">
+		<pen lineStyle="Dashed"/>
+		<box rightPadding="2">
+			<rightPen lineWidth="0.25"/>
+		</box>
+	</style>
+	<field name="c0" class="java.lang.String">
+		<fieldDescription><![CDATA[[0]]]></fieldDescription>
+	</field>
+	<field name="c1" class="java.lang.String">
+		<fieldDescription><![CDATA[[1]]]></fieldDescription>
+	</field>
+	<field name="c2" class="java.lang.String">
+		<fieldDescription><![CDATA[[2]]]></fieldDescription>
+	</field>
+	<field name="c3" class="java.lang.String">
+		<fieldDescription><![CDATA[[3]]]></fieldDescription>
+	</field>
+	<field name="c4" class="java.lang.String">
+		<fieldDescription><![CDATA[[4]]]></fieldDescription>
+	</field>
+	<field name="c5" class="java.lang.String">
+		<fieldDescription><![CDATA[[5]]]></fieldDescription>
+	</field>
+	<field name="c6" class="java.lang.String">
+		<fieldDescription><![CDATA[[6]]]></fieldDescription>
+	</field>
+	<field name="c7" class="java.lang.String">
+		<fieldDescription><![CDATA[[7]]]></fieldDescription>
+	</field>
+	<field name="c8" class="java.lang.String">
+		<fieldDescription><![CDATA[[8]]]></fieldDescription>
+	</field>
+	<field name="c9" class="java.lang.String">
+		<fieldDescription><![CDATA[[9]]]></fieldDescription>
+	</field>
+	<field name="c10" class="java.lang.String">
+		<fieldDescription><![CDATA[[10]]]></fieldDescription>
+	</field>
+	<field name="c11" class="java.lang.String">
+		<fieldDescription><![CDATA[[11]]]></fieldDescription>
+	</field>
+	<field name="c12" class="java.lang.String">
+		<fieldDescription><![CDATA[[12]]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="7" splitType="Stretch">
+			<textField isBlankWhenNull="true">
+				<reportElement style="style1" x="0" y="0" width="38" height="7" uuid="89cbb144-4030-437f-bc31-b162878ae8ca"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{c0}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement style="style1" x="38" y="0" width="38" height="7" uuid="a2c6fe7b-b593-41f3-b91c-ab159b7506ed"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{c1}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement style="style1" x="76" y="0" width="38" height="7" uuid="f608a5e3-134c-4f57-ad1b-4aff321fb493"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{c2}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement style="style1" x="114" y="0" width="38" height="7" uuid="7eb430cc-3a6f-41d5-8432-fe82338e7788"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{c3}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement style="style1" x="152" y="0" width="38" height="7" uuid="3e469c69-bd77-4337-9731-e65f79867acf"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{c4}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement style="style1" x="190" y="0" width="38" height="7" uuid="b0ff70f4-c3bf-4db0-a01b-f7e75c790805"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{c5}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement style="style1" x="228" y="0" width="38" height="7" uuid="d81e4634-dad9-43a3-a112-93d0f6bd2062"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{c6}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement style="style1" x="266" y="0" width="38" height="7" uuid="607b4761-d473-4af8-a497-8cd5232378aa"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{c7}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement style="style1" x="304" y="0" width="39" height="7" uuid="eebf9982-a7b0-495c-acf4-f8ad06208974"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{c8}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement style="style1" x="343" y="0" width="39" height="7" uuid="adbd0ae8-59b3-48fd-bbf2-7822145318cb"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{c9}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement style="style1" x="382" y="0" width="39" height="7" uuid="bda20d89-7e36-4f9e-87be-7956537eeb7c"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{c10}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement style="style1" x="421" y="0" width="39" height="7" uuid="b830a4a7-f449-4b99-9a62-c6e5850de402"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{c11}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement style="style1" x="460" y="0" width="39" height="7" uuid="b365bc25-3d78-4c5f-9e7b-60e396e2cecc"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{c12}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

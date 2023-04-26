@@ -1,0 +1,1291 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="969" pageHeight="595" orientation="Landscape" columnWidth="929" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="72c7e010-c5fc-47c0-889a-9db99c481c2a">
+	<property name="ireport.zoom" value="1.5"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="4"/>
+	<style name="style1">
+		<box topPadding="1" leftPadding="1" bottomPadding="1" rightPadding="1">
+			<topPen lineWidth="0.25"/>
+			<leftPen lineWidth="0.25"/>
+			<bottomPen lineWidth="0.25"/>
+			<rightPen lineWidth="0.25"/>
+		</box>
+		<paragraph lineSpacing="Fixed" lineSpacingSize="7.7"/>
+	</style>
+	<style name="style1_1">
+		<box topPadding="1" leftPadding="1" bottomPadding="1" rightPadding="1">
+			<topPen lineWidth="0.0" lineStyle="Double" lineColor="#FFFFFF"/>
+			<leftPen lineWidth="0.0" lineStyle="Double" lineColor="#FFFFFF"/>
+			<bottomPen lineWidth="0.0" lineColor="#FFFFFF"/>
+			<rightPen lineWidth="0.0" lineColor="#FFFFFF"/>
+		</box>
+		<paragraph lineSpacing="Fixed" lineSpacingSize="7.7"/>
+	</style>
+	<parameter name="C" class="java.util.Map" isForPrompting="false">
+		<defaultValueExpression><![CDATA[new java.util.HashMap()]]></defaultValueExpression>
+	</parameter>
+	<parameter name="APPLICATION_NAME" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["Sistema Integral de Gestión Administrativa - PEGASUS V2.0"]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="codigo" class="java.lang.String">
+		<fieldDescription><![CDATA[planillaDetPK.codigo]]></fieldDescription>
+	</field>
+	<field name="anoEje" class="java.lang.String">
+		<fieldDescription><![CDATA[planillaDetPK.anoEje]]></fieldDescription>
+	</field>
+	<field name="NExpediente" class="java.lang.String">
+		<fieldDescription><![CDATA[planillaDetPK.NExpediente]]></fieldDescription>
+	</field>
+	<field name="dni" class="java.lang.String">
+		<fieldDescription><![CDATA[planillaDetPK.dni]]></fieldDescription>
+	</field>
+	<field name="mesEje" class="java.lang.String">
+		<fieldDescription><![CDATA[planillaTrab.planilla.mes.mesEje]]></fieldDescription>
+	</field>
+	<field name="mesNombre" class="java.lang.String">
+		<fieldDescription><![CDATA[planillaTrab.planilla.mes.nombre]]></fieldDescription>
+	</field>
+	<field name="NPlanilla" class="java.lang.String">
+		<fieldDescription><![CDATA[planillaTrab.planilla.NPlanilla]]></fieldDescription>
+	</field>
+	<field name="secFunc" class="java.lang.String">
+		<fieldDescription><![CDATA[planillaTrab.planilla.secFunc]]></fieldDescription>
+	</field>
+	<field name="modLaboralCode" class="java.lang.String">
+		<fieldDescription><![CDATA[planillaTrab.planilla.modLaboral.id]]></fieldDescription>
+	</field>
+	<field name="modLaboralName" class="java.lang.String">
+		<fieldDescription><![CDATA[planillaTrab.planilla.modLaboral.nombre]]></fieldDescription>
+	</field>
+	<field name="fechaPlan" class="java.util.Date">
+		<fieldDescription><![CDATA[planillaTrab.planilla.fechaPlan]]></fieldDescription>
+	</field>
+	<field name="periodoFin" class="java.util.Date">
+		<fieldDescription><![CDATA[planillaTrab.planilla.periodoFin]]></fieldDescription>
+	</field>
+	<field name="periodoIni" class="java.util.Date">
+		<fieldDescription><![CDATA[planillaTrab.planilla.periodoIni]]></fieldDescription>
+	</field>
+	<field name="estado" class="java.lang.Character">
+		<fieldDescription><![CDATA[planillaTrab.planilla.estado]]></fieldDescription>
+	</field>
+	<field name="tipoTrab" class="java.lang.String">
+		<fieldDescription><![CDATA[planillaTrab.planilla.tipoTrab]]></fieldDescription>
+	</field>
+	<field name="tipoPlanilla" class="java.lang.String">
+		<fieldDescription><![CDATA[planillaTrab.planilla.tipoPlanilla.tipoPlanilla]]></fieldDescription>
+	</field>
+	<field name="nombrePlanilla" class="java.lang.String">
+		<fieldDescription><![CDATA[planillaTrab.planilla.tipoPlanilla.nombrePlanilla]]></fieldDescription>
+	</field>
+	<field name="abrevPlanilla" class="java.lang.String">
+		<fieldDescription><![CDATA[planillaTrab.planilla.tipoPlanilla.abrevPlanilla]]></fieldDescription>
+	</field>
+	<field name="nombComp" class="java.lang.String">
+		<fieldDescription><![CDATA[planillaTrab.personal.nombComp]]></fieldDescription>
+	</field>
+	<field name="fechaInscrip" class="java.util.Date">
+		<fieldDescription><![CDATA[planillaTrab.personal.fechaInscrip]]></fieldDescription>
+	</field>
+	<field name="cuspp" class="java.lang.String">
+		<fieldDescription><![CDATA[planillaTrab.personal.cuspp]]></fieldDescription>
+	</field>
+	<field name="fechaIngreso" class="java.util.Date">
+		<fieldDescription><![CDATA[planillaTrab.personal.fechaIngreso]]></fieldDescription>
+	</field>
+	<field name="codPlza" class="java.lang.String">
+		<fieldDescription><![CDATA[planillaTrab.personal.codPlza]]></fieldDescription>
+	</field>
+	<field name="ind" class="java.lang.Character">
+		<fieldDescription><![CDATA[ind]]></fieldDescription>
+	</field>
+	<field name="monto" class="java.math.BigDecimal">
+		<fieldDescription><![CDATA[monto]]></fieldDescription>
+	</field>
+	<field name="nm" class="java.lang.String">
+		<fieldDescription><![CDATA[planillaTrab.planilla.meta.nm]]></fieldDescription>
+	</field>
+	<field name="nombreNm" class="java.lang.String">
+		<fieldDescription><![CDATA[planillaTrab.planilla.meta.nombreNm]]></fieldDescription>
+	</field>
+	<field name="regPensionName" class="java.lang.String">
+		<fieldDescription><![CDATA[planillaTrab.regPension.nombre]]></fieldDescription>
+	</field>
+	<field name="regPensionCode" class="java.lang.String">
+		<fieldDescription><![CDATA[planillaTrab.regPension.regPensionCode]]></fieldDescription>
+	</field>
+	<field name="nivelRemName" class="java.lang.String">
+		<fieldDescription><![CDATA[planillaTrab.nivelRem.nombre]]></fieldDescription>
+	</field>
+	<field name="nivelRemAbrev" class="java.lang.String">
+		<fieldDescription><![CDATA[planillaTrab.nivelRem.abrev]]></fieldDescription>
+	</field>
+	<field name="descCargo" class="java.lang.String">
+		<fieldDescription><![CDATA[planillaTrab.descCargo]]></fieldDescription>
+	</field>
+	<field name="diasNor" class="java.lang.Integer">
+		<fieldDescription><![CDATA[planillaTrab.diasNor]]></fieldDescription>
+	</field>
+	<field name="NOrden" class="java.lang.Integer">
+		<fieldDescription><![CDATA[planillaTrab.NOrden]]></fieldDescription>
+	</field>
+	<field name="NSerie" class="java.lang.String">
+		<fieldDescription><![CDATA[planillaTrab.NSerie]]></fieldDescription>
+	</field>
+	<field name="remAseg" class="java.math.BigDecimal">
+		<fieldDescription><![CDATA[planillaTrab.remAseg]]></fieldDescription>
+	</field>
+	<field name="diasDom" class="java.lang.Integer">
+		<fieldDescription><![CDATA[planillaTrab.diasDom]]></fieldDescription>
+	</field>
+	<field name="diasFer" class="java.lang.Integer">
+		<fieldDescription><![CDATA[planillaTrab.diasFer]]></fieldDescription>
+	</field>
+	<field name="diasFtrab" class="java.lang.Integer">
+		<fieldDescription><![CDATA[planillaTrab.diasFtrab]]></fieldDescription>
+	</field>
+	<field name="montoRem" class="java.math.BigDecimal">
+		<fieldDescription><![CDATA[planillaTrab.montoRem]]></fieldDescription>
+	</field>
+	<field name="numHijos" class="java.lang.Integer">
+		<fieldDescription><![CDATA[planillaTrab.numHijos]]></fieldDescription>
+	</field>
+	<field name="sectorNombre" class="java.lang.String">
+		<fieldDescription><![CDATA[planillaTrab.planilla.sector.nombres]]></fieldDescription>
+	</field>
+	<field name="codSect" class="java.lang.String">
+		<fieldDescription><![CDATA[planillaTrab.planilla.sector.codSect]]></fieldDescription>
+	</field>
+	<field name="regPensionAbrev" class="java.lang.String">
+		<fieldDescription><![CDATA[planillaTrab.regPension.abrev]]></fieldDescription>
+	</field>
+	<field name="funcionCode" class="java.lang.String">
+		<fieldDescription><![CDATA[planillaTrab.planilla.meta.funcionCode]]></fieldDescription>
+	</field>
+	<field name="funcionNombre" class="java.lang.String">
+		<fieldDescription><![CDATA[planillaTrab.planilla.meta.funcion.nombre]]></fieldDescription>
+	</field>
+	<field name="planillaPK" class="org.pegasus.personal.jpa.PlanillaPK">
+		<fieldDescription><![CDATA[planillaTrab.planilla.planillaPK]]></fieldDescription>
+	</field>
+	<field name="fuenteFinanc" class="java.lang.String">
+		<fieldDescription><![CDATA[planillaTrab.planilla.fuenteFinanc]]></fieldDescription>
+	</field>
+	<field name="horaExtra" class="java.lang.Integer">
+		<fieldDescription><![CDATA[planillaTrab.horaExtra]]></fieldDescription>
+	</field>
+	<variable name="monto_2" class="java.math.BigDecimal" resetType="Group" resetGroup="dni" calculation="Sum">
+		<variableExpression><![CDATA[$F{ind}=='1'?$F{monto}:null]]></variableExpression>
+	</variable>
+	<variable name="monto_3" class="java.math.BigDecimal" resetType="Group" resetGroup="dni" calculation="Sum">
+		<variableExpression><![CDATA[$F{ind}=='2'?$F{monto}:null]]></variableExpression>
+	</variable>
+	<variable name="monto2080" class="java.math.BigDecimal" resetType="Group" resetGroup="dni" calculation="Sum">
+		<variableExpression><![CDATA["2080".equals($F{codigo})||"2081".equals($F{codigo})||"2082".equals($F{codigo})?$F{monto}:java.math.BigDecimal.ZERO]]></variableExpression>
+	</variable>
+	<variable name="monto_1" class="java.math.BigDecimal" resetType="Group" resetGroup="dni" incrementType="Report" calculation="Sum">
+		<variableExpression><![CDATA[null]]></variableExpression>
+		<initialValueExpression><![CDATA[$P{C}.remove("_")]]></initialValueExpression>
+	</variable>
+	<variable name="montoRem_1" class="java.math.BigDecimal" resetType="Group" resetGroup="planillaPKGroup" calculation="Sum">
+		<variableExpression><![CDATA[$F{montoRem}]]></variableExpression>
+	</variable>
+	<variable name="monto_4" class="java.math.BigDecimal" resetType="Group" resetGroup="planillaPKGroup" calculation="Sum">
+		<variableExpression><![CDATA[$F{monto}]]></variableExpression>
+	</variable>
+	<variable name="remAseg_1" class="java.math.BigDecimal" resetType="Group" resetGroup="dni" calculation="Sum">
+		<variableExpression><![CDATA[$F{remAseg}]]></variableExpression>
+	</variable>
+	<group name="planillaPKGroup" isReprintHeaderOnEachPage="true">
+		<groupExpression><![CDATA[$F{planillaPK}]]></groupExpression>
+		<groupHeader>
+			<band height="136">
+				<staticText>
+					<reportElement style="style1" mode="Transparent" x="181" y="91" width="52" height="45" uuid="b7cfedeb-9888-4110-b430-c1144f5f9165"/>
+					<textElement textAlignment="Center">
+						<font fontName="Arial" size="6"/>
+					</textElement>
+					<text><![CDATA[CATEGORIA
+D.N.I.]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="style1" x="233" y="91" width="94" height="45" uuid="af6c9242-3a10-4091-a113-c21701fc7174"/>
+					<textElement textAlignment="Center">
+						<font fontName="Arial" size="6"/>
+					</textElement>
+					<text><![CDATA[REG. PENSIONES
+CODIGO A.F.P.
+FECHA AFILIACION]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="style1" mode="Transparent" x="327" y="91" width="46" height="45" uuid="fe1d0375-b002-455b-9e93-8eea1d52b749"/>
+					<textElement textAlignment="Center">
+						<font fontName="Arial" size="6"/>
+					</textElement>
+					<text><![CDATA[JORNAL
+MOVILIDAD
+S.N.P.]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="style1" mode="Transparent" x="373" y="91" width="46" height="45" uuid="e5cd0a45-8031-4762-9e62-7300e94fecca"/>
+					<textElement textAlignment="Center">
+						<font fontName="Arial" size="6"/>
+					</textElement>
+					<text><![CDATA[DIA TOTAL
+VACACION
+PENS.AFP]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="style1" mode="Transparent" x="419" y="91" width="50" height="45" uuid="cca060e6-9400-4a09-a863-bb4570d840b7"/>
+					<textElement textAlignment="Center">
+						<font fontName="Arial" size="6" isStrikeThrough="false"/>
+					</textElement>
+					<text><![CDATA[DIA DOMI.
+T.SERVICIO
+PRIMA.AFP]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="style1" mode="Transparent" x="469" y="91" width="46" height="45" uuid="80093552-2208-4662-907f-f1089acdcc25"/>
+					<textElement textAlignment="Center">
+						<font fontName="Arial" size="6"/>
+					</textElement>
+					<text><![CDATA[T.REMUNER.
+GRATIFIC.
+SEGURO AFP]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="style1" mode="Transparent" x="515" y="91" width="46" height="45" uuid="5a025972-341b-446c-ae7d-2976a5c8d607"/>
+					<textElement textAlignment="Center">
+						<font fontName="Arial" size="6"/>
+					</textElement>
+					<text><![CDATA[T.DOMINI.
+REINTEGRO
+CONAFOVISER]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="style1" mode="Transparent" x="561" y="91" width="46" height="45" uuid="b79dd3b9-aefc-4f91-8436-e324eeb8bec8"/>
+					<textElement textAlignment="Center">
+						<font fontName="Arial" size="6"/>
+					</textElement>
+					<text><![CDATA[HORA EXTRA
+IMP. EXTRA
+DSCT.SIND.]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="style1" mode="Transparent" x="607" y="91" width="46" height="45" uuid="499b9a66-85f8-477f-ac92-b8729b41d179"/>
+					<textElement textAlignment="Center">
+						<font fontName="Arial" size="6"/>
+					</textElement>
+					<text><![CDATA[B.U.C.
+BONI EXTRA
+DSCT.JUDI]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="style1" mode="Transparent" x="653" y="91" width="46" height="45" uuid="fb801940-6c0d-43f8-ab25-574f5e119582"/>
+					<textElement textAlignment="Center">
+						<font fontName="Arial" size="6"/>
+					</textElement>
+					<text><![CDATA[Nº HIJOS
+OTRO INGR.
+OTRO DSCT.]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="style1" mode="Transparent" x="699" y="91" width="46" height="45" uuid="cd214d33-a7bb-4c57-b909-b1908b51bd43"/>
+					<textElement textAlignment="Center">
+						<font fontName="Arial" size="6"/>
+					</textElement>
+					<text><![CDATA[ESCOLARID.
+
+ RIMAC]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="style1" mode="Transparent" x="791" y="91" width="46" height="45" uuid="39a06f6e-b588-4911-a57c-51ac61d4720b"/>
+					<textElement textAlignment="Center">
+						<font fontName="Arial" size="6"/>
+					</textElement>
+					<text><![CDATA[T.INGRESO
+PLUS
+
+
+T.EGRESO]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="style1" mode="Transparent" x="837" y="91" width="46" height="45" uuid="5c118cb2-3621-4f75-a12c-ddc24011439c"/>
+					<textElement textAlignment="Center">
+						<font fontName="Arial" size="6"/>
+					</textElement>
+					<text><![CDATA[NETO]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="style1" mode="Transparent" x="12" y="91" width="169" height="45" uuid="6c2e864c-4593-4072-a728-829ca4df606a"/>
+					<textElement textAlignment="Center">
+						<font fontName="Arial" size="6"/>
+					</textElement>
+					<text><![CDATA[NOMBRE COMPLETO]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="style1" mode="Transparent" x="0" y="91" width="12" height="45" uuid="3e63b96f-76c7-4962-8656-bd77bca45645"/>
+					<textElement textAlignment="Center">
+						<font fontName="Arial" size="6"/>
+					</textElement>
+					<text><![CDATA[S
+E
+C]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="0" y="0" width="929" height="20" uuid="76fa7124-b04e-4d04-871b-89b213432770"/>
+					<textElement textAlignment="Center" markup="none">
+						<font isBold="true"/>
+					</textElement>
+					<text><![CDATA[PLANILLA DE CONSTRUCCION CIVIL]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="style1" mode="Transparent" x="883" y="91" width="46" height="12" uuid="b548e05c-5381-439d-9ac4-745e50c5c94c"/>
+					<textElement textAlignment="Center">
+						<font fontName="Arial" size="6"/>
+					</textElement>
+					<text><![CDATA[REM.ASEGUR]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="style1" mode="Transparent" x="883" y="103" width="46" height="33" uuid="8a021ece-13ca-4b22-96c7-32b68ae5353f"/>
+					<textElement textAlignment="Center">
+						<font fontName="Arial" size="6"/>
+					</textElement>
+					<text><![CDATA[ESSALUD
+SCRT
+TOT.CUOT.P]]></text>
+				</staticText>
+				<textField>
+					<reportElement x="76" y="40" width="195" height="13" uuid="bb1143ed-c404-466a-856b-792b5170950a"/>
+					<textElement>
+						<font fontName="Arial" size="8" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[": "+$F{funcionCode}+" "+$F{funcionNombre}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="0" y="40" width="76" height="13" uuid="299ab2d3-dbbc-40a3-9396-3606f34a0e7d"/>
+					<textElement>
+						<font fontName="Arial" size="8" isBold="true"/>
+					</textElement>
+					<text><![CDATA[FUNCION]]></text>
+				</staticText>
+				<textField>
+					<reportElement x="76" y="53" width="195" height="13" uuid="20b6134f-0a7f-48b7-995b-0c184f99e098"/>
+					<textElement>
+						<font fontName="Arial" size="8" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[": "+$F{funcionCode}+" "+$F{funcionNombre}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="0" y="53" width="76" height="13" uuid="cc598051-1ae2-40cc-ae91-02ec1eacf5f8"/>
+					<textElement>
+						<font fontName="Arial" size="8" isBold="true"/>
+					</textElement>
+					<text><![CDATA[META]]></text>
+				</staticText>
+				<textField>
+					<reportElement x="76" y="66" width="195" height="13" uuid="a044d800-e939-4fbf-a1a1-e29412981468"/>
+					<textElement>
+						<font fontName="Arial" size="8" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[": "+$F{funcionCode}+" "+$F{nombreNm}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="0" y="66" width="76" height="13" uuid="cd822f07-5d21-48ed-800d-1f0a5e2ffbec"/>
+					<textElement>
+						<font fontName="Arial" size="8" isBold="true"/>
+					</textElement>
+					<text><![CDATA[OBRA]]></text>
+				</staticText>
+				<textField>
+					<reportElement x="334" y="66" width="74" height="13" uuid="23fbfde5-c211-473b-854b-b3202fe05df6"/>
+					<textElement>
+						<font fontName="Arial" size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{periodoIni}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="442" y="66" width="73" height="13" uuid="1407315c-38de-4dbc-a7bd-36825518a487"/>
+					<textElement>
+						<font fontName="Arial" size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{periodoIni}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="273" y="66" width="61" height="13" uuid="05e11d00-38ef-4f9e-9a9a-b613290a1ff1"/>
+					<textElement markup="none">
+						<font fontName="Arial" size="8" isBold="false"/>
+					</textElement>
+					<text><![CDATA[PERIODO : ]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="408" y="66" width="34" height="13" uuid="ccc1ae54-dac0-4b59-94d6-81b37664323d"/>
+					<textElement textAlignment="Center" markup="none">
+						<font fontName="Arial" size="8" isBold="true"/>
+					</textElement>
+					<text><![CDATA[AL]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="515" y="66" width="103" height="13" uuid="44f8a267-f51e-4d08-870c-24cf7775ec7f"/>
+					<textElement textAlignment="Center" markup="none">
+						<font fontName="Arial" size="8" isBold="true"/>
+					</textElement>
+					<text><![CDATA[FECHA ELABORACION :]]></text>
+				</staticText>
+				<textField>
+					<reportElement x="618" y="66" width="62" height="13" uuid="48a738db-ab28-4fc9-b181-e8ec4b64e02e"/>
+					<textElement>
+						<font fontName="Arial" size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{fechaPlan}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="783" y="66" width="62" height="13" uuid="64637435-8347-4b31-8dae-5514cd81776a"/>
+					<textElement>
+						<font fontName="Arial" size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{NExpediente}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="680" y="66" width="103" height="13" uuid="8cde16b7-fb41-48e7-b6f2-4406c316d620"/>
+					<textElement textAlignment="Center" markup="none">
+						<font fontName="Arial" size="8" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Nº HOJA DE TAREO :]]></text>
+				</staticText>
+				<textField>
+					<reportElement style="style1" mode="Transparent" x="883" y="40" width="46" height="12" uuid="117f545d-dcfb-4ae9-9f1b-8f60e936cd63"/>
+					<textElement textAlignment="Center" markup="none">
+						<font fontName="Arial" size="6"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{NPlanilla}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="style1" mode="Transparent" x="837" y="40" width="46" height="12" uuid="5fdb8122-c69e-44d4-b3a0-3ecb42050eac"/>
+					<textElement textAlignment="Center" markup="none">
+						<font fontName="Arial" size="6"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{anoEje}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement style="style1" mode="Transparent" x="883" y="28" width="46" height="12" uuid="a255d3fb-71db-4a42-867a-09f7563d2d04"/>
+					<textElement textAlignment="Center">
+						<font fontName="Arial" size="6"/>
+					</textElement>
+					<text><![CDATA[Nª]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="style1" mode="Transparent" x="837" y="28" width="46" height="12" uuid="df682e97-7e5b-42a4-b238-20752be2b2f4"/>
+					<textElement textAlignment="Center">
+						<font fontName="Arial" size="6"/>
+					</textElement>
+					<text><![CDATA[AÑO]]></text>
+				</staticText>
+			</band>
+		</groupHeader>
+		<groupFooter>
+			<band height="45">
+				<staticText>
+					<reportElement style="style1" mode="Transparent" x="373" y="0" width="46" height="45" uuid="a85f7174-0cb5-4851-829c-f9a9d35c7eb9"/>
+					<textElement textAlignment="Center">
+						<font fontName="Arial" size="6"/>
+					</textElement>
+					<text><![CDATA[]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="style1" mode="Transparent" x="327" y="0" width="46" height="45" uuid="8f4ffef0-e956-465e-bfef-3b05bc886cce"/>
+					<textElement textAlignment="Center">
+						<font fontName="Arial" size="6"/>
+					</textElement>
+					<text><![CDATA[]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="style1" mode="Transparent" x="607" y="0" width="46" height="45" uuid="8a45fb09-bee2-4dd1-bb17-0a836b93a8fb"/>
+					<textElement textAlignment="Center">
+						<font fontName="Arial" size="6"/>
+					</textElement>
+					<text><![CDATA[]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="style1" mode="Transparent" x="561" y="0" width="46" height="45" uuid="70e502f4-6a41-4b05-b027-84f6f8bcbd31"/>
+					<textElement textAlignment="Center">
+						<font fontName="Arial" size="6"/>
+					</textElement>
+					<text><![CDATA[]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="style1" mode="Transparent" x="653" y="0" width="46" height="45" uuid="93738037-4f48-4003-af0d-21a8fba158e9"/>
+					<textElement textAlignment="Center">
+						<font fontName="Arial" size="6"/>
+					</textElement>
+					<text><![CDATA[]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="style1" mode="Transparent" x="699" y="0" width="46" height="45" uuid="bc5933d2-6767-4620-bf5c-f4f8e20f7152"/>
+					<textElement textAlignment="Center">
+						<font fontName="Arial" size="6"/>
+					</textElement>
+					<text><![CDATA[]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="style1" mode="Transparent" x="837" y="0" width="46" height="45" uuid="c9758ced-40f7-4e6a-8e2a-04262e2004b8"/>
+					<textElement textAlignment="Center">
+						<font fontName="Arial" size="6"/>
+					</textElement>
+					<text><![CDATA[]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="style1" mode="Transparent" x="791" y="0" width="46" height="45" uuid="1a81ebc0-c830-43fb-8980-8cf972cd3195"/>
+					<textElement textAlignment="Center">
+						<font fontName="Arial" size="6"/>
+					</textElement>
+					<text><![CDATA[]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="style1" mode="Transparent" x="469" y="0" width="46" height="45" uuid="344a19dd-805e-4011-b94a-3c761739e9f6"/>
+					<textElement textAlignment="Center">
+						<font fontName="Arial" size="6"/>
+					</textElement>
+					<text><![CDATA[]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="style1" mode="Transparent" x="515" y="0" width="46" height="45" uuid="dd73d1b3-f444-47e4-8e4e-0b9299d93abb"/>
+					<textElement textAlignment="Center">
+						<font fontName="Arial" size="6"/>
+					</textElement>
+					<text><![CDATA[]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="style1" mode="Transparent" x="0" y="0" width="327" height="45" uuid="7d00d5f6-93cb-4bf1-a930-91915ad39e9e"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Arial" size="8" isBold="true"/>
+					</textElement>
+					<text><![CDATA[TOTALES]]></text>
+				</staticText>
+				<textField evaluationTime="Group" evaluationGroup="dni" isBlankWhenNull="true">
+					<reportElement style="style1_1" mode="Transparent" x="561" y="0" width="46" height="9" uuid="99bf1533-3c6a-4f77-a1bb-7ebb9ab41610"/>
+					<textElement textAlignment="Right">
+						<font fontName="Arial" size="6"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{C}.get("t_1051")]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement style="style1" mode="Transparent" x="419" y="0" width="50" height="45" uuid="02f3c27b-7f8d-4076-a276-72b4eb73ad61"/>
+					<textElement textAlignment="Center">
+						<font fontName="Arial" size="6"/>
+					</textElement>
+					<text><![CDATA[]]></text>
+				</staticText>
+				<textField evaluationTime="Group" evaluationGroup="dni" pattern="###0.00;-###0.00" isBlankWhenNull="true">
+					<reportElement style="style1_1" mode="Transparent" x="469" y="0" width="46" height="9" forecolor="#000000" backcolor="#FFFFFF" uuid="b4e4b5d6-8483-4a53-a8bc-5c1331797334"/>
+					<textElement textAlignment="Right" verticalAlignment="Top" rotation="None" markup="none">
+						<font fontName="Arial" size="6" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+						<paragraph lineSpacing="Fixed"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{C}.get("t_1000")]]></textFieldExpression>
+				</textField>
+				<textField evaluationTime="Group" evaluationGroup="dni" isBlankWhenNull="true">
+					<reportElement style="style1_1" mode="Transparent" x="607" y="0" width="46" height="9" uuid="f606be4d-2348-4987-b294-374aeaa3f992"/>
+					<textElement textAlignment="Right">
+						<font fontName="Arial" size="6"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{C}.get("t_1023")]]></textFieldExpression>
+				</textField>
+				<textField evaluationTime="Group" evaluationGroup="dni" pattern="###0.00;-###0.00" isBlankWhenNull="true">
+					<reportElement style="style1_1" mode="Transparent" x="373" y="9" width="46" height="9" forecolor="#000000" backcolor="#FFFFFF" uuid="4640c759-23d4-4424-8b80-4f4a5de16296"/>
+					<textElement textAlignment="Right" verticalAlignment="Top" rotation="None" markup="none">
+						<font fontName="Arial" size="6" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+						<paragraph lineSpacing="Fixed"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{C}.get("t_1018")]]></textFieldExpression>
+				</textField>
+				<textField evaluationTime="Group" evaluationGroup="dni" pattern="###0.00;-###0.00" isBlankWhenNull="true">
+					<reportElement style="style1_1" mode="Transparent" x="515" y="9" width="46" height="9" forecolor="#000000" backcolor="#FFFFFF" uuid="43abb58b-083b-4f00-ac9f-e20ffbd4025f"/>
+					<textElement textAlignment="Right" verticalAlignment="Top" rotation="None" markup="none">
+						<font fontName="Arial" size="6" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+						<paragraph lineSpacing="Fixed"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{C}.get("t_1011")]]></textFieldExpression>
+				</textField>
+				<textField evaluationTime="Group" evaluationGroup="dni" pattern="###0.00;-###0.00" isBlankWhenNull="true">
+					<reportElement style="style1_1" mode="Transparent" x="469" y="18" width="46" height="9" forecolor="#000000" backcolor="#FFFFFF" uuid="2e2296e5-875d-4280-9b51-b00c3726ae0f"/>
+					<textElement textAlignment="Right" verticalAlignment="Top" rotation="None" markup="none">
+						<font fontName="Arial" size="6" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+						<paragraph lineSpacing="Fixed"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{C}.get("t_2041")]]></textFieldExpression>
+				</textField>
+				<textField evaluationTime="Group" evaluationGroup="dni" pattern="###0.00;-###0.00" isBlankWhenNull="true">
+					<reportElement style="style1_1" mode="Transparent" x="373" y="18" width="46" height="9" forecolor="#000000" backcolor="#FFFFFF" uuid="7fb4f4a5-7fb3-4049-9ec8-e6c4adaa2f7f"/>
+					<textElement textAlignment="Right" verticalAlignment="Top" rotation="None" markup="none">
+						<font fontName="Arial" size="6" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+						<paragraph lineSpacing="Fixed"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{C}.get("t_2040")]]></textFieldExpression>
+				</textField>
+				<textField evaluationTime="Group" evaluationGroup="dni" pattern="###0.00;-###0.00" isBlankWhenNull="true">
+					<reportElement style="style1_1" mode="Transparent" x="515" y="0" width="46" height="9" forecolor="#000000" backcolor="#FFFFFF" uuid="c670f49b-361a-4970-b19f-0ffe7bdf4c64"/>
+					<textElement textAlignment="Right" verticalAlignment="Top" rotation="None" markup="none">
+						<font fontName="Arial" size="6" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+						<paragraph lineSpacing="Fixed"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{C}.get("t_1012")]]></textFieldExpression>
+				</textField>
+				<textField evaluationTime="Group" evaluationGroup="dni" pattern="###0.00;-###0.00" isBlankWhenNull="true">
+					<reportElement style="style1_1" mode="Transparent" x="327" y="18" width="46" height="9" forecolor="#000000" backcolor="#FFFFFF" uuid="0b2de2f4-68af-41ff-98da-474dfa172648"/>
+					<textElement textAlignment="Right" verticalAlignment="Top" rotation="None" markup="none">
+						<font fontName="Arial" size="6" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+						<paragraph lineSpacing="Fixed"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{C}.get("t_2030")]]></textFieldExpression>
+				</textField>
+				<textField evaluationTime="Group" evaluationGroup="dni" isBlankWhenNull="true">
+					<reportElement style="style1_1" mode="Transparent" x="607" y="9" width="46" height="9" uuid="4b5e2dad-90d1-47c8-a82e-9bdc047c8bb8"/>
+					<textElement textAlignment="Right">
+						<font fontName="Arial" size="6"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{C}.get("t_1025")]]></textFieldExpression>
+				</textField>
+				<textField evaluationTime="Group" evaluationGroup="dni" pattern="###0.00;-###0.00" isBlankWhenNull="true">
+					<reportElement style="style1_1" mode="Transparent" x="469" y="9" width="46" height="9" forecolor="#000000" backcolor="#FFFFFF" uuid="3dce0273-2c8c-4669-8472-256402163e26"/>
+					<textElement textAlignment="Right" verticalAlignment="Top" rotation="None" markup="none">
+						<font fontName="Arial" size="6" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+						<paragraph lineSpacing="Fixed"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{C}.get("t_1026")]]></textFieldExpression>
+				</textField>
+				<textField evaluationTime="Group" evaluationGroup="dni" isBlankWhenNull="true">
+					<reportElement style="style1_1" mode="Transparent" x="699" y="0" width="46" height="9" uuid="60a1ec79-aafb-4d46-9eb0-c5e7d18108a4"/>
+					<textElement textAlignment="Right">
+						<font fontName="Arial" size="6"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{C}.get("t_1020")]]></textFieldExpression>
+				</textField>
+				<textField evaluationTime="Group" evaluationGroup="dni" isBlankWhenNull="true">
+					<reportElement style="style1_1" mode="Transparent" x="561" y="18" width="46" height="9" uuid="9e1f6659-ab38-440e-8f72-c2b979b81c72"/>
+					<textElement textAlignment="Right">
+						<font fontName="Arial" size="6"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{C}.get("t_2070")]]></textFieldExpression>
+				</textField>
+				<textField evaluationTime="Group" evaluationGroup="dni" pattern="###0.00;-###0.00" isBlankWhenNull="true">
+					<reportElement style="style1_1" mode="Transparent" x="419" y="9" width="50" height="9" forecolor="#000000" backcolor="#FFFFFF" uuid="87a45e48-61ff-4738-8356-3a6d68fbd2b9"/>
+					<textElement textAlignment="Right" verticalAlignment="Top" rotation="None" markup="none">
+						<font fontName="Arial" size="6" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+						<paragraph lineSpacing="Fixed"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{C}.get("t_1041")]]></textFieldExpression>
+				</textField>
+				<textField evaluationTime="Group" evaluationGroup="dni" isBlankWhenNull="true">
+					<reportElement style="style1_1" mode="Transparent" x="561" y="9" width="46" height="9" uuid="25b80c12-331d-4fc3-9f88-951c242b38cb"/>
+					<textElement textAlignment="Right">
+						<font fontName="Arial" size="6"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{C}.get("t_1019")]]></textFieldExpression>
+				</textField>
+				<textField evaluationTime="Group" evaluationGroup="dni" pattern="###0.00;-###0.00" isBlankWhenNull="true">
+					<reportElement style="style1_1" mode="Transparent" x="327" y="9" width="46" height="9" uuid="a764d61a-23c5-4e2c-9166-be13c26da02e"/>
+					<textElement textAlignment="Right">
+						<font fontName="Arial" size="6"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{C}.get("t_1042")]]></textFieldExpression>
+				</textField>
+				<textField evaluationTime="Group" evaluationGroup="dni" pattern="###0.00;-###0.00" isBlankWhenNull="true">
+					<reportElement style="style1_1" mode="Transparent" x="699" y="18" width="46" height="9" forecolor="#000000" backcolor="#FFFFFF" uuid="1c897f0d-fdec-48c5-a89d-650db66c0fbe"/>
+					<textElement textAlignment="Right" verticalAlignment="Top" rotation="None" markup="none">
+						<font fontName="Arial" size="6" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+						<paragraph lineSpacing="Fixed"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{C}.get("t_2137")]]></textFieldExpression>
+				</textField>
+				<textField evaluationTime="Group" evaluationGroup="dni" pattern="###0.00;-###0.00" isBlankWhenNull="true">
+					<reportElement style="style1_1" mode="Transparent" x="515" y="18" width="46" height="9" forecolor="#000000" backcolor="#FFFFFF" uuid="75696097-6846-4c8b-8e60-4d1da15df079"/>
+					<textElement textAlignment="Right" verticalAlignment="Top" rotation="None" markup="none">
+						<font fontName="Arial" size="6" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+						<paragraph lineSpacing="Fixed"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{C}.get("t_2050")]]></textFieldExpression>
+				</textField>
+				<textField evaluationTime="Group" evaluationGroup="dni" pattern="###0.00;-###0.00" isBlankWhenNull="true">
+					<reportElement style="style1_1" mode="Transparent" x="607" y="18" width="46" height="9" forecolor="#000000" backcolor="#FFFFFF" uuid="c0164b0d-7467-43b6-ad7f-e09517bae0c9"/>
+					<textElement textAlignment="Right" verticalAlignment="Top" rotation="None" markup="none">
+						<font fontName="Arial" size="6" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+						<paragraph lineSpacing="Fixed"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{C}.get("t_2080")]]></textFieldExpression>
+				</textField>
+				<textField evaluationTime="Group" evaluationGroup="dni" pattern="###0.00;-###0.00" isBlankWhenNull="true">
+					<reportElement style="style1_1" mode="Transparent" x="419" y="18" width="50" height="9" forecolor="#000000" backcolor="#FFFFFF" uuid="36d752f7-8dfd-4de6-98f4-c32d3a4e713f"/>
+					<textElement textAlignment="Right" verticalAlignment="Top" rotation="None" markup="none">
+						<font fontName="Arial" size="6" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+						<paragraph lineSpacing="Fixed"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{C}.get("t_2042")]]></textFieldExpression>
+				</textField>
+				<textField evaluationTime="Group" evaluationGroup="dni" pattern="###0.00;-###0.00" isBlankWhenNull="true">
+					<reportElement style="style1_1" mode="Transparent" x="653" y="18" width="46" height="9" forecolor="#000000" backcolor="#FFFFFF" uuid="720bea32-80f2-46f8-a881-bb54153b1d75"/>
+					<textElement textAlignment="Right" verticalAlignment="Top" rotation="None" markup="none">
+						<font fontName="Arial" size="6" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+						<paragraph lineSpacing="Fixed"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{C}.get("t_2130")]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement style="style1" mode="Transparent" x="883" y="0" width="46" height="45" uuid="6d80fbcd-e69d-469e-94b8-fe3b26877007"/>
+					<textElement textAlignment="Center">
+						<font fontName="Arial" size="6"/>
+					</textElement>
+					<text><![CDATA[]]></text>
+				</staticText>
+				<textField evaluationTime="Group" evaluationGroup="dni" isBlankWhenNull="true">
+					<reportElement style="style1_1" mode="Transparent" x="883" y="9" width="46" height="9" uuid="5e03a46c-4e03-495f-9500-3b8f70438646"/>
+					<textElement textAlignment="Right">
+						<font fontName="Arial" size="6"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{C}.get("t_3010")]]></textFieldExpression>
+				</textField>
+				<textField evaluationTime="Group" evaluationGroup="dni" pattern="###0.00;-###0.00" isBlankWhenNull="true">
+					<reportElement style="style1_1" mode="Transparent" x="883" y="18" width="46" height="9" forecolor="#000000" backcolor="#FFFFFF" uuid="e3478908-4f7c-4a8f-816b-55e327ee1ee0"/>
+					<textElement textAlignment="Right" verticalAlignment="Top" rotation="None" markup="none">
+						<font fontName="Arial" size="6" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+						<paragraph lineSpacing="Fixed"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{C}.get("t_3020")]]></textFieldExpression>
+				</textField>
+			</band>
+		</groupFooter>
+	</group>
+	<group name="dni">
+		<groupExpression><![CDATA[$F{dni}]]></groupExpression>
+		<groupHeader>
+			<band/>
+		</groupHeader>
+		<groupFooter>
+			<band height="45">
+				<staticText>
+					<reportElement style="style1" mode="Transparent" x="181" y="0" width="52" height="45" uuid="96e286b3-0c44-493b-bb48-c3521d23efca"/>
+					<textElement textAlignment="Center" markup="none">
+						<font fontName="Arial" size="6"/>
+					</textElement>
+					<text><![CDATA[]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="style1" mode="Transparent" x="883" y="9" width="46" height="36" uuid="a249b056-4148-41e1-a248-4c71b7228791"/>
+					<textElement textAlignment="Center">
+						<font fontName="Arial" size="6"/>
+					</textElement>
+					<text><![CDATA[]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="style1" mode="Transparent" x="327" y="0" width="46" height="45" uuid="c66de985-d1e3-4cc1-8c5c-1f68f1e84750"/>
+					<textElement textAlignment="Center">
+						<font fontName="Arial" size="6"/>
+					</textElement>
+					<text><![CDATA[]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="style1" mode="Transparent" x="419" y="0" width="50" height="45" uuid="ae3688cd-7d93-4265-a8bf-b252f05b50bd"/>
+					<textElement textAlignment="Center">
+						<font fontName="Arial" size="6"/>
+					</textElement>
+					<text><![CDATA[]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="style1" mode="Transparent" x="373" y="0" width="46" height="45" uuid="a5b3e6f9-1c45-4c5a-b786-c5517decce20"/>
+					<textElement textAlignment="Center">
+						<font fontName="Arial" size="6"/>
+					</textElement>
+					<text><![CDATA[]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="style1" mode="Transparent" x="469" y="0" width="46" height="45" uuid="4354059f-e289-4f19-bb8b-76d6ad8ac448"/>
+					<textElement textAlignment="Center">
+						<font fontName="Arial" size="6"/>
+					</textElement>
+					<text><![CDATA[]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="style1" mode="Transparent" x="561" y="0" width="46" height="45" uuid="1e9e3866-77c2-4793-9c72-2ac2fa1eb32e"/>
+					<textElement textAlignment="Center">
+						<font fontName="Arial" size="6"/>
+					</textElement>
+					<text><![CDATA[]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="style1" mode="Transparent" x="837" y="0" width="46" height="45" uuid="836e5cf0-157b-44a0-b96c-c079eca8b667"/>
+					<textElement textAlignment="Center">
+						<font fontName="Arial" size="6"/>
+					</textElement>
+					<text><![CDATA[]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="style1" mode="Transparent" x="653" y="0" width="46" height="45" uuid="831d024b-3452-4d95-9677-19b3fde1193a"/>
+					<textElement textAlignment="Center">
+						<font fontName="Arial" size="6"/>
+					</textElement>
+					<text><![CDATA[]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="style1" mode="Transparent" x="607" y="0" width="46" height="45" uuid="a1e08a4d-b5dc-4579-a2e9-40aa0997885e"/>
+					<textElement textAlignment="Center">
+						<font fontName="Arial" size="6"/>
+					</textElement>
+					<text><![CDATA[]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="style1" mode="Transparent" x="699" y="0" width="46" height="45" uuid="0e39037d-bf55-4906-96d3-c1d47ba208ad"/>
+					<textElement textAlignment="Center">
+						<font fontName="Arial" size="6"/>
+					</textElement>
+					<text><![CDATA[]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="style1" mode="Transparent" x="515" y="0" width="46" height="45" uuid="ea75b0d1-bd8e-4a2d-b544-bc19374d1e7a"/>
+					<textElement textAlignment="Center">
+						<font fontName="Arial" size="6"/>
+					</textElement>
+					<text><![CDATA[]]></text>
+				</staticText>
+				<textField>
+					<reportElement style="style1" mode="Transparent" x="0" y="0" width="12" height="45" uuid="60ed796e-cb30-4fcf-bb3d-69093515e046"/>
+					<textElement>
+						<font fontName="Arial" size="6"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{NOrden}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="style1" mode="Transparent" x="181" y="0" width="52" height="9" uuid="fde4a13d-354a-4a98-998c-6d6262810af9"/>
+					<textElement textAlignment="Center">
+						<font fontName="Arial" size="6"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{nivelRemName}]]></textFieldExpression>
+				</textField>
+				<textField evaluationTime="Group" evaluationGroup="dni">
+					<reportElement style="style1_1" mode="Transparent" x="791" y="0" width="46" height="9" uuid="61a76c3a-e42f-44a2-841f-bf026be75c64"/>
+					<textElement textAlignment="Right">
+						<font fontName="Arial" size="6"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$V{monto_2}]]></textFieldExpression>
+				</textField>
+				<textField evaluationTime="Group" evaluationGroup="dni" isBlankWhenNull="true">
+					<reportElement style="style1_1" mode="Transparent" x="699" y="0" width="46" height="9" uuid="1e551271-65ba-4729-b717-69a21ddc9530"/>
+					<textElement textAlignment="Right">
+						<font fontName="Arial" size="6"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{C}.get("1020")]]></textFieldExpression>
+				</textField>
+				<textField evaluationTime="Group" evaluationGroup="dni">
+					<reportElement style="style1_1" mode="Transparent" x="791" y="36" width="46" height="9" uuid="17842967-173f-4c0a-8d3b-bd139fcee43e"/>
+					<textElement textAlignment="Right">
+						<font fontName="Arial" size="6"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$V{monto_3}]]></textFieldExpression>
+				</textField>
+				<textField evaluationTime="Group" evaluationGroup="dni" pattern="###0.00;-###0.00" isBlankWhenNull="true">
+					<reportElement style="style1_1" mode="Transparent" x="327" y="0" width="46" height="9" uuid="1f8990fe-e1f8-403a-91db-11599972964c"/>
+					<textElement textAlignment="Right">
+						<font fontName="Arial" size="6"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{montoRem}]]></textFieldExpression>
+				</textField>
+				<textField evaluationTime="Group" evaluationGroup="dni" pattern="###0.00;-###0.00" isBlankWhenNull="true">
+					<reportElement style="style1_1" mode="Transparent" x="327" y="9" width="46" height="9" uuid="85a07baa-82d0-4584-9a1b-a04316f644e9"/>
+					<textElement textAlignment="Right">
+						<font fontName="Arial" size="6"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{C}.get("1042")]]></textFieldExpression>
+				</textField>
+				<textField evaluationTime="Group" evaluationGroup="dni" pattern="###0.00;-###0.00" isBlankWhenNull="true">
+					<reportElement style="style1_1" mode="Transparent" x="419" y="0" width="50" height="9" forecolor="#000000" backcolor="#FFFFFF" uuid="df5b1c24-02b2-4637-bed8-d878b89460e4"/>
+					<textElement textAlignment="Right" verticalAlignment="Top" rotation="None" markup="none">
+						<font fontName="Arial" size="6" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+						<paragraph lineSpacing="Fixed"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{diasDom}]]></textFieldExpression>
+				</textField>
+				<textField evaluationTime="Group" evaluationGroup="dni" pattern="###0.00;-###0.00" isBlankWhenNull="true">
+					<reportElement style="style1_1" mode="Transparent" x="327" y="18" width="46" height="9" forecolor="#000000" backcolor="#FFFFFF" uuid="0bfbb536-0918-4f8e-b7f5-071f1f805786"/>
+					<textElement textAlignment="Right" verticalAlignment="Top" rotation="None" markup="none">
+						<font fontName="Arial" size="6" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+						<paragraph lineSpacing="Fixed"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{C}.get("2030")]]></textFieldExpression>
+				</textField>
+				<textField evaluationTime="Group" evaluationGroup="dni" pattern="###0.00;-###0.00" isBlankWhenNull="true">
+					<reportElement style="style1_1" mode="Transparent" x="373" y="0" width="46" height="9" forecolor="#000000" backcolor="#FFFFFF" uuid="1f1f6e26-fc38-466c-8f75-7c2f0fbfed16"/>
+					<textElement textAlignment="Right" verticalAlignment="Top" rotation="None" markup="none">
+						<font fontName="Arial" size="6" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+						<paragraph lineSpacing="Fixed"/>
+					</textElement>
+					<textFieldExpression><![CDATA[($F{diasNor}!=null?$F{diasNor}:0)+
+($F{diasFer}!=null?$F{diasFer}:0)+
+($F{diasFtrab}!=null?$F{diasFtrab}:0)]]></textFieldExpression>
+				</textField>
+				<textField evaluationTime="Group" evaluationGroup="dni" pattern="###0.00;-###0.00" isBlankWhenNull="true">
+					<reportElement style="style1_1" mode="Transparent" x="373" y="9" width="46" height="9" forecolor="#000000" backcolor="#FFFFFF" uuid="95ae774d-27d0-4c8d-9e5b-4aaeb5269800"/>
+					<textElement textAlignment="Right" verticalAlignment="Top" rotation="None" markup="none">
+						<font fontName="Arial" size="6" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+						<paragraph lineSpacing="Fixed"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{C}.get("1018")]]></textFieldExpression>
+				</textField>
+				<textField evaluationTime="Group" evaluationGroup="dni" pattern="###0.00;-###0.00" isBlankWhenNull="true">
+					<reportElement style="style1_1" mode="Transparent" x="373" y="18" width="46" height="9" forecolor="#000000" backcolor="#FFFFFF" uuid="f35ed9a0-61e2-42b1-a08f-486e367ad824"/>
+					<textElement textAlignment="Right" verticalAlignment="Top" rotation="None" markup="none">
+						<font fontName="Arial" size="6" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+						<paragraph lineSpacing="Fixed"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{C}.get("2040")]]></textFieldExpression>
+				</textField>
+				<textField evaluationTime="Group" evaluationGroup="dni" pattern="###0.00;-###0.00" isBlankWhenNull="true">
+					<reportElement style="style1_1" mode="Transparent" x="419" y="9" width="50" height="9" forecolor="#000000" backcolor="#FFFFFF" uuid="a11ed807-2578-42fb-b699-b77dd727b46e"/>
+					<textElement textAlignment="Right" verticalAlignment="Top" rotation="None" markup="none">
+						<font fontName="Arial" size="6" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+						<paragraph lineSpacing="Fixed"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{C}.get("1041")]]></textFieldExpression>
+				</textField>
+				<textField evaluationTime="Group" evaluationGroup="dni" pattern="###0.00;-###0.00" isBlankWhenNull="true">
+					<reportElement style="style1_1" mode="Transparent" x="419" y="18" width="50" height="9" forecolor="#000000" backcolor="#FFFFFF" uuid="f2a25e29-cc6e-4b2a-9e69-5be3f37e13ee"/>
+					<textElement textAlignment="Right" verticalAlignment="Top" rotation="None" markup="none">
+						<font fontName="Arial" size="6" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+						<paragraph lineSpacing="Fixed"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{C}.get("2042")]]></textFieldExpression>
+				</textField>
+				<textField evaluationTime="Group" evaluationGroup="dni" pattern="###0.00;-###0.00" isBlankWhenNull="true">
+					<reportElement style="style1_1" mode="Transparent" x="469" y="0" width="46" height="9" forecolor="#000000" backcolor="#FFFFFF" uuid="45252dee-f37f-4afe-86ac-dae7a0219cd3"/>
+					<textElement textAlignment="Right" verticalAlignment="Top" rotation="None" markup="none">
+						<font fontName="Arial" size="6" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+						<paragraph lineSpacing="Fixed"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{C}.get("1000")]]></textFieldExpression>
+				</textField>
+				<textField evaluationTime="Group" evaluationGroup="dni" pattern="###0.00;-###0.00" isBlankWhenNull="true">
+					<reportElement style="style1_1" mode="Transparent" x="469" y="9" width="46" height="9" forecolor="#000000" backcolor="#FFFFFF" uuid="eea66904-9c80-4d34-8f3d-6bb8607bbaae"/>
+					<textElement textAlignment="Right" verticalAlignment="Top" rotation="None" markup="none">
+						<font fontName="Arial" size="6" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+						<paragraph lineSpacing="Fixed"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{C}.get("1026")]]></textFieldExpression>
+				</textField>
+				<textField evaluationTime="Group" evaluationGroup="dni" pattern="###0.00;-###0.00" isBlankWhenNull="true">
+					<reportElement style="style1_1" mode="Transparent" x="469" y="18" width="46" height="9" forecolor="#000000" backcolor="#FFFFFF" uuid="ab18d735-78d0-4266-a6d8-570736397664"/>
+					<textElement textAlignment="Right" verticalAlignment="Top" rotation="None" markup="none">
+						<font fontName="Arial" size="6" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+						<paragraph lineSpacing="Fixed"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{C}.get("2041")]]></textFieldExpression>
+				</textField>
+				<textField evaluationTime="Group" evaluationGroup="dni" pattern="###0.00;-###0.00" isBlankWhenNull="true">
+					<reportElement style="style1_1" mode="Transparent" x="515" y="0" width="46" height="9" forecolor="#000000" backcolor="#FFFFFF" uuid="38d047f3-e583-4afb-a6e7-f9cc8ce30a74"/>
+					<textElement textAlignment="Right" verticalAlignment="Top" rotation="None" markup="none">
+						<font fontName="Arial" size="6" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+						<paragraph lineSpacing="Fixed"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{C}.get("1012")]]></textFieldExpression>
+				</textField>
+				<textField evaluationTime="Group" evaluationGroup="dni" pattern="###0.00;-###0.00" isBlankWhenNull="true">
+					<reportElement style="style1_1" mode="Transparent" x="515" y="9" width="46" height="9" forecolor="#000000" backcolor="#FFFFFF" uuid="22138b47-5029-4241-b14c-043815a38ecb"/>
+					<textElement textAlignment="Right" verticalAlignment="Top" rotation="None" markup="none">
+						<font fontName="Arial" size="6" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+						<paragraph lineSpacing="Fixed"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{C}.get("1011")]]></textFieldExpression>
+				</textField>
+				<textField evaluationTime="Group" evaluationGroup="dni" pattern="###0.00;-###0.00" isBlankWhenNull="true">
+					<reportElement style="style1_1" mode="Transparent" x="515" y="18" width="46" height="9" forecolor="#000000" backcolor="#FFFFFF" uuid="ef080484-1e20-413c-affd-e166f44309b9"/>
+					<textElement textAlignment="Right" verticalAlignment="Top" rotation="None" markup="none">
+						<font fontName="Arial" size="6" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+						<paragraph lineSpacing="Fixed"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{C}.get("2050")]]></textFieldExpression>
+				</textField>
+				<textField evaluationTime="Group" evaluationGroup="dni" pattern="###0.00;-###0.00" isBlankWhenNull="true">
+					<reportElement style="style1_1" mode="Transparent" x="699" y="18" width="46" height="9" forecolor="#000000" backcolor="#FFFFFF" uuid="6774025f-1e2e-445f-a763-7ae4bfa1762a"/>
+					<textElement textAlignment="Right" verticalAlignment="Top" rotation="None" markup="none">
+						<font fontName="Arial" size="6" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+						<paragraph lineSpacing="Fixed"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{C}.get("2137")]]></textFieldExpression>
+				</textField>
+				<textField evaluationTime="Group" evaluationGroup="dni" isBlankWhenNull="true">
+					<reportElement style="style1_1" mode="Transparent" x="653" y="0" width="46" height="9" uuid="7dc96888-ffd9-4c66-855c-71398b1a8497"/>
+					<textElement textAlignment="Right">
+						<font fontName="Arial" size="6"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{numHijos}]]></textFieldExpression>
+				</textField>
+				<textField evaluationTime="Group" evaluationGroup="dni" pattern="###0.00;-###0.00" isBlankWhenNull="true">
+					<reportElement style="style1_1" mode="Transparent" x="653" y="18" width="46" height="9" forecolor="#000000" backcolor="#FFFFFF" uuid="3031a988-a1e3-49c3-ad20-ad034ef9cc05"/>
+					<textElement textAlignment="Right" verticalAlignment="Top" rotation="None" markup="none">
+						<font fontName="Arial" size="6" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+						<paragraph lineSpacing="Fixed"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{C}.get("2130")]]></textFieldExpression>
+				</textField>
+				<textField evaluationTime="Group" evaluationGroup="dni" pattern="###0.00;-###0.00" isBlankWhenNull="true">
+					<reportElement style="style1_1" mode="Transparent" x="607" y="18" width="46" height="9" forecolor="#000000" backcolor="#FFFFFF" uuid="a9b17557-6712-4dd2-93cd-a89813088ee2"/>
+					<textElement textAlignment="Right" verticalAlignment="Top" rotation="None" markup="none">
+						<font fontName="Arial" size="6" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+						<paragraph lineSpacing="Fixed"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{C}.get("2080")]]></textFieldExpression>
+				</textField>
+				<textField evaluationTime="Group" evaluationGroup="dni" isBlankWhenNull="true">
+					<reportElement style="style1_1" mode="Transparent" x="607" y="0" width="46" height="9" uuid="ddb1b233-082b-4337-9426-72ffa453c32c"/>
+					<textElement textAlignment="Right">
+						<font fontName="Arial" size="6"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{C}.get("1023")]]></textFieldExpression>
+				</textField>
+				<textField evaluationTime="Group" evaluationGroup="dni" isBlankWhenNull="true">
+					<reportElement style="style1_1" mode="Transparent" x="607" y="9" width="46" height="9" uuid="0872b7ab-0917-4924-9fa2-2ad2ae74def8"/>
+					<textElement textAlignment="Right">
+						<font fontName="Arial" size="6"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{C}.get("2025")]]></textFieldExpression>
+				</textField>
+				<textField evaluationTime="Group" evaluationGroup="dni" isBlankWhenNull="true">
+					<reportElement style="style1_1" mode="Transparent" x="561" y="9" width="46" height="9" uuid="475106f4-4056-4205-971c-a65ec3aecfdc"/>
+					<textElement textAlignment="Right">
+						<font fontName="Arial" size="6"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{C}.get("1019")]]></textFieldExpression>
+				</textField>
+				<textField evaluationTime="Group" evaluationGroup="dni" isBlankWhenNull="true">
+					<reportElement style="style1_1" mode="Transparent" x="561" y="0" width="46" height="9" uuid="1a30629a-0de6-4185-a748-69d82beb4ca2"/>
+					<textElement textAlignment="Right">
+						<font fontName="Arial" size="6"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{horaExtra}]]></textFieldExpression>
+				</textField>
+				<textField evaluationTime="Group" evaluationGroup="dni" isBlankWhenNull="true">
+					<reportElement style="style1_1" mode="Transparent" x="561" y="18" width="46" height="9" uuid="f2dda874-cfec-4785-8d2e-632c23b55645"/>
+					<textElement textAlignment="Right">
+						<font fontName="Arial" size="6"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{C}.get("2070")]]></textFieldExpression>
+				</textField>
+				<textField evaluationTime="Group" evaluationGroup="dni" isBlankWhenNull="true">
+					<reportElement style="style1_1" mode="Transparent" x="837" y="18" width="46" height="9" uuid="de9b2c5f-2c5e-48e6-8be1-8fad538f5c33"/>
+					<textElement textAlignment="Right">
+						<font fontName="Arial" size="6"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$V{monto_2}!=null?$V{monto_2}.subtract($V{monto_3}!=null?$V{monto_3}:java.math.BigDecimal.ZERO):null]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement style="style1" mode="Transparent" x="791" y="0" width="46" height="45" uuid="a7863c99-ddea-4e3c-87b2-328893311229"/>
+					<textElement textAlignment="Center">
+						<font fontName="Arial" size="6"/>
+					</textElement>
+					<text><![CDATA[]]></text>
+				</staticText>
+				<textField>
+					<reportElement style="style1" mode="Transparent" x="12" y="0" width="169" height="45" uuid="e96b01f4-e565-4a6b-b2d5-51ecaa6f6dd6"/>
+					<textElement>
+						<font fontName="Arial" size="6"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{nombComp}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement style="style1" mode="Transparent" x="233" y="0" width="94" height="45" uuid="fe6c37df-2230-47c7-9191-8ed10220c038"/>
+					<textElement textAlignment="Center">
+						<font fontName="Arial" size="6"/>
+					</textElement>
+					<text><![CDATA[]]></text>
+				</staticText>
+				<textField evaluationTime="Group" evaluationGroup="dni" pattern="###0.00;-###0.00" isBlankWhenNull="true">
+					<reportElement style="style1_1" mode="Transparent" x="12" y="9" width="169" height="9" uuid="680db30d-c35c-4f49-a200-1aa144a437c4"/>
+					<textElement textAlignment="Left">
+						<font fontName="Arial" size="6"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{descCargo}]]></textFieldExpression>
+				</textField>
+				<textField evaluationTime="Group" evaluationGroup="dni" pattern="###0.00;-###0.00" isBlankWhenNull="true">
+					<reportElement style="style1_1" mode="Transparent" x="233" y="0" width="94" height="9" uuid="2339737c-840a-4c66-8cb2-1f946e5007d2"/>
+					<textElement textAlignment="Left">
+						<font fontName="Arial" size="6"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{regPensionName}]]></textFieldExpression>
+				</textField>
+				<textField evaluationTime="Group" evaluationGroup="dni" pattern="###0.00;-###0.00" isBlankWhenNull="true">
+					<reportElement style="style1_1" mode="Transparent" x="233" y="9" width="94" height="9" uuid="6bdf4e30-b04a-4467-a50e-1eba3bc6fd2c"/>
+					<textElement textAlignment="Left">
+						<font fontName="Arial" size="6"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{cuspp}]]></textFieldExpression>
+				</textField>
+				<textField evaluationTime="Group" evaluationGroup="dni" isBlankWhenNull="true">
+					<reportElement style="style1" mode="Transparent" x="883" y="0" width="46" height="9" uuid="aae55529-c55e-4edf-b433-08fd055a47e4"/>
+					<textElement textAlignment="Right">
+						<font fontName="Arial" size="6"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{remAseg}]]></textFieldExpression>
+				</textField>
+				<textField evaluationTime="Group" evaluationGroup="dni" isBlankWhenNull="true">
+					<reportElement style="style1_1" mode="Transparent" x="883" y="27" width="46" height="9" uuid="9293f2a8-6ca8-4e51-8fc4-f6aa2c7df954"/>
+					<textElement textAlignment="Right">
+						<font fontName="Arial" size="6"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{C}.get("3010")]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="style1" mode="Transparent" x="181" y="9" width="52" height="9" uuid="192926b0-2745-4a28-bf47-ee40e73acdbc"/>
+					<textElement textAlignment="Center">
+						<font fontName="Arial" size="6"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{dni}]]></textFieldExpression>
+				</textField>
+				<textField evaluationTime="Group" evaluationGroup="dni" pattern="###0.00;-###0.00" isBlankWhenNull="true">
+					<reportElement style="style1_1" mode="Transparent" x="233" y="18" width="94" height="9" uuid="ec46e534-edcc-40e7-9083-e01e1c5882fd"/>
+					<textElement textAlignment="Left">
+						<font fontName="Arial" size="6"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{fechaInscrip}]]></textFieldExpression>
+				</textField>
+				<textField evaluationTime="Group" evaluationGroup="dni" isBlankWhenNull="true">
+					<reportElement style="style1_1" mode="Transparent" x="883" y="36" width="46" height="9" uuid="badae41c-4fc4-4343-b473-9a404b696b07"/>
+					<textElement textAlignment="Right">
+						<font fontName="Arial" size="6"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{C}.get("3020")]]></textFieldExpression>
+				</textField>
+			</band>
+		</groupFooter>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="52" splitType="Stretch">
+			<staticText>
+				<reportElement x="76" y="13" width="195" height="13" uuid="b54bfca4-a08c-47b7-bd48-3a93625f892f"/>
+				<textElement>
+					<font fontName="Arial" size="7"/>
+				</textElement>
+				<text><![CDATA[: 441 GOBIERNO REGIONAL DE ANCASH]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="13" width="76" height="13" uuid="a7151102-727b-4ded-80e3-77a53e15a9c5"/>
+				<textElement>
+					<font fontName="Arial" size="7"/>
+				</textElement>
+				<text><![CDATA[PLIEGO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="76" y="26" width="195" height="13" uuid="e201d7a6-f814-442e-9608-97b9af3a7dbc"/>
+				<textElement>
+					<font fontName="Arial" size="7"/>
+				</textElement>
+				<text><![CDATA[: 003 SUB REGION PACIFICO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="26" width="76" height="13" uuid="71ca54b4-8017-4525-85cc-6af8ffd2f8c1"/>
+				<textElement>
+					<font fontName="Arial" size="7"/>
+				</textElement>
+				<text><![CDATA[UNIDAD EJECUTORA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="0" width="76" height="13" uuid="e2b4692c-f7e4-401c-96f6-8a2f866814c0"/>
+				<textElement>
+					<font fontName="Arial" size="7"/>
+				</textElement>
+				<text><![CDATA[SECTOR]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="76" y="0" width="195" height="13" uuid="10f8a4f3-7f80-45b7-9b59-c65fc74e9c18"/>
+				<textElement>
+					<font fontName="Arial" size="7"/>
+				</textElement>
+				<text><![CDATA[: 01 PRESIDENCIA DEL CONSEJO DE MINISTROS]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="76" y="39" width="195" height="13" uuid="b0365a53-9517-4c28-a9da-66abd69a7d53"/>
+				<textElement>
+					<font fontName="Arial" size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[": "+$F{funcionCode}+" "+$F{funcionNombre}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="39" width="76" height="13" uuid="6fb60505-7505-44fc-b571-c6bf65ded270"/>
+				<textElement>
+					<font fontName="Arial" size="7"/>
+				</textElement>
+				<text><![CDATA[FUNCION]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="159" height="0" uuid="3598a99e-0a3b-4b51-9ccd-b860c2aaeeee"/>
+				<textFieldExpression><![CDATA[(($P{C}.put($F{codigo},$F{monto})==$P{C}.put("t_"+$F{codigo},$F{monto}))==
+("2081".equals($F{codigo})||"2082".equals($F{codigo})?($P{C}.put("2080",$F{monto})==$P{C}.put("t_2080",$F{monto})):true))==
+("1150".equals($F{codigo})?($P{C}.put("1201",$F{monto})==$P{C}.put("t_1201",$F{monto})):true)]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="10" y="0" width="159" height="0" uuid="c5c657ba-adbd-4b24-9fda-029ac6c28385"/>
+				<textFieldExpression><![CDATA[("2091".equals($F{codigo})?($P{C}.put("2090",$F{monto})==$P{C}.put("t_2080",$F{monto})):true)]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="20" y="0" width="159" height="0" uuid="cef31d78-c751-469f-927d-eff0c145757a"/>
+				<textFieldExpression><![CDATA[("1014".equals($F{codigo})||"1016".equals($F{codigo})?($P{C}.put("1000",$F{monto})==$P{C}.put("t_1000",$F{monto})):true)]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="26" splitType="Stretch">
+			<rectangle radius="5">
+				<reportElement x="0" y="13" width="929" height="13" uuid="c06ca97a-af77-4963-b1d3-0f5e5cd01e7a"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</rectangle>
+			<textField>
+				<reportElement x="334" y="13" width="262" height="13" uuid="95cfd103-9a6a-4e72-a8b9-1374b56c4206"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+					<font fontName="Arial" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{APPLICATION_NAME}]]></textFieldExpression>
+			</textField>
+			<textField pattern="dd/MM/yyyy HH:mm:ss">
+				<reportElement x="3" y="13" width="100" height="13" uuid="1863f9a9-d749-4772-b2d5-6c9b11a20101"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Arial" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="824" y="13" width="93" height="13" uuid="049174f3-ddb5-4baa-899b-253370165728"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Arial" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Página "+$V{PAGE_NUMBER}+" de"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement x="901" y="13" width="23" height="13" uuid="1c7dfc5b-9e40-40ae-a3de-b7c97db3045a"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Arial" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>
