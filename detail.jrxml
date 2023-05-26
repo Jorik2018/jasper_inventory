@@ -74,7 +74,7 @@
 				<textElement textAlignment="Center" rotation="None">
 					<font size="8" isBold="true" isItalic="false"/>
 				</textElement>
-				<text><![CDATA[MARGESI]]></text>
+				<text><![CDATA[CODIGO PATRIMONIAL]]></text>
 			</staticText>
 			<staticText>
 				<reportElement style="bordered" x="210" y="10" width="140" height="13" uuid="c50ce695-3956-4a56-8d49-a328d0a5214a">
