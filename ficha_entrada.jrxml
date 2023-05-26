@@ -61,7 +61,7 @@
 	<title>
 		<band height="54" splitType="Stretch">
 			<staticText>
-				<reportElement x="294" y="10" width="244" height="20" uuid="8365e84b-2e66-4135-93c6-a793d9e8491e"/>
+				<reportElement x="283" y="10" width="266" height="20" uuid="8365e84b-2e66-4135-93c6-a793d9e8491e"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font isBold="true"/>
 				</textElement>
