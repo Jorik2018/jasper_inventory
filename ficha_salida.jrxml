@@ -83,14 +83,14 @@
 				</textElement>
 				<text><![CDATA[Página:]]></text>
 			</staticText>
-			<textField>
+			<textField isBlankWhenNull="true">
 				<reportElement x="25" y="17" width="50" height="10" uuid="00242250-00cc-45e8-bff7-397893647606"/>
 				<textElement verticalAlignment="Middle">
 					<font size="7"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{pagination}]]></textFieldExpression>
 			</textField>
-			<textField>
+			<textField isBlankWhenNull="true">
 				<reportElement x="740" y="7" width="50" height="10" uuid="fce29840-1346-47e0-9ea7-1acaa3e37fbc"/>
 				<textElement verticalAlignment="Middle">
 					<font size="7"/>
@@ -115,7 +115,7 @@
 				</textElement>
 				<text><![CDATA[Fecha:]]></text>
 			</staticText>
-			<textField>
+			<textField isBlankWhenNull="true">
 				<reportElement x="740" y="17" width="50" height="10" uuid="4abb8ef5-4030-448e-bdc6-94f736db5e3d">
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
