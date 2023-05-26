@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Created with Jaspersoft Studio version 6.20.1.final using JasperReports Library version 6.20.1-7584acb244139816654f64e2fd57a00d3e31921e  -->
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ficha_asignacion_bien" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="43b2a9a1-6292-4a09-9c32-b63f931829f7">
-	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="DataAdapter.jrdax"/>
-	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
 	<style name="Crosstab_CH" mode="Opaque" backcolor="#F0F8FF">
 		<box>
 			<pen lineWidth="0.5" lineColor="#000000"/>
@@ -41,8 +40,8 @@
 	</style>
 	<style name="Style1" style="Crosstab_CG"/>
 	<parameter name="SUBREPORT_DIR" class="java.lang.String"/>
-	<queryString>
-		<![CDATA[select * from aa]]>
+	<queryString language="jsonql">
+		<![CDATA[details]]>
 	</queryString>
 	<field name="fullName" class="java.lang.String">
 		<fieldDescription><![CDATA[fullName]]></fieldDescription>
@@ -84,14 +83,14 @@
 				</textElement>
 				<text><![CDATA[Página:]]></text>
 			</staticText>
-			<textField isBlankWhenNull="true">
+			<textField>
 				<reportElement x="25" y="17" width="50" height="10" uuid="00242250-00cc-45e8-bff7-397893647606"/>
-				<textElement verticalAlignment="Middle" markup="">
+				<textElement verticalAlignment="Middle">
 					<font size="7"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{pagination}]]></textFieldExpression>
 			</textField>
-			<textField isBlankWhenNull="true">
+			<textField>
 				<reportElement x="740" y="7" width="50" height="10" uuid="fce29840-1346-47e0-9ea7-1acaa3e37fbc"/>
 				<textElement verticalAlignment="Middle">
 					<font size="7"/>
@@ -116,7 +115,7 @@
 				</textElement>
 				<text><![CDATA[Fecha:]]></text>
 			</staticText>
-			<textField isBlankWhenNull="true">
+			<textField>
 				<reportElement x="740" y="17" width="50" height="10" uuid="4abb8ef5-4030-448e-bdc6-94f736db5e3d">
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
