@@ -32,11 +32,6 @@
 			<location>D:/wildfly/bin/.data/jasper/detail.jasper</location>
 		</link>
 		<link>
-			<name>detail.jrxml</name>
-			<type>1</type>
-			<location>D:/wildfly/bin/.data/jasper/detail.jrxml</location>
-		</link>
-		<link>
 			<name>detail_1.jasper</name>
 			<type>1</type>
 			<location>D:/wildfly/bin/.data/jasper/detail.jasper</location>
@@ -45,11 +40,6 @@
 			<name>ficha_salida.jasper</name>
 			<type>1</type>
 			<location>D:/wildfly/bin/.data/jasper/ficha_salida.jasper</location>
-		</link>
-		<link>
-			<name>ficha_salida.jrxml</name>
-			<type>1</type>
-			<location>D:/wildfly/bin/.data/jasper/ficha_salida.jrxml</location>
 		</link>
 		<link>
 			<name>ficha_salida_1.jasper</name>
