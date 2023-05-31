@@ -39,6 +39,7 @@
 		</box>
 	</style>
 	<style name="Style1" style="Crosstab_CG"/>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String"/>
 	<queryString language="jsonql">
 		<![CDATA[details]]>
 	</queryString>
@@ -304,7 +305,7 @@
 				<reportElement x="3" y="0" width="790" height="65" uuid="f31308ea-1e23-4b37-b372-daeab740c320"/>
 				<dataSourceExpression><![CDATA[$P{REPORT_DATA_SOURCE} instanceof net.sf.jasperreports.engine.data.JsonDataSource?((net.sf.jasperreports.engine.data.JsonDataSource)$P{REPORT_DATA_SOURCE}).subDataSource("details"):
 new net.sf.jasperreports.engine.data.JRBeanCollectionDataSource($F{details})]]></dataSourceExpression>
-				<subreportExpression><![CDATA["./detail.jasper"]]></subreportExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR}+"\\detail.jasper"]]></subreportExpression>
 			</subreport>
 		</band>
 	</detail>
