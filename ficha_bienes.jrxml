@@ -89,7 +89,7 @@
 					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font size="8"/>
+					<font size="8" isBold="true"/>
 				</textElement>
 				<text><![CDATA[CÓDIGO PATRIMONIAL]]></text>
 			</staticText>
@@ -104,7 +104,7 @@
 					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font size="8"/>
+					<font size="8" isBold="true"/>
 				</textElement>
 				<text><![CDATA[DENOMINACIÓN]]></text>
 			</staticText>
@@ -119,7 +119,7 @@
 					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font size="8"/>
+					<font size="8" isBold="true"/>
 				</textElement>
 				<text><![CDATA[N° DE LOTE]]></text>
 			</staticText>
@@ -134,7 +134,7 @@
 					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font size="8"/>
+					<font size="8" isBold="true"/>
 				</textElement>
 				<text><![CDATA[MARCA]]></text>
 			</staticText>
@@ -149,7 +149,7 @@
 					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font size="8"/>
+					<font size="8" isBold="true"/>
 				</textElement>
 				<text><![CDATA[MODELO]]></text>
 			</staticText>
@@ -164,7 +164,7 @@
 					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font size="8"/>
+					<font size="8" isBold="true"/>
 				</textElement>
 				<text><![CDATA[COLOR]]></text>
 			</staticText>
@@ -179,7 +179,7 @@
 					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font size="8"/>
+					<font size="8" isBold="true"/>
 				</textElement>
 				<text><![CDATA[DIMENSIONES]]></text>
 			</staticText>
@@ -194,7 +194,7 @@
 					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font size="8"/>
+					<font size="8" isBold="true"/>
 				</textElement>
 				<text><![CDATA[SERIE]]></text>
 			</staticText>
@@ -209,7 +209,7 @@
 					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font size="8"/>
+					<font size="8" isBold="true"/>
 				</textElement>
 				<text><![CDATA[OTROS]]></text>
 			</staticText>
@@ -224,7 +224,7 @@
 					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font size="8"/>
+					<font size="8" isBold="true"/>
 				</textElement>
 				<text><![CDATA[CONSERVACIÓN]]></text>
 			</staticText>
@@ -239,7 +239,7 @@
 					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font size="8"/>
+					<font size="8" isBold="true"/>
 				</textElement>
 				<text><![CDATA[N° DE ORDEN]]></text>
 			</staticText>
@@ -255,7 +255,7 @@
 					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font size="8"/>
+					<font size="8" isBold="true"/>
 				</textElement>
 				<text><![CDATA[OBSERVACIONES]]></text>
 			</staticText>
@@ -427,7 +427,7 @@
 				</textElement>
 				<textFieldExpression><![CDATA[$F{moveId}]]></textFieldExpression>
 			</textField>
-			<textField>
+			<textField isBlankWhenNull="true">
 				<reportElement x="700" y="-30" width="80" height="40" uuid="5a516a35-c89b-4c73-92d6-0dd6de64d7af">
 					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="d8d12f0a-13a8-449c-bc63-7ca691576a14"/>
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
