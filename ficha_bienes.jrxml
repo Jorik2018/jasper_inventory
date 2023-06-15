@@ -199,7 +199,7 @@
 				<text><![CDATA[SERIE]]></text>
 			</staticText>
 			<staticText>
-				<reportElement style="Style1" x="560" y="10" width="60" height="34" uuid="814c357a-ca98-41c7-9ba4-d7aadc07b8a7">
+				<reportElement style="Style1" x="720" y="10" width="60" height="34" uuid="814c357a-ca98-41c7-9ba4-d7aadc07b8a7">
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 				</reportElement>
 				<box>
@@ -211,10 +211,10 @@
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="8" isBold="true"/>
 				</textElement>
-				<text><![CDATA[OTROS]]></text>
+				<text><![CDATA[UBICACIÓN FÍSICA]]></text>
 			</staticText>
 			<staticText>
-				<reportElement style="Style1" x="620" y="10" width="80" height="34" uuid="7a146c82-b4a5-494e-acbf-cc18686459c8">
+				<reportElement style="Style1" x="560" y="10" width="80" height="34" uuid="7a146c82-b4a5-494e-acbf-cc18686459c8">
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 				</reportElement>
 				<box>
@@ -244,7 +244,7 @@
 				<text><![CDATA[N° DE ORDEN]]></text>
 			</staticText>
 			<staticText>
-				<reportElement mode="Opaque" x="700" y="10" width="80" height="34" isRemoveLineWhenBlank="true" backcolor="#BFE1FF" uuid="be3cde4a-db7b-4547-a047-56f9b750a919">
+				<reportElement mode="Opaque" x="640" y="10" width="80" height="34" isRemoveLineWhenBlank="true" backcolor="#BFE1FF" uuid="be3cde4a-db7b-4547-a047-56f9b750a919">
 					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="d8d12f0a-13a8-449c-bc63-7ca691576a14"/>
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 				</reportElement>
@@ -383,7 +383,7 @@
 				<textFieldExpression><![CDATA[$F{series}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="560" y="-30" width="60" height="40" uuid="6699c764-8e18-4873-a71d-0dbb6d67c802">
+				<reportElement x="720" y="-30" width="60" height="40" uuid="6699c764-8e18-4873-a71d-0dbb6d67c802">
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 				</reportElement>
 				<box>
@@ -398,7 +398,7 @@
 				<textFieldExpression><![CDATA[$F{others}]]></textFieldExpression>
 			</textField>
 			<textField evaluationTime="Report">
-				<reportElement x="620" y="-30" width="80" height="40" uuid="5fe97077-f6d4-4748-8ec1-3960aafeb9da">
+				<reportElement x="560" y="-30" width="80" height="40" uuid="5fe97077-f6d4-4748-8ec1-3960aafeb9da">
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 				</reportElement>
 				<box>
@@ -428,7 +428,7 @@
 				<textFieldExpression><![CDATA[$F{moveId}]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
-				<reportElement x="700" y="-30" width="80" height="40" uuid="5a516a35-c89b-4c73-92d6-0dd6de64d7af">
+				<reportElement x="640" y="-30" width="80" height="40" uuid="5a516a35-c89b-4c73-92d6-0dd6de64d7af">
 					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="d8d12f0a-13a8-449c-bc63-7ca691576a14"/>
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 				</reportElement>
