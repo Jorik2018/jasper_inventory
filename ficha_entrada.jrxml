@@ -69,16 +69,16 @@
 				<text><![CDATA[CARGO POR ASIGNACIÓN DE BIENES DE USO]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="279" y="20" width="244" height="15" uuid="ffd1b662-edff-477d-a4af-e62d67617783">
+				<reportElement x="279" y="20" width="244" height="20" uuid="ffd1b662-edff-477d-a4af-e62d67617783">
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font size="10" isBold="true"/>
+					<font size="12" isBold="true"/>
 				</textElement>
 				<text><![CDATA[GOBIERNO REGIONAL DE ÁNCASH]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="279" y="35" width="244" height="15" uuid="dbf6ccba-35ea-407a-9d57-94912a397cbe">
+				<reportElement x="279" y="40" width="244" height="15" uuid="dbf6ccba-35ea-407a-9d57-94912a397cbe">
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
@@ -277,7 +277,7 @@
 				<textElement verticalAlignment="Middle" markup="none">
 					<font size="7" isBold="true"/>
 				</textElement>
-				<text><![CDATA[DIRECCIÓN]]></text>
+				<text><![CDATA[UBICACIÓN FÍSICA]]></text>
 			</staticText>
 			<textField>
 				<reportElement x="646" y="51" width="150" height="18" uuid="0545e811-7137-43cd-9b99-9d84dc1eda61">
