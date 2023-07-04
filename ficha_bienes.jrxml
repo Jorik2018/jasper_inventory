@@ -49,7 +49,7 @@
 	<field name="marca" class="java.lang.String"/>
 	<field name="model" class="java.lang.String"/>
 	<field name="color" class="java.lang.String"/>
-	<field name="dimensions" class="java.lang.String"/>
+	<field name="dimention" class="java.lang.String"/>
 	<field name="series" class="java.lang.String"/>
 	<field name="others" class="java.lang.String"/>
 	<field name="condition" class="java.lang.String"/>
@@ -365,7 +365,7 @@
 				<textElement textAlignment="Left" verticalAlignment="Middle">
 					<font size="8"/>
 				</textElement>
-				<textFieldExpression><![CDATA[$F{dimensions}]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$F{dimention}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement x="500" y="-30" width="60" height="40" uuid="9efacdc3-29a1-4162-aa10-e09a22d8be7f">

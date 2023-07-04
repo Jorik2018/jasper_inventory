@@ -34,7 +34,7 @@
 	<field name="id" class="java.lang.Number"/>
 	<field name="code_barras" class="java.lang.String"/>
 	<field name="observation" class="java.lang.String"/>
-	<field name="dimensions" class="java.lang.String"/>
+	<field name="dimention" class="java.lang.String"/>
 	<background>
 		<band splitType="Stretch"/>
 	</background>
@@ -304,7 +304,7 @@
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="7"/>
 				</textElement>
-				<textFieldExpression><![CDATA[$F{dimensions}]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$F{dimention}]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
 				<reportElement x="643" y="0" width="70" height="20" uuid="5fea2390-8a00-4e8e-9993-5df75a75d099">
