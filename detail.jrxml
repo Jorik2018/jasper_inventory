@@ -176,7 +176,7 @@
 				<text><![CDATA[N°]]></text>
 			</staticText>
 			<staticText>
-				<reportElement style="bordered" x="744" y="10" width="90" height="13" uuid="143d60f7-ab1a-4f73-8d84-89cf1721a768">
+				<reportElement style="bordered" x="744" y="10" width="87" height="13" uuid="143d60f7-ab1a-4f73-8d84-89cf1721a768">
 					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="85b828fe-645a-4eeb-befe-cd9c793ab5b2"/>
 				</reportElement>
 				<box>
@@ -355,7 +355,7 @@
 				<textFieldExpression><![CDATA[$F{id}]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
-				<reportElement x="744" y="0" width="90" height="20" uuid="421b9466-da35-47a6-a60f-72205b9538c6">
+				<reportElement x="744" y="0" width="87" height="20" uuid="421b9466-da35-47a6-a60f-72205b9538c6">
 					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="85b828fe-645a-4eeb-befe-cd9c793ab5b2"/>
 				</reportElement>
 				<box>
