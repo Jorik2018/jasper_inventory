@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.20.1.final using JasperReports Library version 6.20.1-7584acb244139816654f64e2fd57a00d3e31921e  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="demo" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="8a5db59d-fe5c-474e-942c-4fcdaf699269">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="subject" class="java.lang.String">
+		<fieldDescription><![CDATA[caso_asunto]]></fieldDescription>
+	</field>
+	<field name="offender" class="java.lang.String">
+		<fieldDescription><![CDATA[offender]]></fieldDescription>
+	</field>
+	<field name="address" class="java.lang.String">
+		<fieldDescription><![CDATA[domicilio_infractor]]></fieldDescription>
+	</field>
+	<field name="year" class="java.lang.Number">
+		<fieldDescription><![CDATA[year]]></fieldDescription>
+	</field>
+	<field name="number" class="java.lang.Number">
+		<fieldDescription><![CDATA[number]]></fieldDescription>
+	</field>
+	<field name="company" class="java.lang.String">
+		<fieldDescription><![CDATA[company]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="780" splitType="Stretch">
+			<rectangle radius="50">
+				<reportElement x="58" y="83" width="432" height="597" uuid="59c08d59-3544-459e-ac75-8996f4d8208f"/>
+				<graphicElement>
+					<pen lineWidth="10.0" lineStyle="Double"/>
+				</graphicElement>
+			</rectangle>
+			<textField>
+				<reportElement x="168" y="325" width="300" height="65" uuid="75fab322-5d9e-464d-80a7-d59aec092924">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="a25b2a16-29c9-422e-b0e2-b153f2077f2a"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Arial"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{subject}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="56" y="174" width="434" height="50" uuid="a797cb91-2671-4c4f-94eb-d691b0ff2156">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="a25b2a16-29c9-422e-b0e2-b153f2077f2a"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="13" isBold="true"/>
+				</textElement>
+				<text><![CDATA[SECRETARÍA TÉCNICA DEL PROCEDIMIENTO
+ADMINISTRATIVO DISCIPLINARIO
+Y SANCIONADOR DEL GOBIERNO REGIONAL DE ÁNCASH]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="78" y="468" width="390" height="30" uuid="18a17221-b6fb-4b47-bf75-284d1658b8ee"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="16" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["CASO Nº: "+java.lang.String.format("%03d",$F{number}!=null?$F{number}.intValue():0)+" - "+$F{year}+" - GRA/ST - PAD"]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="76" y="327" width="92" height="30" uuid="0df99ea6-49ad-4210-a401-52cdb78e1b0e"/>
+				<textElement>
+					<font fontName="Arial" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ASUNTO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="76" y="400" width="92" height="30" uuid="8372c64e-ae94-4b45-8e90-70d1bdddc22d"/>
+				<textElement>
+					<font fontName="Arial" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ENTIDAD:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="76" y="259" width="92" height="30" uuid="705b1922-7ffd-496b-8a7c-611b23b97179"/>
+				<textElement>
+					<font fontName="Arial" isBold="true"/>
+				</textElement>
+				<text><![CDATA[INFRACTOR:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="168" y="257" width="300" height="30" uuid="0a76b72f-0ca8-4451-9c0b-523d6e5a5f47">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="a25b2a16-29c9-422e-b0e2-b153f2077f2a"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Arial" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{offender}!=null?$F{offender}:"LOS QUE RESULTEN RESPONSABLES"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="168" y="400" width="300" height="30" uuid="46f3ca9f-d989-4a07-b6d4-c7952be8b794">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="a25b2a16-29c9-422e-b0e2-b153f2077f2a"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Arial"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{company}]]></textFieldExpression>
+			</textField>
+			<image hAlign="Center" vAlign="Middle">
+				<reportElement x="241" y="104" width="75" height="60" uuid="130cab70-109e-4f1c-8e80-34a20ee4007a"/>
+				<imageExpression><![CDATA["favicon.png"]]></imageExpression>
+			</image>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>
