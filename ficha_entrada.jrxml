@@ -358,14 +358,46 @@
 		</band>
 	</pageHeader>
 	<detail>
-		<band height="81" splitType="Stretch">
+		<band height="121" splitType="Stretch">
 			<property name="com.jaspersoft.studio.layout"/>
 			<subreport>
-				<reportElement x="1" y="0" width="795" height="65" uuid="f31308ea-1e23-4b37-b372-daeab740c320"/>
+				<reportElement x="1" y="0" width="799" height="65" uuid="f31308ea-1e23-4b37-b372-daeab740c320"/>
 				<dataSourceExpression><![CDATA[$P{REPORT_DATA_SOURCE} instanceof net.sf.jasperreports.engine.data.JsonDataSource?((net.sf.jasperreports.engine.data.JsonDataSource)$P{REPORT_DATA_SOURCE}).subDataSource("details"):
 new net.sf.jasperreports.engine.data.JRBeanCollectionDataSource($F{details})]]></dataSourceExpression>
 				<subreportExpression><![CDATA[$P{SUBREPORT_DIR}+"\\detail.jasper"]]></subreportExpression>
 			</subreport>
+			<staticText>
+				<reportElement x="20" y="90" width="194" height="16" uuid="2c061caf-c50e-4d1d-9834-6b2345360c90">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[USUARIO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="20" y="81" width="194" height="16" uuid="1e3d3e97-6ae2-4492-9178-bbe2a864d925">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[-------------------------------------------------------]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="550" y="90" width="194" height="27" uuid="490e8a32-774e-4f52-8864-18e53ecf3e0a">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[VERIFICADOR DE LA SUBGERENCIA DE CONTROL PATRIMONIAL]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="550" y="81" width="194" height="16" uuid="6a17582d-760f-465c-a41c-e10173f0b724">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[-------------------------------------------------------]]></text>
+			</staticText>
 		</band>
 	</detail>
 	<pageFooter>
