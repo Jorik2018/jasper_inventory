@@ -369,9 +369,9 @@ new net.sf.jasperreports.engine.data.JRBeanCollectionDataSource($F{details})]]><
 		</band>
 	</detail>
 	<pageFooter>
-		<band height="58" splitType="Stretch">
+		<band height="77" splitType="Stretch">
 			<staticText>
-				<reportElement x="20" y="28" width="194" height="16" uuid="2c061caf-c50e-4d1d-9834-6b2345360c90">
+				<reportElement x="20" y="48" width="194" height="16" uuid="2c061caf-c50e-4d1d-9834-6b2345360c90">
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
@@ -380,14 +380,14 @@ new net.sf.jasperreports.engine.data.JRBeanCollectionDataSource($F{details})]]><
 				<text><![CDATA[USUARIO]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="20" y="19" width="194" height="16" uuid="1e3d3e97-6ae2-4492-9178-bbe2a864d925">
+				<reportElement x="20" y="39" width="194" height="16" uuid="1e3d3e97-6ae2-4492-9178-bbe2a864d925">
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 				<textElement textAlignment="Center" verticalAlignment="Middle"/>
 				<text><![CDATA[-------------------------------------------------------]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="550" y="28" width="194" height="27" uuid="490e8a32-774e-4f52-8864-18e53ecf3e0a">
+				<reportElement x="550" y="48" width="194" height="27" uuid="490e8a32-774e-4f52-8864-18e53ecf3e0a">
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
@@ -396,11 +396,31 @@ new net.sf.jasperreports.engine.data.JRBeanCollectionDataSource($F{details})]]><
 				<text><![CDATA[VERIFICADOR DE LA SUBGERENCIA DE CONTROL PATRIMONIAL]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="550" y="19" width="194" height="16" uuid="6a17582d-760f-465c-a41c-e10173f0b724">
+				<reportElement x="550" y="39" width="194" height="16" uuid="6a17582d-760f-465c-a41c-e10173f0b724">
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 				<textElement textAlignment="Center" verticalAlignment="Middle"/>
 				<text><![CDATA[-------------------------------------------------------]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="2" y="2" width="38" height="16" uuid="457e9866-76e1-4049-8986-35748d9e7e77">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[NOTA:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="40" y="2" width="755" height="28" uuid="d36ad9eb-f596-4706-9527-fd5b9c56f3f9">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="5"/>
+				</textElement>
+				<text><![CDATA[- El usuario declara  haber mostrado todos los bienes  que se encuentran bajo su responsabilidad y no contar con mas bienes materia de inventario.
+- El usuario es responsable de la permanencia y conservación de cada uno de los bienes descritos, recomendándosele tomar las providencias del caso,   para evitar perdidas, sustracciones, deterioros, etc. 
+- Cualquier  necesidad de traslado del bien mueble dentro o fuera del local de la Entidad, es previamnete comunicado al encargado  de la OCP, bajo responsabilidad.]]></text>
 			</staticText>
 		</band>
 	</pageFooter>
