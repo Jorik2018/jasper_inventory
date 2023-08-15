@@ -90,7 +90,7 @@
 		</band>
 	</title>
 	<pageHeader>
-		<band height="103" splitType="Stretch">
+		<band height="93" splitType="Stretch">
 			<staticText>
 				<reportElement x="6" y="11" width="119" height="10" uuid="01c4fc98-0f2a-4cc8-954f-2c29ab9d4a5c"/>
 				<box leftPadding="10"/>
