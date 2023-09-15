@@ -44,7 +44,7 @@
 				</graphicElement>
 			</rectangle>
 			<textField>
-				<reportElement stretchType="RelativeToTallestObject" x="168" y="362" width="300" height="85" uuid="75fab322-5d9e-464d-80a7-d59aec092924">
+				<reportElement x="170" y="362" width="300" height="128" uuid="75fab322-5d9e-464d-80a7-d59aec092924">
 					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="a25b2a16-29c9-422e-b0e2-b153f2077f2a"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
@@ -73,14 +73,14 @@ Y SANCIONADOR DEL GOBIERNO REGIONAL DE ÁNCASH]]></text>
 				<textFieldExpression><![CDATA["CASO Nº: "+java.lang.String.format("%03d",$F{number}!=null?$F{number}.intValue():0)+" - "+$F{year}+" - GRA/ST - PAD"]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement x="76" y="364" width="92" height="30" uuid="0df99ea6-49ad-4210-a401-52cdb78e1b0e"/>
+				<reportElement x="76" y="362" width="94" height="32" uuid="0df99ea6-49ad-4210-a401-52cdb78e1b0e"/>
 				<textElement>
 					<font fontName="Arial" size="14" isBold="true"/>
 				</textElement>
-				<text><![CDATA[ASUNTO]]></text>
+				<text><![CDATA[ASUNTO:]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="76" y="463" width="92" height="30" uuid="8372c64e-ae94-4b45-8e90-70d1bdddc22d"/>
+				<reportElement x="78" y="490" width="92" height="30" uuid="8372c64e-ae94-4b45-8e90-70d1bdddc22d"/>
 				<textElement>
 					<font fontName="Arial" size="14" isBold="true"/>
 				</textElement>
@@ -104,7 +104,7 @@ Y SANCIONADOR DEL GOBIERNO REGIONAL DE ÁNCASH]]></text>
 				<textFieldExpression><![CDATA[$F{offender}!=null?$F{offender}:"LOS QUE RESULTEN RESPONSABLES"]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="168" y="463" width="300" height="74" uuid="46f3ca9f-d989-4a07-b6d4-c7952be8b794">
+				<reportElement x="170" y="490" width="300" height="57" uuid="46f3ca9f-d989-4a07-b6d4-c7952be8b794">
 					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="a25b2a16-29c9-422e-b0e2-b153f2077f2a"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
