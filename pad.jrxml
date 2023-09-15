@@ -118,7 +118,7 @@ Y SANCIONADOR DEL GOBIERNO REGIONAL DE ÁNCASH]]></text>
 				<reportElement x="241" y="104" width="75" height="60" uuid="130cab70-109e-4f1c-8e80-34a20ee4007a"/>
 				<imageExpression><![CDATA["favicon.png"]]></imageExpression>
 			</image>
-			<textField>
+			<textField isBlankWhenNull="true">
 				<reportElement x="168" y="315" width="302" height="30" uuid="24087741-ebb9-4533-aa02-9ca69f392f23"/>
 				<textElement>
 					<font fontName="Arial" size="14"/>
