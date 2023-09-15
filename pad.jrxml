@@ -44,7 +44,7 @@
 				</graphicElement>
 			</rectangle>
 			<textField>
-				<reportElement x="168" y="362" width="300" height="85" uuid="75fab322-5d9e-464d-80a7-d59aec092924">
+				<reportElement stretchType="RelativeToTallestObject" x="168" y="362" width="300" height="85" uuid="75fab322-5d9e-464d-80a7-d59aec092924">
 					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="a25b2a16-29c9-422e-b0e2-b153f2077f2a"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
