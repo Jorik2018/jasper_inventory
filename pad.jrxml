@@ -75,13 +75,6 @@ Y SANCIONADOR DEL GOBIERNO REGIONAL DE ÁNCASH]]></text>
 				<text><![CDATA[ASUNTO1:]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="77" y="480" width="93" height="23" uuid="8372c64e-ae94-4b45-8e90-70d1bdddc22d"/>
-				<textElement>
-					<font fontName="Arial" size="14" isBold="true"/>
-				</textElement>
-				<text><![CDATA[ENTIDAD:]]></text>
-			</staticText>
-			<staticText>
 				<reportElement x="76" y="285" width="94" height="30" uuid="705b1922-7ffd-496b-8a7c-611b23b97179"/>
 				<textElement>
 					<font fontName="Arial" size="14" isBold="true"/>
@@ -97,16 +90,6 @@ Y SANCIONADOR DEL GOBIERNO REGIONAL DE ÁNCASH]]></text>
 					<font fontName="Arial" size="12" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{offender}!=null?$F{offender}:"LOS QUE RESULTEN RESPONSABLES"]]></textFieldExpression>
-			</textField>
-			<textField>
-				<reportElement positionType="Float" x="170" y="480" width="300" height="50" uuid="46f3ca9f-d989-4a07-b6d4-c7952be8b794">
-					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="a25b2a16-29c9-422e-b0e2-b153f2077f2a"/>
-					<property name="com.jaspersoft.studio.unit.height" value="px"/>
-				</reportElement>
-				<textElement>
-					<font fontName="Arial" size="14"/>
-				</textElement>
-				<textFieldExpression><![CDATA[$F{company}]]></textFieldExpression>
 			</textField>
 			<image hAlign="Center" vAlign="Middle">
 				<reportElement x="241" y="104" width="75" height="60" uuid="130cab70-109e-4f1c-8e80-34a20ee4007a"/>
@@ -126,6 +109,28 @@ Y SANCIONADOR DEL GOBIERNO REGIONAL DE ÁNCASH]]></text>
 				</textElement>
 				<textFieldExpression><![CDATA["CASO Nº: "+java.lang.String.format("%03d",$F{number}!=null?$F{number}.intValue():0)+" - "+$F{year}+" - GRA/ST - PAD"]]></textFieldExpression>
 			</textField>
+			<rectangle>
+				<reportElement positionType="Float" x="76" y="466" width="393" height="10" forecolor="#FFFFFF" uuid="f62c37cc-ebee-452a-aff5-a4b693ff40ea">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+			</rectangle>
+			<textField>
+				<reportElement positionType="Float" x="170" y="477" width="300" height="50" uuid="46f3ca9f-d989-4a07-b6d4-c7952be8b794">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="a25b2a16-29c9-422e-b0e2-b153f2077f2a"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Arial" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{company}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement positionType="Float" x="77" y="477" width="93" height="23" uuid="8372c64e-ae94-4b45-8e90-70d1bdddc22d"/>
+				<textElement>
+					<font fontName="Arial" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ENTIDAD:]]></text>
+			</staticText>
 		</band>
 	</detail>
 	<columnFooter>
