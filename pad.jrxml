@@ -67,13 +67,6 @@
 ADMINISTRATIVO DISCIPLINARIO
 Y SANCIONADOR DEL GOBIERNO REGIONAL DE ÁNCASH]]></text>
 			</staticText>
-			<textField>
-				<reportElement x="77" y="524" width="392" height="30" uuid="18a17221-b6fb-4b47-bf75-284d1658b8ee"/>
-				<textElement textAlignment="Center">
-					<font fontName="Arial" size="16" isBold="true"/>
-				</textElement>
-				<textFieldExpression><![CDATA["CASO Nº: "+java.lang.String.format("%03d",$F{number}!=null?$F{number}.intValue():0)+" - "+$F{year}+" - GRA/ST - PAD"]]></textFieldExpression>
-			</textField>
 			<staticText>
 				<reportElement x="76" y="432" width="94" height="32" uuid="0df99ea6-49ad-4210-a401-52cdb78e1b0e"/>
 				<textElement>
@@ -82,7 +75,7 @@ Y SANCIONADOR DEL GOBIERNO REGIONAL DE ÁNCASH]]></text>
 				<text><![CDATA[ASUNTO1:]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="77" y="464" width="93" height="23" uuid="8372c64e-ae94-4b45-8e90-70d1bdddc22d"/>
+				<reportElement x="77" y="480" width="93" height="23" uuid="8372c64e-ae94-4b45-8e90-70d1bdddc22d"/>
 				<textElement>
 					<font fontName="Arial" size="14" isBold="true"/>
 				</textElement>
@@ -106,7 +99,7 @@ Y SANCIONADOR DEL GOBIERNO REGIONAL DE ÁNCASH]]></text>
 				<textFieldExpression><![CDATA[$F{offender}!=null?$F{offender}:"LOS QUE RESULTEN RESPONSABLES"]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement positionType="Float" x="170" y="464" width="300" height="50" uuid="46f3ca9f-d989-4a07-b6d4-c7952be8b794">
+				<reportElement positionType="Float" x="170" y="480" width="300" height="50" uuid="46f3ca9f-d989-4a07-b6d4-c7952be8b794">
 					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="a25b2a16-29c9-422e-b0e2-b153f2077f2a"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
@@ -125,6 +118,13 @@ Y SANCIONADOR DEL GOBIERNO REGIONAL DE ÁNCASH]]></text>
 					<font fontName="Arial" size="12"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{caso_infractor_position}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement positionType="Float" x="76" y="550" width="392" height="30" uuid="18a17221-b6fb-4b47-bf75-284d1658b8ee"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="16" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["CASO Nº: "+java.lang.String.format("%03d",$F{number}!=null?$F{number}.intValue():0)+" - "+$F{year}+" - GRA/ST - PAD"]]></textFieldExpression>
 			</textField>
 		</band>
 	</detail>
