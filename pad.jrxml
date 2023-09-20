@@ -45,7 +45,7 @@
 				</graphicElement>
 			</rectangle>
 			<textField>
-				<reportElement x="170" y="410" width="300" height="158" uuid="75fab322-5d9e-464d-80a7-d59aec092924">
+				<reportElement x="170" y="432" width="300" height="158" uuid="75fab322-5d9e-464d-80a7-d59aec092924">
 					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="a25b2a16-29c9-422e-b0e2-b153f2077f2a"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
@@ -74,28 +74,28 @@ Y SANCIONADOR DEL GOBIERNO REGIONAL DE ÁNCASH]]></text>
 				<textFieldExpression><![CDATA["CASO Nº: "+java.lang.String.format("%03d",$F{number}!=null?$F{number}.intValue():0)+" - "+$F{year}+" - GRA/ST - PAD"]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement x="76" y="410" width="94" height="32" uuid="0df99ea6-49ad-4210-a401-52cdb78e1b0e"/>
+				<reportElement x="76" y="432" width="94" height="32" uuid="0df99ea6-49ad-4210-a401-52cdb78e1b0e"/>
 				<textElement>
 					<font fontName="Arial" size="14" isBold="true"/>
 				</textElement>
 				<text><![CDATA[ASUNTO:]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="78" y="568" width="92" height="23" uuid="8372c64e-ae94-4b45-8e90-70d1bdddc22d"/>
+				<reportElement x="77" y="590" width="93" height="23" uuid="8372c64e-ae94-4b45-8e90-70d1bdddc22d"/>
 				<textElement>
 					<font fontName="Arial" size="14" isBold="true"/>
 				</textElement>
 				<text><![CDATA[ENTIDAD:]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="76" y="285" width="92" height="30" uuid="705b1922-7ffd-496b-8a7c-611b23b97179"/>
+				<reportElement x="76" y="285" width="94" height="30" uuid="705b1922-7ffd-496b-8a7c-611b23b97179"/>
 				<textElement>
 					<font fontName="Arial" size="14" isBold="true"/>
 				</textElement>
 				<text><![CDATA[INFRACTOR:]]></text>
 			</staticText>
 			<textField>
-				<reportElement x="168" y="283" width="302" height="67" uuid="0a76b72f-0ca8-4451-9c0b-523d6e5a5f47">
+				<reportElement x="170" y="283" width="300" height="69" uuid="0a76b72f-0ca8-4451-9c0b-523d6e5a5f47">
 					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="a25b2a16-29c9-422e-b0e2-b153f2077f2a"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
@@ -105,7 +105,7 @@ Y SANCIONADOR DEL GOBIERNO REGIONAL DE ÁNCASH]]></text>
 				<textFieldExpression><![CDATA[$F{offender}!=null?$F{offender}:"LOS QUE RESULTEN RESPONSABLES"]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="170" y="568" width="300" height="50" uuid="46f3ca9f-d989-4a07-b6d4-c7952be8b794">
+				<reportElement x="170" y="590" width="300" height="50" uuid="46f3ca9f-d989-4a07-b6d4-c7952be8b794">
 					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="a25b2a16-29c9-422e-b0e2-b153f2077f2a"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
@@ -119,7 +119,7 @@ Y SANCIONADOR DEL GOBIERNO REGIONAL DE ÁNCASH]]></text>
 				<imageExpression><![CDATA["favicon.png"]]></imageExpression>
 			</image>
 			<textField isBlankWhenNull="true">
-				<reportElement x="168" y="350" width="302" height="60" uuid="24087741-ebb9-4533-aa02-9ca69f392f23"/>
+				<reportElement x="170" y="352" width="300" height="80" uuid="24087741-ebb9-4533-aa02-9ca69f392f23"/>
 				<textElement>
 					<font fontName="Arial" size="12"/>
 				</textElement>
