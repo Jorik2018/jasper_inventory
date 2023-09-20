@@ -79,7 +79,7 @@ Y SANCIONADOR DEL GOBIERNO REGIONAL DE ÁNCASH]]></text>
 				<textElement>
 					<font fontName="Arial" size="14" isBold="true"/>
 				</textElement>
-				<text><![CDATA[ASUNTO1:]]></text>
+				<text><![CDATA[ASUNTO12:]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="77" y="464" width="93" height="23" uuid="8372c64e-ae94-4b45-8e90-70d1bdddc22d"/>
