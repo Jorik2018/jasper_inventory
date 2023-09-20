@@ -46,7 +46,7 @@
 				</graphicElement>
 			</rectangle>
 			<textField textAdjust="StretchHeight">
-				<reportElement x="170" y="432" width="300" height="32" uuid="75fab322-5d9e-464d-80a7-d59aec092924">
+				<reportElement x="180" y="378" width="290" height="32" uuid="75fab322-5d9e-464d-80a7-d59aec092924">
 					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="a25b2a16-29c9-422e-b0e2-b153f2077f2a"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
@@ -68,21 +68,21 @@ ADMINISTRATIVO DISCIPLINARIO
 Y SANCIONADOR DEL GOBIERNO REGIONAL DE ÁNCASH]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="76" y="432" width="94" height="32" uuid="0df99ea6-49ad-4210-a401-52cdb78e1b0e"/>
+				<reportElement positionType="Float" x="76" y="378" width="104" height="32" uuid="0df99ea6-49ad-4210-a401-52cdb78e1b0e"/>
 				<textElement>
 					<font fontName="Arial" size="14" isBold="true"/>
 				</textElement>
-				<text><![CDATA[ASUNTO1:]]></text>
+				<text><![CDATA[ASUNTO:]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="76" y="285" width="94" height="30" uuid="705b1922-7ffd-496b-8a7c-611b23b97179"/>
+				<reportElement positionType="Float" x="76" y="285" width="104" height="30" uuid="705b1922-7ffd-496b-8a7c-611b23b97179"/>
 				<textElement>
 					<font fontName="Arial" size="14" isBold="true"/>
 				</textElement>
 				<text><![CDATA[INFRACTOR:]]></text>
 			</staticText>
-			<textField>
-				<reportElement x="170" y="283" width="300" height="69" uuid="0a76b72f-0ca8-4451-9c0b-523d6e5a5f47">
+			<textField textAdjust="StretchHeight">
+				<reportElement x="180" y="283" width="290" height="32" uuid="0a76b72f-0ca8-4451-9c0b-523d6e5a5f47">
 					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="a25b2a16-29c9-422e-b0e2-b153f2077f2a"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
@@ -95,8 +95,8 @@ Y SANCIONADOR DEL GOBIERNO REGIONAL DE ÁNCASH]]></text>
 				<reportElement x="241" y="104" width="75" height="60" uuid="130cab70-109e-4f1c-8e80-34a20ee4007a"/>
 				<imageExpression><![CDATA["favicon.png"]]></imageExpression>
 			</image>
-			<textField isBlankWhenNull="true">
-				<reportElement x="170" y="352" width="300" height="80" uuid="24087741-ebb9-4533-aa02-9ca69f392f23"/>
+			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
+				<reportElement x="180" y="325" width="290" height="42" uuid="24087741-ebb9-4533-aa02-9ca69f392f23"/>
 				<textElement>
 					<font fontName="Arial" size="12"/>
 				</textElement>
@@ -110,12 +110,12 @@ Y SANCIONADOR DEL GOBIERNO REGIONAL DE ÁNCASH]]></text>
 				<textFieldExpression><![CDATA["CASO Nº: "+java.lang.String.format("%03d",$F{number}!=null?$F{number}.intValue():0)+" - "+$F{year}+" - GRA/ST - PAD"]]></textFieldExpression>
 			</textField>
 			<rectangle>
-				<reportElement positionType="Float" x="76" y="466" width="393" height="10" forecolor="#FFFFFF" uuid="f62c37cc-ebee-452a-aff5-a4b693ff40ea">
+				<reportElement positionType="Float" x="76" y="410" width="394" height="10" forecolor="#FFFFFF" uuid="f62c37cc-ebee-452a-aff5-a4b693ff40ea">
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 			</rectangle>
 			<textField>
-				<reportElement positionType="Float" x="170" y="477" width="300" height="50" uuid="46f3ca9f-d989-4a07-b6d4-c7952be8b794">
+				<reportElement positionType="Float" x="180" y="420" width="290" height="50" uuid="46f3ca9f-d989-4a07-b6d4-c7952be8b794">
 					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="a25b2a16-29c9-422e-b0e2-b153f2077f2a"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
@@ -125,12 +125,29 @@ Y SANCIONADOR DEL GOBIERNO REGIONAL DE ÁNCASH]]></text>
 				<textFieldExpression><![CDATA[$F{company}]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement positionType="Float" x="77" y="477" width="93" height="23" uuid="8372c64e-ae94-4b45-8e90-70d1bdddc22d"/>
+				<reportElement positionType="Float" x="76" y="420" width="104" height="23" uuid="8372c64e-ae94-4b45-8e90-70d1bdddc22d"/>
 				<textElement>
 					<font fontName="Arial" size="14" isBold="true"/>
 				</textElement>
 				<text><![CDATA[ENTIDAD:]]></text>
 			</staticText>
+			<rectangle>
+				<reportElement positionType="Float" x="76" y="368" width="394" height="10" forecolor="#FFFFFF" uuid="82231c3a-800a-4335-91b4-c53699cec1de">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+			</rectangle>
+			<staticText>
+				<reportElement positionType="Float" x="76" y="325" width="104" height="42" uuid="ff4367d0-2ee4-43b8-980b-a6dc1e5b0e94"/>
+				<textElement>
+					<font fontName="Arial" size="12.5" isBold="true"/>
+				</textElement>
+				<text><![CDATA[CARGO DESEMPEÑADO:]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement positionType="Float" x="76" y="315" width="394" height="10" forecolor="#FFFFFF" uuid="9c70f32e-d5a0-46e7-b7b2-b2c5e2a50fe3">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+			</rectangle>
 		</band>
 	</detail>
 	<columnFooter>
