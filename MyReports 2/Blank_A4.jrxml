@@ -1,0 +1,309 @@
+<!-- Created with Jaspersoft Studio version 7.0.1.final using JasperReports Library version 7.0.1-573496633c2b4074e32f433154b543003f7d2498  -->
+<jasperReport name="Blank_A4" language="javascript" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="f4ac5b9b-c48e-4b6c-8846-d2b9024ed950">
+	<style name="Table_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table 1_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table 1_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table 1_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<dataset name="Dataset1" uuid="70dae5a0-3bc6-4044-b15e-30ed5620eeed">
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+		<query language="sql"><![CDATA[]]></query>
+	</dataset>
+	<dataset name="Dataset2" uuid="a40b35cb-fc51-4f83-b76c-af938a4d3a97">
+		<query language="sql"><![CDATA[]]></query>
+	</dataset>
+	<parameter name="ClientName" class="java.lang.String"/>
+	<parameter name="Category" class="java.lang.String"/>
+	<parameter name="Product" class="java.lang.String"/>
+	<parameter name="SubProduct" class="java.lang.String"/>
+	<parameter name="CreditNumber" class="java.lang.String"/>
+	<parameter name="Currency" class="java.lang.String"/>
+	<parameter name="FinancedCapital" class="java.lang.String"/>
+	<parameter name="AnnualRate" class="java.lang.String"/>
+	<query language="sql"><![CDATA[]]></query>
+	<field name="PaymentNumber" class="java.lang.Integer"/>
+	<field name="PaymentDate" class="java.lang.String"/>
+	<field name="Principal" class="java.lang.Double"/>
+	<field name="Interest" class="java.lang.Double"/>
+	<field name="TotalPayment" class="java.lang.Double"/>
+	<background splitType="Stretch"/>
+	<title splitType="Stretch"/>
+	<pageHeader splitType="Stretch"/>
+	<columnHeader splitType="Stretch"/>
+	<detail>
+		<band height="670" splitType="Stretch">
+			<element kind="staticText" uuid="2d8f8567-5a11-4f99-a183-b2d8477a1629" x="3" y="165" width="160" height="20" fontSize="8.0" bold="true">
+				<text><![CDATA[Caracteristica del Credito:]]></text>
+			</element>
+			<element kind="staticText" uuid="279e3782-da16-4e79-a0e4-e7f8998a3e8e" x="16" y="190" width="80" height="20" fontSize="8.0">
+				<text><![CDATA[Nº Credito:]]></text>
+			</element>
+			<element kind="staticText" uuid="1cda039d-b84f-46c6-a3f7-c5f8a110ae78" x="16" y="212" width="100" height="20" fontSize="8.0">
+				<text><![CDATA[Capital Financiado:]]></text>
+			</element>
+			<element kind="staticText" uuid="e41d8702-82fc-4437-9eac-803b62736834" x="12" y="232" width="190" height="20" fontSize="7.0" underline="true" bold="true">
+				<text><![CDATA[Tasa de Interes compensatorio efectiva anual fija(1):]]></text>
+			</element>
+			<element kind="staticText" uuid="1173be2f-4d35-490d-a75e-e0462020c61f" x="16" y="254" width="80" height="20" fontSize="8.0">
+				<text><![CDATA[Tipo Cuota:]]></text>
+			</element>
+			<element kind="staticText" uuid="8b50462b-1ae0-4feb-8875-983d803492ea" x="16" y="275" width="80" height="20" fontSize="8.0">
+				<text><![CDATA[Dias Gracia:]]></text>
+			</element>
+			<element kind="staticText" uuid="37aed76c-9523-4eb0-9e8c-9b4959798332" x="313" y="194" width="56" height="20" fontSize="8.0">
+				<text><![CDATA[Moneda:]]></text>
+			</element>
+			<element kind="staticText" uuid="eba8bb17-6d53-4f8b-b882-2c3ba6e96aa6" x="311" y="215" width="149" height="17" fontSize="7.0" underline="true" bold="true">
+				<text><![CDATA[Tasa de costo efectivo anual fija(2):]]></text>
+			</element>
+			<element kind="staticText" uuid="aaafff05-4de4-44cf-8ee9-dc8b55745885" x="311" y="232" width="159" height="15" fontSize="8.0">
+				<text><![CDATA[Monto Total de Interes Compensatorios:]]></text>
+			</element>
+			<element kind="staticText" uuid="16564d3b-6857-4661-bd00-c6ce3f50dde5" x="313" y="254" width="111" height="20" fontSize="8.0">
+				<text><![CDATA[Fecha de Desembolso:]]></text>
+			</element>
+			<element kind="staticText" uuid="4a9cf843-c210-49d9-a4ff-b3b3473cfe8b" x="314" y="276" width="110" height="18" fontSize="8.0">
+				<text><![CDATA[Primer Vencimiento:]]></text>
+			</element>
+			<element kind="staticText" uuid="984f104a-0402-4146-83e2-111775d65cab" x="314" y="298" width="110" height="20" fontSize="8.0">
+				<text><![CDATA[Vencimiento Credito:]]></text>
+			</element>
+			<element kind="staticText" uuid="0037e760-8078-4b10-82e0-8bbeef054433" x="17" y="300" width="150" height="20" fontSize="8.0">
+				<text><![CDATA[Nº total de cuotas mensuales:]]></text>
+			</element>
+			<element kind="rectangle" uuid="f1ec5b18-71fd-4be4-9f97-90d86bb1232e" x="210" y="185" width="95" height="21"/>
+			<element kind="rectangle" uuid="584bcbd5-422a-49d0-8fbc-5fbf95ddac84" x="210" y="205" width="95" height="21"/>
+			<element kind="rectangle" uuid="e40874d4-2440-44c5-9b5d-5137e4cc8747" x="210" y="226" width="95" height="21"/>
+			<element kind="rectangle" uuid="d2c161d9-5152-4e04-a5fd-c0a669e1088a" x="210" y="247" width="95" height="21"/>
+			<element kind="rectangle" uuid="6cb89798-3169-4271-bb81-814aeabf1068" x="210" y="268" width="95" height="21"/>
+			<element kind="rectangle" uuid="e65a3391-f4f1-4ca1-9da1-732a428f021e" x="210" y="289" width="95" height="21"/>
+			<element kind="staticText" uuid="46b8ba5e-5a3f-4888-9c1e-acf1cc63d81b" x="6" y="323" width="160" height="20" fontSize="8.0" bold="true">
+				<text><![CDATA[Comisiones y gastos:]]></text>
+			</element>
+			<element kind="rectangle" uuid="643d1ff0-eb58-4f52-93d3-32d61d9c0642" x="210" y="341" width="95" height="21"/>
+			<element kind="rectangle" uuid="3cf6123e-5055-425f-8b76-5417c676bd2c" x="210" y="362" width="95" height="21"/>
+			<element kind="rectangle" uuid="844b1af0-5007-4f03-a2e2-2aa27df39ffc" x="210" y="383" width="95" height="21"/>
+			<element kind="rectangle" uuid="25455844-f692-4ae0-b832-f28aae75960f" x="210" y="404" width="95" height="21"/>
+			<element kind="rectangle" uuid="9a714791-3530-44fb-a594-5a87f2d2994a" x="210" y="425" width="95" height="21"/>
+			<element kind="staticText" uuid="bdd1409e-cf16-4113-9c16-e4a369ab532b" x="311" y="349" width="190" height="20" fontSize="8.0" underline="false" bold="false">
+				<text><![CDATA[Modificaciones al cronograma (7):]]></text>
+			</element>
+			<element kind="rectangle" uuid="badbf357-3d42-4b91-8fdd-32bf176a8f1a" x="480" y="343" width="75" height="21"/>
+			<element kind="rectangle" uuid="35df8667-a003-415c-9742-1f1b89523c74" x="480" y="363" width="75" height="21"/>
+			<element kind="rectangle" uuid="8df65a48-caaa-4656-a1e9-200771226c3a" x="480" y="383" width="75" height="21"/>
+			<element kind="rectangle" uuid="6d303e76-f7f4-46ad-85bb-8669c4dff1fb" x="480" y="403" width="75" height="21"/>
+			<element kind="rectangle" uuid="4576da41-4e63-4ead-b563-8f2fd349c9f9" x="480" y="420" width="75" height="21"/>
+			<element kind="staticText" uuid="e8bf227f-9b9a-4042-9ad5-3335647ff985" x="20" y="348" width="175" height="20" fontSize="6.0" underline="true" bold="true">
+				<text><![CDATA[Impuesto a las Trans. Financieras -ITF (3):]]></text>
+			</element>
+			<element kind="staticText" uuid="f4c4ea99-6fd9-4f52-986e-17c147007bb4" x="18" y="368" width="126" height="20" fontSize="8.0">
+				<text><![CDATA[Tipo seguro Degravamen:]]></text>
+			</element>
+			<element kind="staticText" uuid="cfe24b3c-8bf6-4236-8818-384c16c72b82" x="18" y="390" width="154" height="13" fontSize="8.0">
+				<text><![CDATA[Tasa seguro degravamen (4):]]></text>
+			</element>
+			<element kind="staticText" uuid="c1ae91b6-c498-4e3a-abe9-80890abf3c39" x="19" y="411" width="150" height="13" fontSize="8.0">
+				<text><![CDATA[Tasa seguro del bien (5):]]></text>
+			</element>
+			<element kind="staticText" uuid="6757a357-4aa5-408e-86ae-32130c8d8e11" x="312" y="368" width="159" height="20" fontSize="8.0">
+				<text><![CDATA[Monto de prima de Seg. Desg.:]]></text>
+			</element>
+			<element kind="staticText" uuid="d4c76944-e572-4e0d-8b6a-cb67cd6c0182" x="312" y="390" width="120" height="20" fontSize="8.0">
+				<text><![CDATA[Nº poliza Degravamen (4):]]></text>
+			</element>
+			<element kind="staticText" uuid="cb44b2f3-ad9d-4cf3-a2d4-e7bb4abacfdd" x="312" y="411" width="110" height="20" fontSize="8.0">
+				<text><![CDATA[Nº poliza Seg. Bien (5):]]></text>
+			</element>
+			<element kind="staticText" uuid="92e3a108-b556-4981-83a3-51353dc31436" x="312" y="430" width="134" height="20" fontSize="8.0">
+				<text><![CDATA[Nº poliza de Seg. Multiriesgos (6):]]></text>
+			</element>
+			<element kind="staticText" uuid="454b36e2-3856-42ab-bce1-63117ff86680" x="19" y="429" width="150" height="15" fontSize="8.0">
+				<text><![CDATA[Tasa seguro multiriesgos (6):]]></text>
+			</element>
+			<element kind="staticText" uuid="64d6180a-a878-4719-a7f9-bb9056db56f5" x="-4" y="477" width="554" height="40" fontSize="7.0" hTextAlign="Justified">
+				<text><![CDATA[Ante el incumplimiento del pago según las condiciones pactadas, se procederá a realizar el reporte correspondiente a la Central de Riesgos con la calificación que corresponda, de conformidad con el Reglamento para la Evaluación y Clasificación del Deudor y la Exigencia de Provisiones vigente. Asimismo, ante cualquier atraso en los pagos del crédito, se aplicará el interés moratorio indicado en el presente documento:]]></text>
+			</element>
+			<element kind="staticText" uuid="121b3df0-4736-4607-9cdf-34963f77d4ff" x="-10" y="467" width="270" height="20" fontSize="8.0" bold="true">
+				<text><![CDATA[Conceptos que se aplicaran por incumplimiento:]]></text>
+			</element>
+			<element kind="staticText" uuid="7474d1f8-89eb-4bfd-9605-8c0bca0dfa88" x="-10" y="517" width="270" height="20" fontSize="8.0" underline="true" bold="true">
+				<text><![CDATA[Interes Moratorio (1):]]></text>
+			</element>
+			<element kind="staticText" uuid="8484b979-cfed-4e5f-945c-79ec66634e9d" x="-4" y="547" width="270" height="20" fontSize="7.0" underline="false" bold="true">
+				<text><![CDATA[Periodo de gracia]]></text>
+			</element>
+			<element kind="staticText" uuid="e811dde6-efc5-4714-9ef5-3778ba9c94a5" x="-4" y="557" width="554" height="40" fontSize="7.0" hTextAlign="Justified">
+				<text><![CDATA[Es el periodo que transcurre entre el desembolso del crédito y el día que corresponda al mes inmediato anterior a la fecha de primer pago. El monto de los Intereses y Seguros que se generen durante el Periodo de Gracia se cobran en la primera cuota del préstamo; en caso el importe de la primera cuota no cubra el monto de intereses y seguros generados durante el Periodo de Gracia, este saldo se capitalizará a partir de la segunda cuota.]]></text>
+			</element>
+			<element kind="staticText" uuid="e945184a-1ef4-4091-a5cb-725f6a7c63fd" x="-1" y="583" width="124" height="20" fontSize="7.0" underline="false" bold="true">
+				<text><![CDATA[Aval]]></text>
+			</element>
+			<element kind="staticText" uuid="bac59ffc-0042-4e31-8515-f32bf7c09a87" x="-6" y="597" width="554" height="23" fontSize="7.0" hTextAlign="Justified">
+				<text><![CDATA[De ser el caso, el aval se constituye con la cláusula de aval indefinido por lo que su obligación es ilimitada y por plazo indeterminado hasta la cancelación del íntegro del monto adeudado por el cliente. A la suscripción del pagare el aval acepto las renovaciones o prorrogas que INTERBANK pudiese otorgarle al cliente.]]></text>
+			</element>
+			<element kind="rectangle" uuid="c6fb0ba2-8c14-40ab-92f9-3fc132c71624" x="430" y="101" width="124" height="21"/>
+			<element kind="staticText" uuid="3715e675-a3ed-4b9e-a533-92879709ee2c" x="26" y="129" width="80" height="20" fontSize="8.0">
+				<text><![CDATA[Producto:]]></text>
+			</element>
+			<element kind="rectangle" uuid="7eb1fc1e-8d07-480e-899d-dfd021a34b7d" x="430" y="122" width="124" height="21"/>
+			<element kind="rectangle" uuid="7e94bcc3-d9ab-491b-874b-fb67cadf68e5" x="106" y="101" width="228" height="21"/>
+			<element kind="staticText" uuid="590851a2-5d23-4dd9-83de-c5b3bbf5bae1" x="26" y="101" width="80" height="20" fontSize="8.0">
+				<text><![CDATA[Cliente:]]></text>
+			</element>
+			<element kind="staticText" uuid="d690b6f6-0000-48ee-9dc3-44d23de04100" x="340" y="129" width="80" height="20" fontSize="8.0">
+				<text><![CDATA[Sub Producto:]]></text>
+			</element>
+			<element kind="rectangle" uuid="16ac002a-4662-4031-b1ff-a1a0bf1788dc" x="106" y="122" width="228" height="21"/>
+			<element kind="staticText" uuid="95791513-ea7b-43d6-a201-955d377dfc96" x="6" y="76" width="100" height="20" fontSize="8.0" bold="true">
+				<text><![CDATA[Datos del cliente:]]></text>
+			</element>
+			<element kind="staticText" uuid="2cb6767c-f0d9-4158-8bcb-19260a08d1bc" x="340" y="104" width="80" height="20" fontSize="8.0">
+				<text><![CDATA[Categoría:]]></text>
+			</element>
+			<element kind="staticText" uuid="2785adfa-c178-4df5-a32a-1ce43b5086fc" x="183" y="10" width="224" height="20" fontSize="8.0" bold="true">
+				<text><![CDATA[HOJA RESUMEN Y CRONOGRAMA DE PAGOS]]></text>
+			</element>
+			<element kind="image" uuid="9c8d95ea-8a9b-4a3e-af7e-7570dbd2d5fa" x="-6" y="-10" width="124" height="40">
+				<expression><![CDATA["/Users/davidaguirre/Desktop/Captura de pantalla 2024-12-05 a la(s) 19.30.27.png"]]></expression>
+			</element>
+			<element kind="staticText" uuid="a2ae4d80-ad49-446d-b203-284140dd88d7" x="-4" y="30" width="180" height="22" fontSize="8.0" bold="true">
+				<text><![CDATA[CAPITAL DE TRABAJO                             CREDITO PARA PEQUENA EMPRESA]]></text>
+			</element>
+			<element kind="rectangle" uuid="f86d85df-c2ee-4571-8d9f-71096ab77496" x="480" y="226" width="75" height="21"/>
+			<element kind="rectangle" uuid="8655c325-79ad-4d4f-a987-f11dd72e55c4" x="480" y="185" width="75" height="21"/>
+			<element kind="rectangle" uuid="b1dc4108-7b23-4338-8f0c-cf0f529d879c" x="480" y="268" width="75" height="21"/>
+			<element kind="rectangle" uuid="f9038f02-3d63-465e-9da0-222b821423e7" x="480" y="205" width="75" height="21"/>
+			<element kind="rectangle" uuid="d4e8d99e-d75c-4141-8226-7c15b618d3b1" x="480" y="289" width="75" height="21"/>
+			<element kind="rectangle" uuid="8ec3ed61-f9d9-400d-896a-fc42af41f26d" x="480" y="247" width="75" height="21"/>
+			<element kind="rectangle" uuid="77a07d88-975d-4af5-b543-86caa945b6ee" x="480" y="519" width="75" height="21"/>
+			<element kind="staticText" uuid="f5d2f0c6-41df-4368-b66c-c97e6a525b9f" x="-4" y="530" width="338" height="20" fontSize="7.0" hTextAlign="Justified">
+				<text><![CDATA[(Se calcula sobre el importe del capital de la cuota vencida desde el primer día de atraso)]]></text>
+			</element>
+			<element kind="staticText" uuid="f644d825-ac91-4005-80c0-cb0f7ff4dee8" x="1" y="620" width="124" height="14" fontSize="7.0" underline="false" bold="true">
+				<text><![CDATA[Pagos Anticipados]]></text>
+			</element>
+			<element kind="staticText" uuid="765d7302-85fd-4deb-8caa-f57d6f623cd4" x="-1" y="637" width="554" height="23" fontSize="7.0" hTextAlign="Justified">
+				<text><![CDATA[Cuando se realicen pagos por encima de la cuota exigible en el periodo, EL CLIENTE tiene derecho a elegir por alguna de las siguientes modalidades:
+Pago anticipado: Monto destinado al pago del capital del crédito, reduciendo intereses, comisiones y gastos al día del pago. Podrá escoger entre: (i) reducción del monto de la cuota]]></text>
+			</element>
+		</band>
+	</detail>
+	<columnFooter height="27" splitType="Stretch"/>
+	<pageFooter height="21" splitType="Stretch"/>
+	<summary height="794" splitType="Stretch">
+		<element kind="staticText" uuid="7b75f7d2-4e05-4f7d-ac40-3e45be920d93" x="-6" y="420" width="558" height="260" fontSize="7.0" hTextAlign="Justified">
+			<text><![CDATA[       
+1. Año Base de 360 días. Durante la vigencia del contrato las tasas de interés podrán variar de acuerdo con lo establecido en la legislación aplicable.
+2. El cálculo de la tasa de costo efectivo procederá bajo el supuesto de cumplimiento de todas las condiciones pactadas.
+3. Se aplica sobre el importe de crédito desembolsado y sobre cualquier pago efectuado.
+4. Cobro mensual. Se calcula sobre el saldo capital. Interbank ofrece el Seguro de Desgravamen a través de Interseguro Compañía de Seguros S.A. Los riesgos cubiertos de dicho Seguro son Fallecimiento e Invalidez Total y Permanente por Accidente o Enfermedad; cuyo plazo de vigencia corresponde al plazo del crédito. Los términos de dicho seguro se detallan en la "Solicitud Certificado de Seguro de Desgravamen " que entregamos al cliente con el Crédito. Asimismo, el cliente tiene la alternativa de contratar un Seguro con rescate y/o devolución el cual también es ofrecido por Interbank a través de Interseguro, dicho seguro cuenta con la cobertura de Sobrevivencia además de las antes descritas. Interbank solo puede ofrecer otras coberturas opcionales distintas a las señaladas mediante cláusulas adicionales previo consentimiento expreso del cliente.
+El cliente podrá optar por contratar un Seguro de Desgravamen con otra empresa de seguros que elija y/o endosar un seguro existente a favor de Interbank, sin que ello implique un costo adicional, siempre y cuando brinde coberturas, condiciones y plazos mayores o iguales al seguro ofrecido por Interbank a través de Interseguro. Para mayor información con respecto a condiciones, coberturas y procedimientos ingresar a www.interbank.pe
+5. Cobro mensual. Se calcula sobre la suma asegurada del bien. Interbank ofrece el Seguro del Bien a través de Mapfre Perú Compañía de Seguros y Reaseguros. Los principales riesgos cubiertos de dicho Seguro son incendio, daños por naturaleza, terremoto; los términos y condiciones de dicho seguro se detallan en la póliza que será entregada al cliente posterior al desembolso.
+El cliente podrá optar por contratar un Seguro del Bien con otra empresa de seguros que elija y/o endosar un seguro existente a favor de Interbank, siempre y cuando brinde coberturas, condiciones y plazos mayores o iguales al seguro ofrecido por Mapfre a través de Interbank. Para mayor información con respecto a condiciones, coberturas y procedimientos ingresar a www.interbank.pe
+Los números de pólizas, Compañía de Seguros, tasas, coberturas y exclusiones, serán los indicados en los respectivos documentos que se encontrarán a disposición del cliente a través de www.interbank.pe
+El Banco podrá contratar, por cuenta del cliente, los seguros que este último no haya contratado, renovado o informado al banco para el endoso del seguro antes del vencimiento de las pólizas o estas no se encuentren conformes por Interbank, o en cualquier otro supuesto donde el crédito o el bien garantizado se encuentren fuera de cobertura. El Banco no será responsable por el eventual caso en que algún riesgo específico no hubiese sido cubierto. Los costos serán incluidos dentro de las cuotas mensuales a pagar por el cliente. 6. Se calcula sobre el importe original del crédito. La póliza es emitida por LA POSITIVA. Si el cliente realiza actividades de comercialización de giros determinados se contratará un seguro multiriesgos. Este seguro cubre la propiedad del asegurado contra pérdida o daño físico causado directamente a los bienes, siempre que ocurra en forma súbita, repentina, violenta, imprevista y accidental durante la vigencia de la presente póliza, incluyendo incendio todo riesgo, explosión, terrorismo y riesgos políticos, terremoto y riesgos de naturaleza.
+7. Las modificaciones al cronograma aplican solo para cambio de tasa, plazo o fecha.]]></text>
+		</element>
+		<element kind="staticText" uuid="ed684328-57d9-4361-b266-ced1b7a638ec" x="-4" y="10" width="554" height="60" fontSize="7.0" hTextAlign="Justified">
+			<text><![CDATA[manteniendo el plazo original del crédito o (ii) reducción del número de cuotas con la consecuente reducción del plazo de crédito. En caso no se cuente con dicha elección, INTERBANK reducirá el número de cuotas. En cualquiera de los casos y a solicitud de EL CLIENTE, INTERBANK entregará el cronograma de pagos modificado dentro de los 7 días calendario posterior a la solicitud.
+Adelanto de cuotas: Monto destinado al pago de las cuotas inmediatamente posteriores a la exigible en el período, sin la reducción de intereses, comisiones y gastos.
+Cuando se realice un pago menor o igual a dos cuotas (se incluye aquella exigible en el período) y EL CLIENTE no haya manifestado su elección, se considerará como adelanto de cuotas, salvo que se solicite expresamente que aplique como pago anticipado.]]></text>
+		</element>
+		<element kind="staticText" uuid="695b6cca-3e31-4ee6-8074-00737ff8b194" x="-1" y="90" width="554" height="23" fontSize="7.0" hTextAlign="Justified">
+			<text><![CDATA[
+En caso de que, por dolo o culpa debidamente acreditados, el cliente fuese inducido a error y, como consecuencia de ello, realiza un pago en exceso, dicho monto será recuperable y devengará hasta su devolución el máximo de la suma por concepto de intereses compensatorio y moratorio que se hayan pactado para la operación crediticia o, en su defecto, el interés legal.]]></text>
+		</element>
+		<element kind="staticText" uuid="d88e2399-52e3-4175-873e-bb4a71ac4c29" x="-1" y="76" width="124" height="14" fontSize="7.0" underline="false" bold="true">
+			<text><![CDATA[Pagos en Exceso]]></text>
+		</element>
+		<element kind="staticText" uuid="674fd070-804e-4c62-b427-691f744de244" x="3" y="128" width="554" height="52" fontSize="7.0" hTextAlign="Justified">
+			<text><![CDATA[En caso la presente operación fuera a encontrarse respaldada por una garantía hipotecaria, el CLIENTE declara que ha convenido que ésta respalda a todos aquellos créditos, deudas y obligaciones, directos o indirectos, existentes o futuros, asumidos o que fueran a ser asumidas en el futuro por el CLIENTE frente a INTERBANK, incluyendo el presente crédito, bajo cualquier modalidad, sin reserva ni limitación alguna, hasta por el Monto del Gravamen pactado en el contrato respectivo. La cobertura de la hipoteca antes mencionada respalda y alcanza también a aquellas personas (naturales o jurídicas) a las cuales el propietario del bien hubiere convenido en respaldar, conforme se establece en el contrato de hipoteca respectivo y sus modificatorias, si las hubiere. El CLIENTE tiene derecho a solicitar a INTERBANK una copia simple de la tasación realizada, en caso esta hubiere sido contratada como efecto del presente crédito.]]></text>
+		</element>
+		<element kind="staticText" uuid="702943e4-87d2-4c6c-b975-b5adfd586c5f" x="3" y="114" width="124" height="14" fontSize="7.0" underline="false" bold="true">
+			<text><![CDATA[Garantías Hipotecarias]]></text>
+		</element>
+		<element kind="staticText" uuid="c7ab2329-7d20-4ae0-b74e-d03b9e819e1f" x="-4" y="380" width="162" height="14" fontSize="7.0" underline="false" bold="true">
+			<text><![CDATA[Tasa de costo efectivo anual fija (2):]]></text>
+		</element>
+		<element kind="component" uuid="9cffb9c9-2db5-40cd-b878-3b462eed6cc9" x="35" y="200" width="481" height="60">
+			<component kind="table">
+				<datasetRun uuid="88e0fb79-3284-46c2-97cc-ab858f5e9235" subDataset="Dataset2">
+					<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.JREmptyDataSource()]]></dataSourceExpression>
+				</datasetRun>
+				<column kind="single" uuid="af4d2faf-d2b2-4682-b54b-b82bdaba2ee4" width="40">
+					<tableHeader height="30" style="Table 1_TH"/>
+					<tableFooter height="30" style="Table 1_TH"/>
+					<columnHeader height="30" style="Table 1_CH"/>
+					<columnFooter height="30" style="Table 1_CH"/>
+					<detailCell height="30" style="Table 1_TD"/>
+				</column>
+			</component>
+			<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.VerticalRowLayout"/>
+			<property name="com.jaspersoft.studio.table.style.table_header" value="Table 1_TH"/>
+			<property name="com.jaspersoft.studio.table.style.column_header" value="Table 1_CH"/>
+			<property name="com.jaspersoft.studio.table.style.detail" value="Table 1_TD"/>
+		</element>
+		<element kind="staticText" uuid="62b85532-ff6a-433b-8c3e-3828c17b54c7" x="19" y="730" width="552" height="30" fontSize="7.0">
+			<text><![CDATA[
+EN LA CIUDAD DE _____________________ , A LOS __________ DIAS DEL MES ___________________ DE 20____       ]]></text>
+		</element>
+		<element kind="staticText" uuid="2cd230f3-2e82-47f3-b0d2-f5f8a2411e6d" x="96" y="770" width="300" height="20" fontSize="7.0">
+			<text><![CDATA[                    CLIENTE                                                 BANCO]]></text>
+		</element>
+		<element kind="staticText" uuid="76db428a-7a09-4322-a903-cc8e99d93d8b" x="-4" y="400" width="556" height="30" fontSize="7.0">
+			<text><![CDATA[El detalle de las comisiones por servicios transversales prestados a solicitud del cliente, podrán ser encontrados en nuestros tarifarios publicados en www.Interbank.pe o solicitarlo en cualquiera de nuestras tiendas Interbank.  ]]></text>
+		</element>
+		<element kind="staticText" uuid="b1c883e5-15fb-4f4b-a3da-e533a47e7275" x="-2" y="670" width="556" height="30" fontSize="7.0">
+			<text><![CDATA[El cliente declara lo siguiente: (I) Que esta hoja resumen y el contrato que han suscrito para el otorgamiento del crédito le han sido entregados previamente por INTERBANK para su lectura; (II) Que las dudas sobre los términos y conceptos de dichos documentos fueron absueltas por INTERBANK; y, (III) Que firma tales documentos con pleno conocimiento de las condiciones que se establecen en los mismos.]]></text>
+		</element>
+	</summary>
+</jasperReport>
