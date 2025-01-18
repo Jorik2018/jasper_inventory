@@ -22,8 +22,8 @@
 			<rightPen lineWidth="0.25" lineStyle="Solid" lineColor="#000000"/>
 		</box>
 	</style>
-	<parameter name="SUBREPORT_DIR" class="java.lang.String">
-		<defaultValueExpression><![CDATA[..]]></defaultValueExpression>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["/.."]]></defaultValueExpression>
 	</parameter>
 	<queryString language="json">
 		<![CDATA[]]>
@@ -70,7 +70,7 @@
 				<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.data.JsonDataSource(
     new java.io.ByteArrayInputStream($F{detail}.getBytes("UTF-8"))
 )]]></dataSourceExpression>
-				<subreportExpression><![CDATA[$P{SUBREPORT_DIR}+"\\payroll\\hc_detail.jasper"]]></subreportExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR}+"/payroll/hc_detail.jasper"]]></subreportExpression>
 			</subreport>
 			<staticText>
 				<reportElement x="180" y="0" width="400" height="30" uuid="e131f8e4-dab1-4404-8546-4595d2d62d64"/>
@@ -199,7 +199,7 @@
 				<textFieldExpression><![CDATA[$F{fullName}]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement x="0" y="190" width="130" height="40" uuid="1a2c5f81-48ef-4d5d-a018-12bd20beabd0"/>
+				<reportElement style="white" positionType="Float" x="0" y="191" width="130" height="40" uuid="1a2c5f81-48ef-4d5d-a018-12bd20beabd0"/>
 				<textElement textAlignment="Left">
 					<font size="6"/>
 					<paragraph lineSpacing="Fixed" lineSpacingSize="8.0"/>
@@ -210,7 +210,7 @@ DE 1991 A 2017    NUEVO SOLES
 2018 A LA FECHA     SOLES	]]></text>
 			</staticText>
 			<textField>
-				<reportElement style="white" x="655" y="202" width="155" height="16" uuid="16184a10-0363-49e1-a9ad-252935e2cce3">
+				<reportElement style="white" positionType="Float" x="655" y="202" width="155" height="16" uuid="16184a10-0363-49e1-a9ad-252935e2cce3">
 					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="e47bfd99-51b5-4419-a303-de4c6c534ce0"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
