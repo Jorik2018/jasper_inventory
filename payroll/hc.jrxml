@@ -50,7 +50,9 @@
 	<field name="dependence" class="java.lang.String"/>
 	<field name="subDependence" class="java.lang.String"/>
 	<field name="date" class="java.lang.String"/>
-	<field name="ruc" class="java.lang.String"/>
+	<field name="ruc" class="java.lang.String">
+		<fieldDescription><![CDATA[ruc]]></fieldDescription>
+	</field>
 	<field name="code" class="java.lang.String"/>
 	<group name="Group1" isStartNewPage="true" isReprintHeaderOnEachPage="true">
 		<groupExpression><![CDATA[$F{year}]]></groupExpression>
@@ -153,7 +155,7 @@
 					<textFieldExpression><![CDATA[$F{fullName}]]></textFieldExpression>
 				</textField>
 				<staticText>
-					<reportElement style="white" x="429" y="78" width="36" height="14" uuid="00e245b8-9ebb-4bbd-8dde-6419ea086070">
+					<reportElement style="white" x="451" y="78" width="28" height="14" uuid="00e245b8-9ebb-4bbd-8dde-6419ea086070">
 						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="e47bfd99-51b5-4419-a303-de4c6c534ce0"/>
 						<property name="com.jaspersoft.studio.unit.height" value="px"/>
 					</reportElement>
@@ -163,7 +165,7 @@
 					<text><![CDATA[DNI:]]></text>
 				</staticText>
 				<staticText>
-					<reportElement style="white" x="429" y="64" width="36" height="14" uuid="81e1a53f-2071-4786-9ae5-afbc71ddf839">
+					<reportElement style="white" x="451" y="64" width="28" height="14" uuid="81e1a53f-2071-4786-9ae5-afbc71ddf839">
 						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="e47bfd99-51b5-4419-a303-de4c6c534ce0"/>
 						<property name="com.jaspersoft.studio.unit.height" value="px"/>
 					</reportElement>
@@ -173,7 +175,7 @@
 					<text><![CDATA[RUC:]]></text>
 				</staticText>
 				<textField isBlankWhenNull="true">
-					<reportElement style="white" x="465" y="78" width="90" height="14" uuid="215082b0-bd1e-4e95-bee2-7b23a7240e52">
+					<reportElement style="white" x="480" y="78" width="74" height="14" uuid="215082b0-bd1e-4e95-bee2-7b23a7240e52">
 						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="e47bfd99-51b5-4419-a303-de4c6c534ce0"/>
 						<property name="com.jaspersoft.studio.unit.height" value="px"/>
 					</reportElement>
@@ -181,16 +183,6 @@
 						<font size="8" isItalic="true"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$F{code}]]></textFieldExpression>
-				</textField>
-				<textField isBlankWhenNull="true">
-					<reportElement style="white" x="465" y="64" width="90" height="14" uuid="7341f1b0-cfb1-485a-8ff8-248a00beec1e">
-						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="e47bfd99-51b5-4419-a303-de4c6c534ce0"/>
-						<property name="com.jaspersoft.studio.unit.height" value="px"/>
-					</reportElement>
-					<textElement textAlignment="Center" verticalAlignment="Middle" markup="rtf">
-						<font size="8" isItalic="true"/>
-					</textElement>
-					<textFieldExpression><![CDATA[$F{ruc}]]></textFieldExpression>
 				</textField>
 				<textField>
 					<reportElement style="Style1" x="0" y="130" width="554" height="14" uuid="79b2dc2c-519f-4c81-82c6-c958b74ed571">
@@ -201,6 +193,16 @@
 						<font size="8" isItalic="true"/>
 					</textElement>
 					<textFieldExpression><![CDATA["CORRESPONDIENTE AL PERIODO "+$F{year}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement style="white" x="480" y="64" width="74" height="14" uuid="94c78e4f-f720-4a22-b9b1-62aedd1812d6">
+						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="e47bfd99-51b5-4419-a303-de4c6c534ce0"/>
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8" isItalic="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{ruc}]]></textFieldExpression>
 				</textField>
 			</band>
 		</groupHeader>
