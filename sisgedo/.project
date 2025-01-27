@@ -24,27 +24,38 @@
 		<link>
 			<name>Matriz_Faltas_Tardanzas.jasper</name>
 			<type>1</type>
-			<location>D:/wildfly/bin/.data/jasper/Matriz_Faltas_Tardanzas.jasper</location>
+			<location>/Users/ealarcop/Projects/nodejs/vue/isobit-ui/D::/wildfly/bin/.data/jasper/Matriz_Faltas_Tardanzas.jasper</location>
 		</link>
 		<link>
 			<name>detail.jasper</name>
 			<type>1</type>
-			<location>D:/wildfly/bin/.data/jasper/detail.jasper</location>
+			<location>/Users/ealarcop/Projects/nodejs/vue/isobit-ui/D::/wildfly/bin/.data/jasper/detail.jasper</location>
 		</link>
 		<link>
 			<name>detail_1.jasper</name>
 			<type>1</type>
-			<location>D:/wildfly/bin/.data/jasper/detail.jasper</location>
+			<location>/Users/ealarcop/Projects/nodejs/vue/isobit-ui/D::/wildfly/bin/.data/jasper/detail.jasper</location>
 		</link>
 		<link>
 			<name>ficha_salida.jasper</name>
 			<type>1</type>
-			<location>D:/wildfly/bin/.data/jasper/ficha_salida.jasper</location>
+			<location>/Users/ealarcop/Projects/nodejs/vue/isobit-ui/D::/wildfly/bin/.data/jasper/ficha_salida.jasper</location>
 		</link>
 		<link>
 			<name>ficha_salida_1.jasper</name>
 			<type>1</type>
-			<location>D:/wildfly/bin/.data/jasper/ficha_salida.jasper</location>
+			<location>/Users/ealarcop/Projects/nodejs/vue/isobit-ui/D::/wildfly/bin/.data/jasper/ficha_salida.jasper</location>
 		</link>
 	</linkedResources>
+	<filteredResources>
+		<filter>
+			<id>1737220962978</id>
+			<name></name>
+			<type>30</type>
+			<matcher>
+				<id>org.eclipse.core.resources.regexFilterMatcher</id>
+				<arguments>node_modules|\.git|__CREATED_BY_JAVA_LANGUAGE_SERVER__</arguments>
+			</matcher>
+		</filter>
+	</filteredResources>
 </projectDescription>
